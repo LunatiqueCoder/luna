@@ -1,4 +1,5 @@
 {
   "name": "ProjectName",
-  "displayName": "ProjectName"
+  "displayName": "ProjectName",
+  "templateName": "ProjectName"
 }
