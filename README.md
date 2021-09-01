@@ -46,7 +46,7 @@ Launches the app for Android in debug mode.
 
 - ### No IOS support
 
-This project was configured for Android and Web only. There is no support for IOS yet. \
+This project was configured for Android and Web only. There is no support for IOS yet.
 
 - ### React Native CLI
 This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
