@@ -2,7 +2,7 @@
   "name": "react-native-web-advanced-template",
   "version": "0.0.1",
   "description": "React Native Web Advanced Template",
-  "repository": "git@github.com:Notorious112/react-native-web-advanced-template.git",
+  "repository": "https://github.com/Notorious112/react-native-web-advanced-template.git",
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
   "license": "MIT"
 }
