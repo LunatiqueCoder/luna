@@ -1,0 +1,5 @@
+{
+  "name": "app",
+  "private": true,
+  "main": "App.tsx"
+}
