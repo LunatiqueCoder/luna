@@ -3,6 +3,7 @@
 > This project was configured for Android and Web only. There is no support for IOS yet. \
 > [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 
+## ⚠️ Work in progress!
 
 ## ⭐ Features:
 
@@ -13,7 +14,7 @@
 - [react-app-rewired](https://www.npmjs.com/package/react-app-rewired)
 - [Customize Create-React-App](https://github.com/arackaf/customize-cra)
 
-## Usage
+## 🛠 Usage
 
 `npx react-native init SomeApp --template https://github.com/Notorious112/react-native-web-advanced-template.git`
 
