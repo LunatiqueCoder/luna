@@ -1,6 +1,6 @@
 # 🛸 `react-native-web-advanced-template`
 
-> This project was configured for Android and Web only. There is no support for IOS yet. \
+> This project was configured for Android and Web only. ⚠️ There is no support for IOS yet. \
 > [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 
 ## ⚠️ Work in progress!
