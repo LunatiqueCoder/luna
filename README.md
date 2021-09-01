@@ -18,7 +18,7 @@
 
 `npx react-native init SomeApp --template https://github.com/Notorious112/react-native-web-advanced-template.git`
 
-Use the above command to use this template. Prior to that, all the commands from below are available:
+Use the above command to start a new React Native project using this template. Prior to that, all the commands from below are available:
 
 ### `npm run web`
 
