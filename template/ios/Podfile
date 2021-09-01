@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'MyApp' do
+target 'ProjectName' do
   config = use_native_modules!
 
   use_react_native!(
@@ -12,11 +12,7 @@ target 'MyApp' do
     :hermes_enabled => false
   )
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
-  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
-
-  target 'MyAppTests' do
+  target 'ProjectNameTests' do
     inherit! :complete
     # Pods for testing
   end
