@@ -1,2 +1,47 @@
-# react-native-web-advanced-template
- React Native Web Advanced Template
+# 🛸 `react-native-web-template`
+
+> This project was configured for Android and Web only. There is no support for IOS yet. \
+> [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
+
+
+## ⭐ Features:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Elements](https://reactnativeelements.com/)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [react-app-rewired](https://www.npmjs.com/package/react-app-rewired)
+- [Customize Create-React-App](https://github.com/arackaf/customize-cra)
+
+## Usage
+
+`npx react-native init SomeApp --template https://github.com/Notorious112/react-native-web-advanced-template.git`
+
+Use the above command to use this template. Prior to that, all the commands from below are available:
+
+### `npm run web`
+
+Runs the app in the web.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+
+### `npm run build`
+
+Builds the web app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed for web!
+
+
+### `npm run start`
+
+Start Metro Bundler.
+
+
+### `npm run android`
+
+Launches the app for Android in debug mode.
