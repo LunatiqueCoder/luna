@@ -28,11 +28,13 @@ Start Metro Bundler.
 ### `npm run android`
 
 Launches the app for Android in debug mode.
-## ⚠️ DANGER ZONE ⚠️
-> ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
+## ⚠️ WARNINGS ⚠️
 - ### Work in progress
 > 🚧 This template is currently under development, but we consider it stable.
 - ### React Native CLI
+> ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
+> 🔗 https://reactnative.dev/docs/environment-setup
+
 > This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
 > If you tried the above and still get the react-native-template-react- native-template-typescript: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
