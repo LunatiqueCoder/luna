@@ -28,6 +28,10 @@ Start Metro Bundler.
 ### `npm run android`
 
 Launches the app for Android in debug mode.
+
+### `npm run ios`
+
+Launches the app for IOS in debug mode.
 ## ⚠️ WARNINGS ⚠️
 - ### Work in progress
 > 🚧 This template is currently under development, but we consider it stable.
