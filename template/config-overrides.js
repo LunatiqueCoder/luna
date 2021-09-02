@@ -1,5 +1,5 @@
 const path = require('path');
-const { override, addBabelPlugins, babelInclude, addWebpackModuleRule } = require('customize-cra');
+const {override, addBabelPlugins, babelInclude, addWebpackModuleRule} = require('customize-cra');
 
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties', 'babel-plugin-react-native-web'),

@@ -1,6 +1,6 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-import { Section } from 'app/components/Section/Section';
+import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {Section} from 'app/components/Section/Section';
 
 export const Home = () => {
   const isDarkMode = useColorScheme() === 'dark';

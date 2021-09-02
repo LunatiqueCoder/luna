@@ -1,3 +1,6 @@
 # Windows files should use crlf line endings
 # https://help.github.com/articles/dealing-with-line-endings/
+# Our recommendations:
+# https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/
+# https://stackoverflow.com/questions/9976986/force-lf-eol-in-git-repo-and-working-copy
 *.bat text eol=crlf

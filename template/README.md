@@ -3,6 +3,7 @@
 This project was configured for Android and Web. Please be sure your environment is set up correctly for Android. There is no support for IOS yet.
 
 Other configurations for web:
+
 - React Navigation
 - React Native Elements
 - React Native Vector Icons
@@ -31,7 +32,6 @@ Start Metro Bundler.
 ### `npm run android`
 
 Launches the app for Android in debug mode.
-
 
 ### `npm run eject`
 

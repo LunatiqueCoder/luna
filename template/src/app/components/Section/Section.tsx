@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
-export const Section = ({ children, title }: any) => {
+export const Section = ({children, title}: any) => {
   return (
     <View style={styles.sectionContainer}>
       <Text
