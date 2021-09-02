@@ -11,7 +11,7 @@
 
 `npx react-native init SomeApp --template https://github.com/Notorious112/react-native-web-advanced-template.git`
 
-Use the above command to start a new React Native project using this template. Prior to that, all the commands from below are available:
+Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
 ### `npm run web`
 
@@ -25,16 +25,16 @@ You will also see any lint errors in the console.
 
 Start Metro Bundler.
 
-
 ### `npm run android`
 
 Launches the app for Android in debug mode.
 ## ⚠️ DANGER ZONE ⚠️
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
-
+- ### Work in progress
+🚧 This template is currently under development, but we consider it stable for Android and Web.
 - ### No IOS support
 
-This project was configured for Android and Web only. There is no support for IOS yet.
+This template was configured for Android and Web only. Even though it might work, we don't guarantee that because there is no support for IOS yet.
 
 - ### React Native CLI
 This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
