@@ -11,7 +11,7 @@ project.ext.react = [
         // the entry file for bundle generation. If none specified and
         // "index.android.js" exists, it will be used. Otherwise "index.js" is
         // default. Can be overridden with ENTRY_FILE environment variable.
-        entryFile: "index.native.js",
+        entryFile: "index.js",
 
         // https://facebook.github.io/react-native/docs/performance#enable-the-ram-format
         bundleCommand: "ram-bundle",
