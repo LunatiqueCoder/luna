@@ -9,7 +9,7 @@
 
 ## 🛠 Usage
 
-`npx react-native init SomeApp --template https://github.com/Notorious112/react-native-web-advanced-template.git`
+<pre>npx react-native init <b>MyAppName</b> --template https://github.com/Notorious112/react-native-web-advanced-template.git</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
