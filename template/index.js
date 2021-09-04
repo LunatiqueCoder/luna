@@ -1,5 +1,5 @@
 /**
- * @format
+ * When compiling for mobile, it will search for index.js on root.
  */
 
 import {AppRegistry} from 'react-native';
