@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <SafeAreaView style={styles.background}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView scrollEnabled={true} style={styles.background}>
+      <ScrollView style={styles.background}>
         <Header />
         <View>
           <Section title='Step One'>

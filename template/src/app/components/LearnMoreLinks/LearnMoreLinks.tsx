@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    opacity: 0.3
   },
 });
