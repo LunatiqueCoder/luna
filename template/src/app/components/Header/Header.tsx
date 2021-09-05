@@ -7,22 +7,10 @@ export const Header = () => {
     <ImageBackground
       accessibilityRole="image"
       source={require('static/assets/logo.png')}
-      style={[
-        styles.background,
-        {
-         flex: 1 // backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-        },
-      ]}
-      // imageStyle={styles.logo}
+      style={styles.background}
+      imageStyle={styles.logo}
     >
-      {/*<HermesBadge />*/}
-      <Text
-        style={[
-          styles.text,
-          {
-            // color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
+      <Text style={styles.text}>
         Welcome to
         {'\n'}
         React Native
@@ -40,15 +28,15 @@ const styles = StyleSheet.create({
   logo: {
     opacity: 0.2,
     overflow: 'visible',
-    resizeMode: 'cover',
+    resizeMode: 'center',
     /*
      * These negative margins allow the image to be offset similarly across screen sizes and component sizes.
      *
      * The source logo.png image is 512x512px, so as such, these margins attempt to be relative to the
      * source image's size.
      */
-    marginLeft: -128,
-    marginBottom: -192,
+    // marginLeft: -128,
+    marginBottom: -80,
   },
   text: {
     fontSize: 40,

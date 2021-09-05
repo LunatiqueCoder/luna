@@ -1,13 +1,3 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @flow strict-local
- * @format
- */
-
 import {
   StyleSheet,
   Text,
@@ -80,25 +70,14 @@ export const LearnMoreLinks = () => {
       {links.map(({id, title, link, description}) => (
         <Fragment key={id}>
           <View
-            style={[
-              styles.separator,
-              {
-                // backgroundColor: isDarkMode ? Colors.dark : Colors.light,
-              },
-            ]}
+            style={styles.separator}
           />
           <TouchableOpacity
             accessibilityRole="button"
             onPress={() => Linking.openURL(link)}
             style={styles.linkContainer}>
             <Text style={styles.link}>{title}</Text>
-            <Text
-              style={[
-                styles.description,
-                {
-                  // color: isDarkMode ? Colors.lighter : Colors.dark,
-                },
-              ]}>
+            <Text style={styles.description}>
               {description}
             </Text>
           </TouchableOpacity>
@@ -134,5 +113,6 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: StyleSheet.hairlineWidth,
+    backgroundColor: 'black'
   },
 });

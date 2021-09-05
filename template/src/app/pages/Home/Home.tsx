@@ -4,25 +4,16 @@ import {Section} from 'app/components/Section';
 import {DebugInstructions} from 'app/components/DebugInstructions'
 import {LearnMoreLinks} from 'app/components/LearnMoreLinks'
 import {Header} from 'app/components/Header'
+
 export const Home = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    // backgroundColor: isDarkMode ? 'white' : 'black'
-    flex: 1
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.background}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView scrollEnabled={true} style={backgroundStyle}>
+      <ScrollView scrollEnabled={true} style={styles.background}>
         <Header />
-        <View
-          style={
-            {
-              // backgroundColor: isDarkMode ? 'black' : 'white'
-            }
-          }>
+        <View>
           <Section title='Step One'>
             Edit <Text style={styles.highlight}>src/app/pages/Home.tsx</Text> to change this screen and then come
             back to see your edits.
@@ -45,5 +36,8 @@ export const Home = () => {
 const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700'
+  },
+  background: {
+    flex: 1
   }
 });
