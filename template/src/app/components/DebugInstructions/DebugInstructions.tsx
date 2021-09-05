@@ -1,11 +1,11 @@
 import React from 'react'
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View, Platform } from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View, Platform} from 'react-native';
 
 export const DebugInstructions = Platform.select({
   web: () => (
     <Text>
-    Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}
-    <Text>Developer tools</Text>.
+      Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}
+      <Text style={styles.highlight}>Developer tools</Text>.
     </Text>
   ),
   ios: () => (
