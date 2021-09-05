@@ -4,7 +4,7 @@ import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, V
 export const DebugInstructions = Platform.select({
   web: () => (
     <Text>
-    Press <Text>F12</Text> in the browser to open{' '}
+    Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}
     <Text>Developer tools</Text>.
     </Text>
   ),
