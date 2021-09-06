@@ -1,0 +1,5 @@
+{
+  "name": "components",
+  "private": true,
+  "main": "components.tsx"
+}

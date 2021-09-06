@@ -4,22 +4,10 @@ import {StyleSheet, Text, View} from 'react-native';
 export const Section = ({children, title}: any) => {
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            // color: isDarkMode ? 'black' : 'white'
-          }
-        ]}>
+      <Text style={styles.sectionTitle}>
         {title}
       </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            // color: isDarkMode ? 'black' : 'white'
-          }
-        ]}>
+      <Text style={styles.sectionDescription}>
         {children}
       </Text>
     </View>
