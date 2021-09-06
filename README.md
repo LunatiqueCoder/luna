@@ -1,5 +1,11 @@
 # 🛸 `react-native-web-advanced-template`
 
+[comment]: <> (![Logo]&#40;static/img/react-native-xlr8.jpg&#41;)
+
+<p align="center">
+ <img src="static/img/react-native-xlr8.jpg" alt="logo"/>
+</p>
+
 ## ⭐ Features:
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -32,6 +38,11 @@ Launches the app for Android in debug mode.
 ### `npm run ios`
 
 Launches the app for IOS in debug mode.
+
+## 📃 License
+
+This project is released under the [MIT License](LICENSE).
+
 ## ⚠️ WARNINGS ⚠️
 - ### Work in progress
 > 🚧 This template is currently under development, but we consider it stable.
