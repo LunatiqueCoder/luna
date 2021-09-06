@@ -6,6 +6,7 @@
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Elements](https://reactnativeelements.com/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- Other
 
 ## 🛠 Usage
 
@@ -32,6 +33,11 @@ Launches the app for Android in debug mode.
 ### `npm run ios`
 
 Launches the app for IOS in debug mode.
+
+## 📃 License
+
+This project is released under the [MIT License](LICENSE).
+
 ## ⚠️ WARNINGS ⚠️
 - ### Work in progress
 > 🚧 This template is currently under development, but we consider it stable.
