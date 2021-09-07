@@ -21,8 +21,12 @@ export const Home = () => {
               reload your app's code.
             </Text>
           </Section>
-          <Section title='Debug'>{<DebugInstructions />}</Section>
-          <Section title='Learn More'>Read the docs to discover what to do next:</Section>
+          <Section title='Debug'>
+            <DebugInstructions />
+          </Section>
+          <Section title='Learn More'>
+            Read the docs to discover what to do next:
+          </Section>
           <LearnMoreLinks />
         </View>
       </ScrollView>

@@ -1,20 +1,23 @@
-# 🛸 `react-native-web-advanced-template`
-
-[comment]: <> (![Logo]&#40;static/img/react-native-xlr8.jpg&#41;)
-
 <p align="center">
- <img src="static/img/react-native-xlr8.jpg" alt="logo"/>
+    <img 
+        src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y4y9febk1nf60gi1dx0k.jpg" 
+        alt="Logo" width="100%"
+        style="max-width:800px;width:100%"
+    >
 </p>
+
+# 🌒 `Luna`
+> **Luna** is a **React Native** boilerplate with minimal configuration so your app can run on **Android**, **IOS** and **Web** as well.
 
 ## ⭐ Features:
 - [React Native Web](https://necolas.github.io/react-native-web/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React Navigation](https://reactnavigation.org/)
+- [React Navigation](https://reactnavigation.org/) 
 - [React Native Elements](https://reactnativeelements.com/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [TypeScript](https://www.typescriptlang.org/)
 - Other
 
-## 🛠 Usage
+## 🛸 Usage
 
 <pre>npx react-native init <b>MyAppName</b> --template https://github.com/Notorious112/react-native-web-advanced-template.git</pre>
 
@@ -46,7 +49,9 @@ This project is released under the [MIT License](LICENSE).
 
 ## ⚠️ WARNINGS ⚠️
 - ### Work in progress
-> 🚧 This template is currently under development, but we consider it stable.
+> 🚧 This template is currently under development, but we consider it stable. \
+> 🙏 Please feel free to try it out and open an issue if you find any problems.
+
 - ### React Native CLI
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
 > 🔗 https://reactnative.dev/docs/environment-setup
