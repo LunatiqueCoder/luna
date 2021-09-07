@@ -45,7 +45,8 @@ Launches the app for IOS in debug mode.
 
 ## 📃 License
 
-This project is released under the [MIT License](LICENSE).
+📃 This project is released under the [MIT License](LICENSE). \
+💻 By contributing, you agree that your contributions will be licensed under its MIT License.
 
 ## ⚠️ WARNINGS ⚠️
 - ### Work in progress
