@@ -12,6 +12,7 @@
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Elements](https://reactnativeelements.com/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- Other
 
 ## 🛠 Usage
 
