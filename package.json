@@ -1,8 +1,24 @@
 {
-  "name": "react-native-web-advanced-template",
-  "version": "0.0.1",
-  "description": "React Native Web Advanced Template",
-  "repository": "https://github.com/Notorious112/react-native-web-advanced-template.git",
+  "name": "@Notorious112/luna",
+  "version": "1.0.0",
+  "description": "Luna is a React Native boilerplate with minimal configuration so your app can run on Android, IOS and Web concurrently.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Notorious112/luna.git"
+  },
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Notorious112/luna/issues"
+  },
+  "homepage": "https://github.com/Notorious112/luna",
+  "keywords": [
+    "react",
+    "native",
+    "boilerplate",
+    "luna",
+    "react-native",
+    "web",
+    "react-native-web"
+  ]
 }
