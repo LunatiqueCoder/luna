@@ -47,7 +47,7 @@ Launches the app for IOS in debug mode.
 
 ## 🐛 Debugging
 - ### React Native CLI
-> This template only works with the new CLI. Make sure that: 
+> This template only works with the new CLI. Please make sure that: 
 > - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
