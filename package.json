@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/Notorious112/luna.git"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
   "license": "MIT",
   "bugs": {
