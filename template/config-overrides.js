@@ -3,23 +3,21 @@ const {override, addBabelPlugins, babelInclude, addWebpackModuleRule} = require(
 
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties', 'babel-plugin-react-native-web'),
-  addWebpackModuleRule(
-    {
+  addWebpackModuleRule({
       test: /\.ttf$/,
       loader: 'url-loader', // or directly file-loader
       include: path.resolve(__dirname, 'node_modules/react-native-vector-icons')
-    }),
-    addWebpackModuleRule({
-      test: /\.(gif|jpe?g|png|svg)$/,
-      use: {
-        loader: 'url-loader',
-        options: {
-          name: '[name].[ext]',
-          esModule: false,
-        }
+  }),
+  addWebpackModuleRule({
+    test: /\.(gif|jpe?g|png|svg)$/,
+    use: {
+      loader: 'url-loader',
+      options: {
+        name: '[name].[ext]',
+        esModule: false,
       }
     }
-  ),
+  }),
   babelInclude([
     path.resolve(__dirname, 'src'),
     path.resolve(__dirname, 'node_modules/react-native-elements'),

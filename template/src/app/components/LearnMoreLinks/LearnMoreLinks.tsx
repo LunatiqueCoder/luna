@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     flex: 2,
     fontSize: 18,
     fontWeight: '400',
-    // color: Colors.primary,
+    color: '#0645AD',
   },
   description: {
     flex: 3,
