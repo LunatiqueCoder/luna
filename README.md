@@ -19,7 +19,7 @@
 
 ## 🛸 Usage
 
-<pre>npx react-native init <b>MyAppName</b> --template https://github.com/Notorious112/luna.git</pre>
+<pre>npx react-native init <b>MyAppName</b> --template @notorious112/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
