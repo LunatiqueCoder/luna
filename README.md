@@ -51,13 +51,13 @@ Launches the app for IOS in debug mode.
 > - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
-> If you tried the above and still get the react-native-template-react- native-template-typescript: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
+> If you tried the above and still get the @notorious112/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
 Further information can be found here: https://github.com/react-native-community/cli#about
 
 ## 📃 License
 
-📃 This project is released under the [MIT License](LICENSE). \
-💻 By contributing, you agree that your contributions will be licensed under its MIT License.
+> 📃 This project is released under the [MIT License](LICENSE). \
+> 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
 
 
 ## 🚧 Work in progress 🚧
