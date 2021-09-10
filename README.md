@@ -7,7 +7,7 @@
 </p>
 
 # 🌒 `Luna`
-### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` cocurrently.
+### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
 
 ## ⭐ Features:
 - [React Native Web](https://necolas.github.io/react-native-web/)
