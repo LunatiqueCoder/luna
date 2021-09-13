@@ -4,9 +4,9 @@ const {override, addBabelPlugins, babelInclude, addWebpackModuleRule} = require(
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties', 'babel-plugin-react-native-web'),
   addWebpackModuleRule({
-      test: /\.ttf$/,
-      loader: 'url-loader', // or directly file-loader
-      include: path.resolve(__dirname, 'node_modules/react-native-vector-icons')
+    test: /\.ttf$/,
+    loader: 'url-loader', // or directly file-loader
+    include: path.resolve(__dirname, 'node_modules/react-native-vector-icons')
   }),
   addWebpackModuleRule({
     test: /\.(gif|jpe?g|png|svg)$/,
@@ -14,7 +14,7 @@ module.exports = override(
       loader: 'url-loader',
       options: {
         name: '[name].[ext]',
-        esModule: false,
+        esModule: false
       }
     }
   }),

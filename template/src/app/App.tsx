@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {FC} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
@@ -7,7 +7,7 @@ import {Home, Details} from 'app/pages';
 
 const Tab = createMaterialTopTabNavigator();
 
-const App = () => {
+const App: FC = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
