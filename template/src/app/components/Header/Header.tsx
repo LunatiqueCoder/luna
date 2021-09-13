@@ -1,8 +1,7 @@
-import React from 'react';
-import {ImageBackground, StyleSheet, Text, useColorScheme} from 'react-native';
+import React, {FC} from 'react';
+import {ImageBackground, StyleSheet, Text} from 'react-native';
 
-export const Header = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+export const Header: FC = () => {
   return (
     <ImageBackground
       accessibilityRole='image'

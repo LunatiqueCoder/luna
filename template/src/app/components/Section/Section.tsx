@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-export const Section = ({children, title}: any) => {
+interface ISection {
+  children?: ReactNode;
+  title: string;
+}
+
+export const Section: FC<ISection> = ({children, title}) => {
   return (
     <View style={styles.sectionContainer}>
       <Text style={styles.sectionTitle}>{title}</Text>

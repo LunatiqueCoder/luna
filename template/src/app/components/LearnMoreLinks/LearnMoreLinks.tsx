@@ -1,5 +1,5 @@
-import {StyleSheet, Text, TouchableOpacity, useColorScheme, View, Linking} from 'react-native';
-import React, {Fragment} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View, Linking} from 'react-native';
+import React, {FC, Fragment} from 'react';
 
 const links = [
   {
@@ -53,8 +53,7 @@ const links = [
   }
 ];
 
-export const LearnMoreLinks = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+export const LearnMoreLinks: FC = () => {
   return (
     <View style={styles.container}>
       {links.map(({id, title, link, description}) => (

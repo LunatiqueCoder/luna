@@ -1,7 +1,7 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, Text, Platform} from 'react-native';
+import React, {FC} from 'react';
+import {StyleSheet, Text, Platform} from 'react-native';
 
-export const DebugInstructions = Platform.select({
+export const DebugInstructions: FC = Platform.select({
   web: () => (
     <Text>
       Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}

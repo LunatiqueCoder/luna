@@ -1,7 +1,8 @@
+import React, {FC} from 'react';
 import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 
-export const Home = () => {
+export const Home: FC = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
