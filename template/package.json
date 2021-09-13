@@ -9,7 +9,9 @@
     "web": "react-app-rewired start",
     "build-web": "react-app-rewired build",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.6",

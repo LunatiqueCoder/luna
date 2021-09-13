@@ -1,7 +1,9 @@
 # 🛸 ProjectName
+
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 
 ## ⭐ Features:
+
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Navigation](https://reactnavigation.org/)

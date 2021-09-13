@@ -5,7 +5,7 @@ export const Header = () => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <ImageBackground
-      accessibilityRole="image"
+      accessibilityRole='image'
       source={require('static/assets/logo.png')}
       style={styles.background}
       imageStyle={styles.logo}
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   background: {
     paddingBottom: 40,
     paddingTop: 96,
-    paddingHorizontal: 32,
+    paddingHorizontal: 32
   },
   logo: {
     opacity: 0.2,
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
      * source image's size.
      */
     marginLeft: -128,
-    marginBottom: -192,
+    marginBottom: -192
   },
   text: {
     fontSize: 40,
     fontWeight: '700',
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  }
 });
