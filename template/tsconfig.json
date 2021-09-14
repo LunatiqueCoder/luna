@@ -16,7 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true              /* Report errors for fallthrough cases in switch statement. */,
     "module": "esnext"                              /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
-    "resolveJsonModule": true                        /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
+    "resolveJsonModule": true                       /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */
   },
   "typeRoots": [
     /* List of folders to include type definitions from. */
