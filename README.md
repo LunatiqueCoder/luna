@@ -1,6 +1,6 @@
 <p align="center">
     <img 
-        src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y4y9febk1nf60gi1dx0k.jpg" 
+        src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g6rptn8cgu8h0uvawrxo.jpeg" 
         alt="Logo" width="100%"
         style="max-width:800px;width:100%"
     >
