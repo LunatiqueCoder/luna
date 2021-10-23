@@ -21,7 +21,7 @@
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
 > 🔗 https://reactnative.dev/docs/environment-setup
 
-<pre>npx react-native init <b>MyAppName</b> --template @notorious112/luna</pre>
+<pre>npx react-native init <b>MyAppName</b> --template @plaut-ro/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
@@ -61,6 +61,5 @@ Further information can be found here: https://github.com/react-native-community
 
 
 ## 🚧 Work in progress 🚧
-> ⚠️ This template is currently under development, but we consider it stable. \
-> 🙏 Please feel free to try it out and open an issue if you find any problems.
+> ⚠️ This template is currently under development. 
 
