@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:pods": "pod-install",
     "start": "react-native start",
     "web": "react-app-rewired start",
     "build-web": "react-app-rewired build",
@@ -51,6 +52,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "metro-react-native-babel-preset": "^0.66.0",
+    "pod-install": "^0.1.28",
     "prettier": "^2.4.0",
     "react-app-rewired": "^2.1.8",
     "react-native-codegen": "^0.0.7",
