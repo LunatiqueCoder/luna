@@ -28,12 +28,13 @@ DerivedData
 local.properties
 *.iml
 
-# node.js
+# node.js - including lock files, templates don't ship with lock files
 #
 package-lock.json
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn.lock
 
 # BUCK
 buck-out/
@@ -55,8 +56,9 @@ buck-out/
 # Bundle artifact
 *.jsbundle
 
-# CocoaPods
+# CocoaPods - including the lockfile, templates don't ship with lockfiles
 /ios/Pods/
+Podfile.lock
 
 # Misc
 build/
