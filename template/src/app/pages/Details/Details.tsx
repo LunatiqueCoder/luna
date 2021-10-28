@@ -1,9 +1,11 @@
 import React, {FC} from 'react';
 import {Text, SafeAreaView, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export const Details: FC = () => (
   <SafeAreaView style={styles.background}>
-    <Text>In progress...</Text>
+    <Icon name='rocket' size={30} color='#900' />
+    <Text>If you see a rocket, everything is working!</Text>
   </SafeAreaView>
 );
 
