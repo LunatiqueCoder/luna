@@ -2,7 +2,7 @@
 
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 
-## ⭐ Features:
+## ⭐ Features
 
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -10,18 +10,30 @@
 - [React Native Elements](https://reactnativeelements.com/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 
-### `npm run web`
+## Running the app
 
-Runs the app in the web.\
+### Web
+
+#### Development
+
+Run the app: `yarn web`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm run start`
+#### Production
 
-Start Metro Bundler.
+Build the app: `yarn build-web`
+Use the app `npx serve -s build/`
 
-### `npm run android`
+### Native
 
-Launches the app for Android in debug mode.
+1. Start Metro Bundler: `yarn start`
+2. Start the Android app: `yarn android`
+3. Start the iOS app: `yarn ios` (make sure you have installed pods first! `yarn ios:pods` if needed)
+
+## Development Tools
+
+1. Check your code style with `yarn lint:all` (runs eslint, prettier, and tsc)
+1. Check your code correctness with `yarn test:all` (runs jest)
