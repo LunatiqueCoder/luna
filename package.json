@@ -1,17 +1,17 @@
 {
-  "name": "@notorious112/luna",
+  "name": "@plaut-ro/luna",
   "version": "1.0.0",
   "description": "Luna is a React Native boilerplate with minimal configuration so your app can run on Android, IOS and Web concurrently.",
-  "repository": "git@github.com:Notorious112/luna.git",
+  "repository": "git@github.com:plaut-ro/luna.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Notorious112/luna/issues"
+    "url": "https://github.com/plaut-ro/luna/issues"
   },
-  "homepage": "https://github.com/Notorious112/luna",
+  "homepage": "https://github.com/plaut-ro/luna",
   "keywords": [
     "react",
     "native",
