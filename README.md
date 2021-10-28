@@ -21,7 +21,7 @@
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
 > 🔗 https://reactnative.dev/docs/environment-setup
 
-<pre>npx react-native init <b>MyAppName</b> --template @plaut-ro/luna</pre>
+<pre>npx react-native init <b>MyAppName</b> --template plaut-ro/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
