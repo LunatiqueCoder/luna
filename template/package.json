@@ -8,10 +8,14 @@
     "start": "react-native start",
     "web": "react-app-rewired start",
     "build-web": "react-app-rewired build",
-    "test": "jest",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "test:all": "yarn test:jest",
+    "test:jest": "jest",
+    "lint:all": "yarn lint:eslint && yarn lint:prettier && yarn lint:types",
+    "lint:eslint": "eslint src/",
+    "lint:eslint:fix": "eslint --fix src/",
+    "lint:prettier": "prettier --check \"src/**/*.+(js|jsx|json|css|md)\"",
+    "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
+    "lint:types": "tsc"
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.6",
