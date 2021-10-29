@@ -20,8 +20,7 @@
 ## 🛸 Usage
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
 > 🔗 https://reactnative.dev/docs/environment-setup
-
-<pre>npx react-native init <b>MyAppName</b> --template plaut-ro/luna</pre>
+<pre>npx react-native init <b>MyAppName</b> --template @plaut-ro/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
@@ -51,8 +50,15 @@ Launches the app for IOS in debug mode.
 > - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
-> If you tried the above and still get the @notorious112/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
-Further information can be found here: https://github.com/react-native-community/cli#about
+> If you tried the above and still get the @plaut-ro/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
+Further information can be found here: https://github.com/react-native-community/cli#about 
+
+- ### Package not found in the npm registry
+
+> We're using Github packages, so you'll need to add the following lines of code into your global ~/.npmrc file. If it doesn't exist, please create one.
+
+>`registry=http://registry.npmjs.org/` \
+`@plaut-ro:registry=https://npm.pkg.github.com/`
 
 ## 📃 License
 
