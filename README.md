@@ -9,7 +9,7 @@
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
 
-## ⭐ Features:
+## ⭐ Features
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [React Navigation](https://reactnavigation.org/) 
 - [React Native Elements](https://reactnativeelements.com/)
@@ -58,8 +58,3 @@ Further information can be found here: https://github.com/react-native-community
 
 > 📃 This project is released under the [MIT License](LICENSE). \
 > 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
-
-
-## 🚧 Work in progress 🚧
-> ⚠️ This template is currently under development. 
-
