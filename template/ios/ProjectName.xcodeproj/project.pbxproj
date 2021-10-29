@@ -114,7 +114,6 @@
 				9BDD34CE91F31E0BA811CA8C /* Pods-ProjectName-ProjectNameTests.debug.xcconfig */,
 				7739BA3BE95557CE30D40940 /* Pods-ProjectName-ProjectNameTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,7 +154,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BM4UAK2663;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ProjectName/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BM4UAK2663;
 				INFOPLIST_FILE = ProjectName/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
