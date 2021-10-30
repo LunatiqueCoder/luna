@@ -18,13 +18,13 @@
 - Other
 
 ## 🎛 Setup
-> ⚠️ [Please be sure your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup) \
+> ⚠️ Please be sure your environment is set up correctly for React Native CLI. \
 > 🔗 https://reactnative.dev/docs/environment-setup 
 
-> We're using Github packages, so you'll need to add the following lines of code into your global ~/.npmrc file. If it doesn't exist, please create one.
+> We're using Github packages, so you'll need the following:
 > 
->`registry=http://registry.npmjs.org/` \
-`@plaut-ro:registry=https://npm.pkg.github.com/`
+> `npm config set registry=http://registry.npmjs.org/` \
+ `npm config set @plaut-ro:registry=https://npm.pkg.github.com/`
 > 
 ## 🛸 Usage
 
