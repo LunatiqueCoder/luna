@@ -26,7 +26,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-native": "0.66.1",
-    "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-pager-view": "^5.4.7",
     "react-native-safe-area-context": "^3.3.2",
@@ -42,6 +41,7 @@
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-native": "^0.66.1",
+    "@types/react-native-vector-icons": "^6.4.9",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
@@ -75,7 +75,7 @@
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|@react-native|react-native-vector-icons)"
     ]
-    },
+  },
   "browserslist": {
     "production": [
       ">0.2%",
