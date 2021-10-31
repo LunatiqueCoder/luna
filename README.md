@@ -11,8 +11,7 @@
 
 ## ⭐ Features
 - [React Native Web](https://necolas.github.io/react-native-web/)
-- [React Navigation](https://reactnavigation.org/) 
-- [React Native Elements](https://reactnativeelements.com/)
+- [React Navigation](https://reactnavigation.org/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [TypeScript](https://www.typescriptlang.org/)
 - Other
