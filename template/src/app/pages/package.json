@@ -1,5 +1,4 @@
 {
-  "name": "pages",
   "private": true,
   "main": "pages.tsx"
 }
