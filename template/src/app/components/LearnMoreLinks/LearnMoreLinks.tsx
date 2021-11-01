@@ -1,8 +1,8 @@
-import React, {FC, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Linking} from 'react-native';
 import {links} from 'static/constants';
 
-export const LearnMoreLinks: FC = () => {
+export const LearnMoreLinks = (): JSX.Element => {
   return (
     <View style={styles.container}>
       {links.map(({id, title, link, description}) => (

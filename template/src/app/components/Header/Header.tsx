@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {ImageBackground, StyleSheet, Text} from 'react-native';
 
-export const Header: FC = () => {
+export const Header = (): JSX.Element => {
   return (
     <ImageBackground
       accessibilityRole='image'

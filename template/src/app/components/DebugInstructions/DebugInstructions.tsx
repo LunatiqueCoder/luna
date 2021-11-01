@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {StyleSheet, Text, Platform} from 'react-native';
 
-export const DebugInstructions: FC = Platform.select({
+export const DebugInstructions = Platform.select({
   web: () => (
     <Text>
       Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}
