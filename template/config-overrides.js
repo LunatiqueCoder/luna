@@ -1,8 +1,15 @@
 const path = require('path');
-const {override, addBabelPlugins, babelInclude, addWebpackModuleRule} = require('customize-cra');
+const {
+  override,
+  addBabelPlugins,
+  babelInclude,
+  addWebpackModuleRule,
+  addExternalBabelPlugins
+} = require('customize-cra');
 
 module.exports = override(
-  ...addBabelPlugins('@babel/plugin-proposal-class-properties', 'babel-plugin-react-native-web'),
+  ...addBabelPlugins('babel-plugin-react-native-web'),
+  ...addExternalBabelPlugins('@babel/plugin-proposal-class-properties'),
   addWebpackModuleRule({
     test: /\.ttf$/,
     loader: 'url-loader', // or directly file-loader
