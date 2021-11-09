@@ -1,13 +1,12 @@
 import React from 'react';
 import {ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 
 export const Home = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView style={styles.background}>
+    <View style={styles.background}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView style={styles.background}>
         <Header />
@@ -28,7 +27,7 @@ export const Home = (): JSX.Element => {
           <LearnMoreLinks />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
