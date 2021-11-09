@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, SafeAreaView, StyleSheet} from 'react-native';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export const Details = (): JSX.Element => (
