@@ -1,5 +1,6 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 
 export const Home = (): JSX.Element => {
