@@ -4,25 +4,25 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {Home, Details} from 'app/pages';
-import {StatusBar, useColorScheme} from 'react-native';
+import {StatusBar} from 'react-native';
+import {useColors} from './hooks/useColors';
 
 const Tab = createMaterialTopTabNavigator();
 
 const App = (): JSX.Element => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const {isDarkMode, backgroundColor, color} = useColors();
+
+  const screenOptions = {
+    tabBarStyle: {backgroundColor},
+    tabBarLabelStyle: {color}
+  };
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={backgroundColor} />
       <NavigationContainer>
         <SafeAreaView style={{flex: 1}} edges={['top']}>
-          <Tab.Navigator
-            initialRouteName='Home'
-            screenOptions={{
-              tabBarStyle: {backgroundColor: isDarkMode ? 'black' : 'white'},
-              tabBarLabelStyle: {color: isDarkMode ? 'white' : 'black'}
-            }}
-          >
+          <Tab.Navigator initialRouteName='Home' screenOptions={screenOptions}>
             <Tab.Screen component={Home} key={'Home'} name={'Home'} />
             <Tab.Screen component={Details} key={'Details'} name={'Details'} />
           </Tab.Navigator>
