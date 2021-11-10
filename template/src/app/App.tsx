@@ -15,7 +15,7 @@ const App = (): JSX.Element => {
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <NavigationContainer>
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1}} edges={['top']}>
           <Tab.Navigator
             initialRouteName='Home'
             screenOptions={{
