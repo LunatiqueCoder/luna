@@ -1,13 +1,14 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const Home = (): JSX.Element => {
   return (
     <View style={styles.background}>
       <ScrollView style={styles.background}>
         <Header />
-        <View>
+        <SafeAreaView>
           <Section title='Step One'>
             Edit <Text style={styles.highlight}>src/app/pages/Home.tsx</Text> to change this screen and then
             come back to see your edits.
@@ -22,7 +23,7 @@ export const Home = (): JSX.Element => {
           </Section>
           <Section title='Learn More'>Read the docs to discover what to do next:</Section>
           <LearnMoreLinks />
-        </View>
+        </SafeAreaView>
       </ScrollView>
     </View>
   );
