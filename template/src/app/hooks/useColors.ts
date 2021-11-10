@@ -1,4 +1,4 @@
-import {Platform, useColorScheme} from 'react-native';
+import {useColorScheme} from 'react-native';
 
 interface IColors {
   backgroundColor: string;
@@ -8,18 +8,8 @@ interface IColors {
 
 export const useColors = (): IColors => {
   const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundColor = Platform.select({
-    ios: isDarkMode ? 'black' : 'white',
-    android: isDarkMode ? '#1C2833' : 'white',
-    default: 'white'
-  });
-
-  const color = Platform.select({
-    ios: isDarkMode ? 'white' : 'black',
-    android: isDarkMode ? 'white' : '#1C2833',
-    default: 'black'
-  });
+  const backgroundColor = isDarkMode ? '#1C2833' : 'white';
+  const color = isDarkMode ? 'white' : '#1C2833';
 
   return {isDarkMode, backgroundColor, color};
 };
