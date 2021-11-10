@@ -1,13 +1,10 @@
 import React from 'react';
-import {ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 
 export const Home = (): JSX.Element => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <View style={styles.background}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView style={styles.background}>
         <Header />
         <View>
