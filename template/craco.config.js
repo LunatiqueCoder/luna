@@ -3,7 +3,16 @@ const {addBeforeLoader, loaderByName} = require('@craco/craco');
 module.exports = {
   babel: {
     presets: ['@babel/preset-react'],
-    plugins: ['babel-plugin-react-native-web', '@babel/plugin-proposal-class-properties']
+    plugins: [
+      'babel-plugin-react-native-web',
+      '@babel/plugin-proposal-class-properties',
+      [
+        '@babel/plugin-transform-react-jsx',
+        {
+          runtime: 'automatic'
+        }
+      ]
+    ]
   },
   webpack: {
     configure: (webpackConfig) => {
