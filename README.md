@@ -10,6 +10,8 @@
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
 
 ## ⭐ Features
+> ### Please visit the [`🌒 Luna Wiki`](https://github.com/plaut-ro/luna/wiki) to see why and how we decided to implement all those features.
+
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
