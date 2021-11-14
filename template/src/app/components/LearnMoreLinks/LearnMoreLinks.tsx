@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import {Fragment} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Linking, Platform} from 'react-native';
 import {links} from 'static/constants';
 import {useColors} from 'app/hooks/useColors';

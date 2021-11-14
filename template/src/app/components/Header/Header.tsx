@@ -1,4 +1,3 @@
-import React from 'react';
 import {ImageBackground, StyleSheet, Text} from 'react-native';
 
 export const Header = (): JSX.Element => {

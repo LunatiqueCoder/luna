@@ -1,4 +1,3 @@
-import React from 'react';
 import {Text, StyleSheet, View, Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useColors} from 'app/hooks/useColors';

@@ -1,4 +1,3 @@
-import React from 'react';
 import {Platform, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 import {SafeAreaView} from 'react-native-safe-area-context';
