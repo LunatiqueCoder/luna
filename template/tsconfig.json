@@ -19,11 +19,6 @@
     "module": "esnext",
     "resolveJsonModule": true
   },
-  "typeRoots": [
-    "./src/types",
-    "./node_modules/@types",
-    "./node_modules"
-  ],
   "exclude": [
     "node_modules",
     "babel.config.js",
