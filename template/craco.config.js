@@ -71,17 +71,15 @@ module.exports = {
   // },
 
   babel: {
-    presets: ['@babel/preset-react'],
-    plugins: [
-      'babel-plugin-react-native-web',
-      '@babel/plugin-proposal-class-properties',
+    presets: [
       [
-        '@babel/plugin-transform-react-jsx',
+        '@babel/preset-react',
         {
           runtime: 'automatic'
         }
       ]
     ],
+    plugins: ['babel-plugin-react-native-web', '@babel/plugin-proposal-class-properties'],
     loaderOptions: {
       /* Any babel-loader configuration options: https://github.com/babel/babel-loader. */
     },
