@@ -74,30 +74,25 @@ module.exports = {
   // },
 
   babel: {
-    presets: [],
-    plugins: [],
+    presets: [
+      // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
+      ['module:metro-react-native-babel-preset', {useTransformReactJSXExperimental: true}]
+    ],
+
+    plugins: [
+      'react-native-web',
+      [
+        // Enable new JSX Transform from React
+        '@babel/plugin-transform-react-jsx',
+        {
+          runtime: 'automatic'
+        }
+      ]
+    ],
     loaderOptions: {
       /* Any babel-loader configuration options: https://github.com/babel/babel-loader. */
-      //   cacheDirectory: true,
-
-      presets: [
-        // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
-        ['module:metro-react-native-babel-preset', {useTransformReactJSXExperimental: true}]
-      ],
-
-      plugins: [
-        'react-native-web',
-        [
-          // Enable new JSX Transform from React
-          '@babel/plugin-transform-react-jsx',
-          {
-            runtime: 'automatic'
-          }
-        ]
-      ]
     }
     // loaderOptions: (babelLoaderOptions, {env, paths}) => {
-    //
     //   return babelLoaderOptions;
     // }
   },
