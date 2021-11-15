@@ -9,9 +9,6 @@ const {
   POSTCSS_MODES
 } = require('@craco/craco');
 
-const path = require('path');
-const appDirectory = path.resolve(__dirname, '../');
-
 module.exports = {
   // reactScriptsVersion: 'react-scripts' /* (default value) */,
   // style: {
@@ -80,6 +77,7 @@ module.exports = {
     ],
 
     plugins: [
+      // https://necolas.github.io/react-native-web/docs/setup/#package-optimization
       'react-native-web',
       [
         // Enable new JSX Transform from React
