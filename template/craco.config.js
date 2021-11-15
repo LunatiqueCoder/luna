@@ -82,11 +82,9 @@ module.exports = {
 
       presets: [
         // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
-        ['module:metro-react-native-babel-preset', {useTransformReactJSXExperimental: true}],
-        '@babel/preset-env',
-        '@babel/preset-react'
+        ['module:metro-react-native-babel-preset', {useTransformReactJSXExperimental: true}]
       ],
-      // Re-write paths to import only the modules needed by the app
+
       plugins: [
         'react-native-web',
         [
