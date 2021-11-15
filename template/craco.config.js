@@ -9,6 +9,9 @@ const {
   POSTCSS_MODES
 } = require('@craco/craco');
 
+const path = require('path');
+const appDirectory = path.resolve(__dirname, '../');
+
 module.exports = {
   // reactScriptsVersion: 'react-scripts' /* (default value) */,
   // style: {
@@ -71,21 +74,34 @@ module.exports = {
   // },
 
   babel: {
-    presets: [
-      [
-        '@babel/preset-react',
-        {
-          runtime: 'automatic'
-        }
-      ]
-    ],
-    plugins: ['babel-plugin-react-native-web', '@babel/plugin-proposal-class-properties'],
+    presets: [],
+    plugins: [],
     loaderOptions: {
       /* Any babel-loader configuration options: https://github.com/babel/babel-loader. */
-    },
-    loaderOptions: (babelLoaderOptions, {env, paths}) => {
-      return babelLoaderOptions;
+      //   cacheDirectory: true,
+
+      presets: [
+        // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
+        ['module:metro-react-native-babel-preset', {useTransformReactJSXExperimental: true}],
+        '@babel/preset-env',
+        '@babel/preset-react'
+      ],
+      // Re-write paths to import only the modules needed by the app
+      plugins: [
+        'react-native-web',
+        [
+          // Enable new JSX Transform from React
+          '@babel/plugin-transform-react-jsx',
+          {
+            runtime: 'automatic'
+          }
+        ]
+      ]
     }
+    // loaderOptions: (babelLoaderOptions, {env, paths}) => {
+    //
+    //   return babelLoaderOptions;
+    // }
   },
   // typescript: {
   //   enableTypeChecking: true /* (default value)  */
