@@ -1,4 +1,4 @@
-import {Platform, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Section, DebugInstructions, LearnMoreLinks, Header} from 'app/components';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useColors} from 'app/hooks/useColors';
@@ -7,7 +7,7 @@ export const Home = (): JSX.Element => {
   const {backgroundColor} = useColors();
 
   return (
-    <View style={[styles.background, Platform.OS === 'android' && {backgroundColor}]}>
+    <View style={[styles.background, {backgroundColor}]}>
       <ScrollView style={styles.background}>
         <Header />
         <SafeAreaView>

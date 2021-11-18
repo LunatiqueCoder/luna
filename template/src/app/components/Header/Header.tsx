@@ -1,4 +1,5 @@
-import {ImageBackground, StyleSheet, Text} from 'react-native';
+import {ImageBackground, StyleSheet} from 'react-native';
+import {StyledText} from '../StyledText';
 
 export const Header = (): JSX.Element => {
   return (
@@ -8,11 +9,11 @@ export const Header = (): JSX.Element => {
       style={styles.background}
       imageStyle={styles.logo}
     >
-      <Text style={styles.text}>
+      <StyledText style={styles.text}>
         Welcome to
         {'\n'}
         React Native
-      </Text>
+      </StyledText>
     </ImageBackground>
   );
 };
