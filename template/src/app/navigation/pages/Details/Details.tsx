@@ -1,16 +1,15 @@
-import React from 'react';
-import {Text, StyleSheet, View, Platform} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useColors} from 'app/hooks/useColors';
+import {StyledText} from 'app/components';
 
 export const Details = (): JSX.Element => {
-  const {isDarkMode, backgroundColor} = useColors();
-  const isAndroid = Platform.OS === 'android';
+  const {backgroundColor, color} = useColors();
 
   return (
-    <View style={[styles.background, isAndroid && {backgroundColor}]}>
-      <Icon name='rocket' size={30} color={isDarkMode && isAndroid ? 'white' : '#900'} />
-      <Text>If you see a rocket, everything is working!</Text>
+    <View style={[styles.background, {backgroundColor}]}>
+      <Icon name='rocket' size={30} color={color} />
+      <StyledText>If you see a rocket, everything is working!</StyledText>
     </View>
   );
 };

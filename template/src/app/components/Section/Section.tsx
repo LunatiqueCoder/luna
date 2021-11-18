@@ -1,5 +1,6 @@
-import React, {ReactNode} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ReactNode} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {StyledText} from '../StyledText';
 
 interface ISection {
   children?: ReactNode;
@@ -9,8 +10,8 @@ interface ISection {
 export const Section = ({children, title}: ISection): JSX.Element => {
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>{title}</Text>
-      <Text style={styles.sectionDescription}>{children}</Text>
+      <StyledText style={styles.sectionTitle}>{title}</StyledText>
+      <StyledText style={styles.sectionDescription}>{children}</StyledText>
     </View>
   );
 };

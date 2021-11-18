@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View, Linking, Platform} from 'react-native';
+import {Fragment} from 'react';
+import {StyleSheet, TouchableOpacity, View, Linking} from 'react-native';
 import {links} from 'static/constants';
 import {useColors} from 'app/hooks/useColors';
+import {StyledText} from '../StyledText';
 
 export const LearnMoreLinks = (): JSX.Element => {
   const {isDarkMode} = useColors();
-  const isAndroid = Platform.OS === 'android';
 
   return (
     <View style={styles.container}>
@@ -17,10 +17,10 @@ export const LearnMoreLinks = (): JSX.Element => {
             onPress={() => Linking.openURL(link)}
             style={styles.linkContainer}
           >
-            <Text style={[styles.link, {color: isDarkMode && isAndroid ? '#b19cd9' : '#0645AD'}]}>
+            <StyledText style={[styles.link, {color: isDarkMode ? '#b19cd9' : '#0645AD'}]}>
               {title}
-            </Text>
-            <Text style={styles.description}>{description}</Text>
+            </StyledText>
+            <StyledText style={styles.description}>{description}</StyledText>
           </TouchableOpacity>
         </Fragment>
       ))}

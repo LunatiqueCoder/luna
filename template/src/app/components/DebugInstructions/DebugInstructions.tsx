@@ -1,24 +1,24 @@
-import React from 'react';
-import {StyleSheet, Text, Platform} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
+import {StyledText} from '../StyledText';
 
 export const DebugInstructions = Platform.select({
   web: () => (
-    <Text>
-      Press <Text style={styles.highlight}>F12</Text> in the browser to open{' '}
-      <Text style={styles.highlight}>Developer tools</Text>.
-    </Text>
+    <StyledText>
+      Press <StyledText style={styles.highlight}>F12</StyledText> in the browser to open{' '}
+      <StyledText style={styles.highlight}>Developer tools</StyledText>.
+    </StyledText>
   ),
   ios: () => (
-    <Text>
-      Press <Text style={styles.highlight}>Cmd + D</Text> in the simulator or{' '}
-      <Text style={styles.highlight}>Shake</Text> your device to open the React Native debug menu.
-    </Text>
+    <StyledText>
+      Press <StyledText style={styles.highlight}>Cmd + D</StyledText> in the simulator or{' '}
+      <StyledText style={styles.highlight}>Shake</StyledText> your device to open the React Native debug menu.
+    </StyledText>
   ),
   default: () => (
-    <Text>
-      Press <Text style={styles.highlight}>Cmd or Ctrl + M</Text> or{' '}
-      <Text style={styles.highlight}>Shake</Text> your device to open the React Native debug menu.
-    </Text>
+    <StyledText>
+      Press <StyledText style={styles.highlight}>Cmd or Ctrl + M</StyledText> or{' '}
+      <StyledText style={styles.highlight}>Shake</StyledText> your device to open the React Native debug menu.
+    </StyledText>
   )
 });
 
