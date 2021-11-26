@@ -1,7 +1,7 @@
 import {StyleSheet, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {useColors} from 'app/hooks/useColors';
-import {StyledText} from 'app/components';
+import {useColors} from '../../../hooks/useColors';
+import {StyledText} from '../../../components';
 
 export const Details = (): JSX.Element => {
   const {backgroundColor, color} = useColors();

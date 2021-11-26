@@ -1,7 +1,7 @@
 import {Fragment} from 'react';
 import {StyleSheet, TouchableOpacity, View, Linking} from 'react-native';
 import {links} from 'static/constants';
-import {useColors} from 'app/hooks/useColors';
+import {useColors} from '../..//hooks/useColors';
 import {StyledText} from '../StyledText';
 
 export const LearnMoreLinks = (): JSX.Element => {
