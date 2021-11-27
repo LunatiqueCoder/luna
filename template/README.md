@@ -7,8 +7,7 @@
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Navigation](https://reactnavigation.org/)
-- [React Native Elements](https://reactnativeelements.com/)
-- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons#readme)
 
 ## Running the app
 
