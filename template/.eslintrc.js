@@ -7,6 +7,14 @@ module.exports = {
   },
   extends: ['@react-native-community'],
   parser: '@typescript-eslint/parser',
+  overrides: [
+    {
+      files: ['*.ts?'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
