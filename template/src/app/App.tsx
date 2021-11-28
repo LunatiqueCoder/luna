@@ -135,12 +135,10 @@ const TopTabNavigator = () => {
   };
 
   return (
-    <SafeAreaProvider style={backgroundStyle}>
-      <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-        <Tab.Screen component={App} key={'Home'} name={'Home'} />
-        <Tab.Screen component={DetailsTab} key={'Details'} name={'Details'} />
-      </Tab.Navigator>
-    </SafeAreaProvider>
+    <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+      <Tab.Screen component={App} key={'Home'} name={'Home'} />
+      <Tab.Screen component={DetailsTab} key={'Details'} name={'Details'} />
+    </Tab.Navigator>
   );
 };
 
