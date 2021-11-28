@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native/Libraries/NewAppScreen/components/LearnMoreLinks.js b/node_modules/react-native/Libraries/NewAppScreen/components/LearnMoreLinks.js
+index ab69dd8..1c6d22f 100644
+--- a/node_modules/react-native/Libraries/NewAppScreen/components/LearnMoreLinks.js
++++ b/node_modules/react-native/Libraries/NewAppScreen/components/LearnMoreLinks.js
+@@ -10,7 +10,8 @@
+ 
+ import Colors from './Colors';
+ import type {Node} from 'react';
+-import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
++import {Linking} from 'react-native';
++let openURLInBrowser = (url) => Linking.openURL(url);
+ import {
+   StyleSheet,
+   Text,

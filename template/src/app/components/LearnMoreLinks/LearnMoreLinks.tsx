@@ -1,3 +1,4 @@
+
 import {Fragment} from 'react';
 import {StyleSheet, TouchableOpacity, View, Linking} from 'react-native';
 import {links} from 'static/constants';

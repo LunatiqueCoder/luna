@@ -69,7 +69,10 @@ const IconsCSS = `
 
 const style = document.createElement('style');
 style.type = 'text/css';
-if (style.styleSheet) style.styleSheet.cssText = IconsCSS;
-else style.appendChild(document.createTextNode(IconsCSS));
+if (style.styleSheet) {
+  style.styleSheet.cssText = IconsCSS;
+} else {
+  style.appendChild(document.createTextNode(IconsCSS));
+}
 
 document.head.appendChild(style);

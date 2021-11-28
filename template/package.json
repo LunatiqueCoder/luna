@@ -16,7 +16,8 @@
     "lint:eslint:fix": "eslint --fix src/",
     "lint:prettier": "prettier --check \"src/**/*.+(js|jsx|json|css|md)\"",
     "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
-    "lint:types": "tsc"
+    "lint:types": "tsc",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.6",
@@ -51,7 +52,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.0",
     "metro-react-native-babel-preset": "^0.66.2",
+    "patch-package": "^6.4.7",
     "pod-install": "^0.1.28",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.4.1",
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.2",
