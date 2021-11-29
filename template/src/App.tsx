@@ -17,7 +17,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
   // @ts-ignore -- these are not well typed, but are only example screens
-} from '../../node_modules/react-native/Libraries/NewAppScreen';
+} from '../node_modules/react-native/Libraries/NewAppScreen';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
@@ -98,7 +98,7 @@ const App = () => {
 };
 
 // *****************************************************************************************************
-// The rest of the file is to set up a react-navigation and react-native-vector-icons demonstraiton:
+// The rest of the file is to set up a react-navigation and react-native-vector-icons demonstration:
 const Tab = createMaterialTopTabNavigator();
 const TopTabNavigator = () => {
   // Used for status bar layout in react-navigation
