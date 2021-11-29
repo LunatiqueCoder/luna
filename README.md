@@ -63,10 +63,6 @@ Launches the app for IOS in debug mode.
 > If you tried the above and still get the @plaut-ro/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
 Further information can be found here: https://github.com/react-native-community/cli#about 
 
-## Advanced
-
-For an advanced start, you can head to [react-native-firebase-authentification-example](https://github.com/invertase/react-native-firebase-authentication-example) which is built on top of Luna template
-
 ## 📃 License
 
 > 📃 This project is released under the [MIT License](LICENSE). \
