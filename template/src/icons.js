@@ -1,3 +1,6 @@
+// In order to use RNVI for web, you need to consume the ttf files in your JavaScript entry point to get the bundled url and inject a style tag in your page
+// https://github.com/oblador/react-native-vector-icons#web-with-webpack
+
 import AntDesign_ttf from 'react-native-vector-icons/Fonts/AntDesign.ttf';
 import Entypo_ttf from 'react-native-vector-icons/Fonts/Entypo.ttf';
 import EvilIcons_ttf from 'react-native-vector-icons/Fonts/EvilIcons.ttf';
@@ -12,6 +15,7 @@ import Octicons_ttf from 'react-native-vector-icons/Fonts/Octicons.ttf';
 import Zocial_ttf from 'react-native-vector-icons/Fonts/Zocial.ttf';
 import SimpleLineIcons_ttf from 'react-native-vector-icons/Fonts/SimpleLineIcons.ttf';
 
+// Generate required css
 const IconsCSS = `
 @font-face {
   src: url(${AntDesign_ttf});
@@ -67,6 +71,7 @@ const IconsCSS = `
 }
 `;
 
+// Create stylesheet
 const style = document.createElement('style');
 style.type = 'text/css';
 if (style.styleSheet) {
@@ -75,4 +80,5 @@ if (style.styleSheet) {
   style.appendChild(document.createTextNode(IconsCSS));
 }
 
+// Inject stylesheet
 document.head.appendChild(style);

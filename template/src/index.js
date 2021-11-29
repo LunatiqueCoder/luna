@@ -5,7 +5,7 @@
 import {AppRegistry} from 'react-native';
 import App from './app/App';
 import {name as appName} from './app.json';
-import './utils/icons';
+import './icons';
 
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.runApplication(appName, {
