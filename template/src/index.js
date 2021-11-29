@@ -5,6 +5,8 @@
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
+
+// RNVI integration for web
 import './icons';
 
 AppRegistry.registerComponent(appName, () => App);
