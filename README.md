@@ -17,7 +17,7 @@
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [TypeScript](https://www.typescriptlang.org/)
-- Other 
+- Other
 
 ## 🎛 Setup
 > ⚠️ Please be sure your environment is set up correctly for React Native CLI. \
