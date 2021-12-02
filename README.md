@@ -10,7 +10,7 @@
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
 
 ## ⭐ Features
-> ### Please visit the [`🌒 Luna Wiki`](https://github.com/plaut-ro/luna/wiki) to see why and how we decided to implement all those features.
+> 📖 Please visit the [`🌒 Luna Wiki`](https://github.com/plaut-ro/luna/wiki) to see why and how we decided to implement all those features. \
 > 🚀 For an advanced start, you can head to [react-native-firebase-authentification-example](https://github.com/invertase/react-native-firebase-authentication-example) which is built on top of Luna template
 
 - [React Native Web](https://necolas.github.io/react-native-web/)
