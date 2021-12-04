@@ -8,6 +8,7 @@
  * @format
  */
 
+import appJson from './app.json';
 import React from 'react';
 import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {
@@ -145,7 +146,11 @@ const TopTabNavigator = () => {
 const TabbedApp = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
+      <NavigationContainer
+        documentTitle={{
+          formatter: (options, route) =>
+            `${appJson.displayName} - ${options?.title ?? route?.name}`,
+        }}>
         <TopTabNavigator />
       </NavigationContainer>
     </SafeAreaProvider>
