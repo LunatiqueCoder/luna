@@ -10,7 +10,14 @@
 
 import appJson from './app.json';
 import React from 'react';
-import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
+import {
+  Button,
+  ScrollView,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
 import {
   Colors,
   DebugInstructions,
@@ -23,6 +30,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import {useLinkTo} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -105,6 +113,9 @@ const TopTabNavigator = () => {
   // Used for status bar layout in react-navigation
   const insets = useSafeAreaInsets();
 
+  // Allows us to use web-compatible navigation
+  const linkTo = useLinkTo();
+
   // Dark mode theming items
   const isDarkMode = useColorScheme() === 'dark';
   const accentColor = isDarkMode ? Colors.ligher : Colors.darker;
@@ -125,6 +136,13 @@ const TopTabNavigator = () => {
       </Text>
     </View>
   );
+  const LinkingExample = () => {
+    return (
+      <View style={[backgroundStyle, styles.detailsContainer]}>
+        <Button title="Link to Details" onPress={() => linkTo('/details')} />
+      </View>
+    );
+  };
 
   const screenOptions = {
     tabBarStyle: {
@@ -139,6 +157,7 @@ const TopTabNavigator = () => {
     <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
       <Tab.Screen component={App} key={'Home'} name={'Home'} />
       <Tab.Screen component={DetailsTab} key={'Details'} name={'Details'} />
+      <Tab.Screen component={LinkingExample} key={'Linking'} name={'Linking'} />
     </Tab.Navigator>
   );
 };
@@ -147,6 +166,16 @@ const TabbedApp = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer
+        linking={{
+          prefixes: ['plaut-ro.github.io/luna', 'localhost'],
+          config: {
+            screens: {
+              Details: 'details',
+              Linking: 'linking',
+              Home: '*', // Fall back to if no routes match
+            },
+          },
+        }}
         documentTitle={{
           formatter: (options, route) =>
             `${appJson.displayName} - ${options?.title ?? route?.name}`,
