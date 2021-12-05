@@ -8,6 +8,7 @@
 
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
+[You can try the live example here.](https://plaut-ro.github.io/luna/)
 
 ## ⭐ Features
 > 📖 Please visit the [`🌒 Luna Wiki`](https://github.com/plaut-ro/luna/wiki) to see why and how we decided to implement all those features. \
