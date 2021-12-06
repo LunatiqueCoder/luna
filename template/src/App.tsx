@@ -27,6 +27,7 @@ import {
   // @ts-ignore -- these are not well typed, but are only example screens
 } from '../node_modules/react-native/Libraries/NewAppScreen';
 import {
+  initialWindowMetrics,
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
@@ -164,7 +165,7 @@ const TopTabNavigator = () => {
 
 const TabbedApp = () => {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <NavigationContainer
         linking={{
           prefixes: ['plaut-ro.github.io/luna', 'localhost'],
@@ -178,7 +179,11 @@ const TabbedApp = () => {
         }}
         documentTitle={{
           formatter: (options, route) =>
-            `${appJson.displayName} - ${options?.title ?? route?.name}`,
+            `${appJson.displayName}${
+              options?.title || route?.name
+                ? ' - ' + options?.title ?? route?.name
+                : ' '
+            }`,
         }}>
         <TopTabNavigator />
       </NavigationContainer>

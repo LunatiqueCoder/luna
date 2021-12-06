@@ -31,7 +31,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
     'linebreak-style': ['error', 'unix'], // https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/
-    quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'prettier/prettier': 'error',
     'react/display-name': 'off',
