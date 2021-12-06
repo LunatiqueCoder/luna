@@ -118,7 +118,7 @@ const TopTabNavigator = () => {
 
   // Dark mode theming items
   const isDarkMode = useColorScheme() === 'dark';
-  const accentColor = isDarkMode ? Colors.ligher : Colors.darker;
+  const accentColor = isDarkMode ? Colors.lighter : Colors.darker;
   const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
   const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
 
@@ -129,7 +129,7 @@ const TopTabNavigator = () => {
         style={[
           styles.sectionTitle,
           {
-            color: isDarkMode ? Colors.white : Colors.black,
+            color: accentColor,
           },
         ]}>
         If you see a rocket, react-native-vector-icons is working!
@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: 24,
   },
   sectionContainer: {
     marginTop: 32,
