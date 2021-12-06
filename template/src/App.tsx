@@ -118,7 +118,7 @@ const TopTabNavigator = () => {
 
   // Dark mode theming items
   const isDarkMode = useColorScheme() === 'dark';
-  const accentColor = isDarkMode ? Colors.ligher : Colors.darker;
+  const accentColor = isDarkMode ? Colors.lighter : Colors.darker;
   const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
   const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
 
