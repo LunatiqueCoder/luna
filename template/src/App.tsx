@@ -178,7 +178,11 @@ const TabbedApp = () => {
         }}
         documentTitle={{
           formatter: (options, route) =>
-            `${appJson.displayName} - ${options?.title ?? route?.name}`,
+            `${appJson.displayName}${
+              options?.title || route?.name
+                ? ' - ' + options?.title ?? route?.name
+                : ' '
+            }`,
         }}>
         <TopTabNavigator />
       </NavigationContainer>
