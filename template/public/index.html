@@ -7,19 +7,20 @@
     <title>React Native Web Example</title>
 
     <style>
-      /* These styles make the body full-height */
       html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
+      body,
       #root {
+        /* These styles make the root element exactly full-size */
+        flex: 1;
         display: flex;
+        max-height: 100vh;
         height: 100%;
+        width: 100%;
+
+        /* These styles disable body scrolling if you are using <ScrollView> */
+        overflow: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     </style>
   </head>
