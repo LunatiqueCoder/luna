@@ -18,7 +18,7 @@
     "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
     "lint:types": "tsc",
     "package:install": "yarn && yarn ios:pods || true",
-    "package:update": "yarn upgrade --latest && yarn add eslint@^7 && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
+    "package:update": "yarn upgrade --latest && yarn add eslint@^7 react-scripts@^4 && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -29,7 +29,7 @@
     "babel-plugin-react-native-web": "^0.17.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native": "^0.66.3",
+    "react-native": "^0.66.4",
     "react-native-gesture-handler": "^2.1.0",
     "react-native-pager-view": "^5.4.9",
     "react-native-safe-area-context": "^3.3.2",
@@ -40,17 +40,17 @@
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/runtime": "^7.12.5",
+    "@babel/core": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
     "@craco/craco": "^6.4.3",
     "@react-native-community/eslint-config": "^3.0.1",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.35",
-    "@types/react-native": "^0.66.8",
+    "@types/react-native": "^0.66.9",
     "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "eslint": "^7",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.0",
@@ -59,9 +59,9 @@
     "pod-install": "^0.1.28",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.5.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^4",
     "react-test-renderer": "^17.0.2",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.4"
   },
   "resolutions": {
     "@types/react": "^17"
