@@ -1,6 +1,6 @@
 {
   "name": "@plaut-ro/luna",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Luna is a React Native boilerplate with minimal configuration so your app can run on Android, IOS and Web concurrently.",
   "repository": "git@github.com:plaut-ro/luna.git",
   "publishConfig": {
