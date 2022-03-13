@@ -15,8 +15,8 @@
 [![GitHub](https://img.shields.io/github/license/criszz77/luna)](https://github.com/criszz77/luna/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/criszz77/luna/graphs/contributors)
 [![npm](https://img.shields.io/npm/v/@criszz77/luna)](https://www.npmjs.com/package/@criszz77/luna)
-[![GitHub issues](https://img.shields.io/github/issues/criszz77/luna)](https://github.com/criszz77/luna/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/criszz77/luna)]((https://github.com/criszz77/luna/issues?q=is%3Aissue+is%3Aclosed))
+<!-- [![GitHub issues](https://img.shields.io/github/issues/criszz77/luna)](https://github.com/criszz77/luna/issues) -->
+<!-- [![GitHub closed issues](https://img.shields.io/github/issues-closed/criszz77/luna)]((https://github.com/criszz77/luna/issues?q=is%3Aissue+is%3Aclosed)) -->
 
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
