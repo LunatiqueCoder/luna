@@ -8,10 +8,10 @@
 
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
-[You can try the live example here.](https://plaut-ro.github.io/luna/)
+[You can try the live example here.](https://criszz77.github.io/luna/)
 
 ## ⭐ Features
-> 📖 Please visit the [`🌒 Luna Wiki`](https://github.com/plaut-ro/luna/wiki) to see why and how we decided to implement all those features. \
+> 📖 Please visit the [`🌒 Luna Wiki`](https://github.com/criszz77/luna/wiki) to see why and how we decided to implement all those features. \
 > 🚀 For an advanced start, you can head to [react-native-firebase-authentification-example](https://github.com/invertase/react-native-firebase-authentication-example) which is built on top of Luna template
 
 - [React Native Web](https://necolas.github.io/react-native-web/)
@@ -24,14 +24,9 @@
 > ⚠️ Please be sure your environment is set up correctly for React Native CLI. \
 > 🔗 https://reactnative.dev/docs/environment-setup 
 
-> We're using Github packages, so you'll need the following:
-> 
-> `npm config set registry=http://registry.npmjs.org/` \
- `npm config set @plaut-ro:registry=https://npm.pkg.github.com/`
-> 
 ## 🛸 Usage
 
-<pre>npx react-native init <b>MyAppName</b> --template @plaut-ro/luna</pre>
+<pre>npx react-native init <b>MyAppName</b> --template @criszz77/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
@@ -61,7 +56,7 @@ Launches the app for IOS in debug mode.
 > - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
-> If you tried the above and still get the @plaut-ro/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
+> If you tried the above and still get the @criszz77/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
 Further information can be found here: https://github.com/react-native-community/cli#about 
 
 ## 📃 License
