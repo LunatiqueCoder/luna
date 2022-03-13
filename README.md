@@ -6,6 +6,16 @@
     >
 </p>
 
+[1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
+[2]: https://github.com/criszz77/luna/actions
+
+[![ci][1]][2]
+[![GitHub](https://img.shields.io/github/license/criszz77/luna)](https://github.com/criszz77/luna/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/criszz77/luna/graphs/contributors)
+[![npm](https://img.shields.io/npm/v/@criszz77/luna)](https://www.npmjs.com/package/@criszz77/luna)
+[![GitHub issues](https://img.shields.io/github/issues/criszz77/luna)](https://github.com/criszz77/luna/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/criszz77/luna)]((https://github.com/criszz77/luna/issues?q=is%3Aissue+is%3Aclosed))
+
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` boilerplate with minimal configuration so your app can run on `Android`, `IOS` and `Web` concurrently.
 [You can try the live example here.](https://criszz77.github.io/luna/)
@@ -63,3 +73,5 @@ Further information can be found here: https://github.com/react-native-community
 
 > 📃 This project is released under the [MIT License](LICENSE). \
 > 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
+
+
