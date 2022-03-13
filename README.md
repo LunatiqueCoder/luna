@@ -9,6 +9,8 @@
 [1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
 [2]: https://github.com/criszz77/luna/actions
 
+[<img src="https://img.shields.io/badge/-React Native-282C34?style=flat-square&logo=react&logoColor=61DAFB"/>](https://reactnative.dev/)
+[![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=flat-square&colorB=191A17)](https://necolas.github.io/react-native-web/)
 [![ci][1]][2]
 [![GitHub](https://img.shields.io/github/license/criszz77/luna)](https://github.com/criszz77/luna/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/criszz77/luna/graphs/contributors)
