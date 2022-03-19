@@ -17,5 +17,20 @@
     "react-native",
     "web",
     "react-native-web"
-  ]
+  ],
+  "devDependencies": {
+    "release-it": "^14.13.0"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    }
+  }
 }
