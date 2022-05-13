@@ -124,6 +124,7 @@ const TopTabNavigator = () => {
   const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
   const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
 
+  // eslint-disable-next-line react/no-unstable-nested-components
   const DetailsTab = () => (
     <View style={[backgroundStyle, styles.detailsContainer]}>
       <Icon name="rocket" size={30} color={'red'} />
@@ -138,6 +139,8 @@ const TopTabNavigator = () => {
       </Text>
     </View>
   );
+
+  // eslint-disable-next-line react/no-unstable-nested-components
   const LinkingExample = () => {
     return (
       <View style={[backgroundStyle, styles.detailsContainer]}>
