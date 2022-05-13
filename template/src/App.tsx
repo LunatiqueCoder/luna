@@ -9,7 +9,7 @@
  */
 
 import appJson from './app.json';
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {
   Button,
   ScrollView,
@@ -43,6 +43,7 @@ import {NavigationContainer} from '@react-navigation/native';
 // The SafeAreaView and StatusBar are commented as those characteristics are provided by react-navigation
 const Section: React.FC<{
   title: string;
+  children: ReactNode;
 }> = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
