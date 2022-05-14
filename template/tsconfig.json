@@ -4,8 +4,10 @@
     "allowJs": true,                          /* Allow javascript files to be compiled. */
     "isolatedModules": true,                  /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     "jsx": "react-jsx",                       /* Specify JSX code generation: 'preserve', 'react-native', 'react-jsx' or 'react'. */
-    "lib": [                                  /* Specify library files to be included in the compilation. */
-      "es2017"
+    "lib": [
+      /* Specify library files to be included in the compilation. */
+      "es2017",
+      "dom"
     ],
     "module": "esnext",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "target": "esnext",                       /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */

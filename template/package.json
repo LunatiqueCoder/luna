@@ -44,6 +44,7 @@
     "@babel/runtime": "^7.17.2",
     "@craco/craco": "^6.4.3",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@types/react-dom": "^18.0.4",
     "@types/react-native": "^0.67.7",
     "@types/react-native-vector-icons": "^6.4.10",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
