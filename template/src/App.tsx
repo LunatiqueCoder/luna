@@ -110,22 +110,21 @@ const App = () => {
 
 // *****************************************************************************************************
 // The rest of the file is to set up a react-navigation and react-native-vector-icons demonstration:
-const Tab = createMaterialTopTabNavigator();
-const TopTabNavigator = () => {
-  // Used for status bar layout in react-navigation
-  const insets = useSafeAreaInsets();
 
-  // Allows us to use web-compatible navigation
-  const linkTo = useLinkTo();
-
+const useStyles = () => {
   // Dark mode theming items
   const isDarkMode = useColorScheme() === 'dark';
   const accentColor = isDarkMode ? Colors.lighter : Colors.darker;
   const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
   const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
 
-  // eslint-disable-next-line react/no-unstable-nested-components
-  const DetailsTab = () => (
+  return {isDarkMode, accentColor, primaryColor, backgroundStyle};
+};
+
+const DetailsTab = () => {
+  const {isDarkMode, backgroundStyle} = useStyles();
+
+  return (
     <View style={[backgroundStyle, styles.detailsContainer]}>
       <Icon name="rocket" size={30} color={'red'} />
       <Text
@@ -139,15 +138,27 @@ const TopTabNavigator = () => {
       </Text>
     </View>
   );
+};
 
-  // eslint-disable-next-line react/no-unstable-nested-components
-  const LinkingExample = () => {
-    return (
-      <View style={[backgroundStyle, styles.detailsContainer]}>
-        <Button title="Link to Details" onPress={() => linkTo('/details')} />
-      </View>
-    );
-  };
+const LinkingExample = () => {
+  // Allows us to use web-compatible navigation
+  const linkTo = useLinkTo();
+
+  const {backgroundStyle} = useStyles();
+
+  return (
+    <View style={[backgroundStyle, styles.detailsContainer]}>
+      <Button title="Link to Details" onPress={() => linkTo('/details')} />
+    </View>
+  );
+};
+
+const Tab = createMaterialTopTabNavigator();
+const TopTabNavigator = () => {
+  // Used for status bar layout in react-navigation
+  const insets = useSafeAreaInsets();
+
+  const {isDarkMode, accentColor, primaryColor} = useStyles();
 
   const screenOptions = {
     tabBarStyle: {
