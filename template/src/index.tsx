@@ -1,7 +1,7 @@
 /**
  * When compiling for web, it will search for index.js on root/src.
  */
-
+import 'react-native-gesture-handler';
 import {createRoot} from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
