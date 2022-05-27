@@ -119,7 +119,7 @@ module.exports = {
           'process.env.NODE_ENV': JSON.stringify(
             process.env.NODE_ENV || 'development',
           ),
-          __DEV__: process.env.NODE_ENV !== 'production' || true,
+          __DEV__: process.env.NODE_ENV !== 'production',
         }),
         // plugin1,
         // [plugin2, 'append'],
