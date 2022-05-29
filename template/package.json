@@ -18,7 +18,7 @@
     "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
     "lint:types": "tsc",
     "package:install": "yarn && yarn ios:pods || true",
-    "package:update": "yarn upgrade --latest && yarn add eslint@^7 react-scripts@^4 && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
+    "package:update": "yarn upgrade --latest && yarn add eslint@^7 react-native-gesture-handler@2.3.2 && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -31,7 +31,7 @@
     "react-dom": "^18.1.0",
     "react-native": "^0.68.2",
     "react-native-gesture-handler": "2.3.2",
-    "react-native-pager-view": "^5.4.15",
+    "react-native-pager-view": "^5.4.24",
     "react-native-reanimated": "^2.8.0",
     "react-native-safe-area-context": "^4.2.5",
     "react-native-screens": "^3.13.1",
@@ -46,7 +46,7 @@
     "@babel/runtime": "^7.17.2",
     "@react-native-community/eslint-config": "^3.0.1",
     "@types/mocha": "^9.1.1",
-    "@types/react-dom": "^18.0.4",
+    "@types/react-dom": "^18.0.5",
     "@types/react-native": "^0.67.7",
     "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^18.0.0",
