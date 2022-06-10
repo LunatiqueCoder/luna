@@ -62,7 +62,7 @@ Launches the app for Android in debug mode.
 
 Launches the app for IOS in debug mode.
 
-## 🪲 Debugging
+## 🐛 Debugging
 - ### React Native CLI
 > This template only works with the new CLI. Please make sure that: 
 > - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
