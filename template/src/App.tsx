@@ -183,9 +183,8 @@ const TabbedApp = () => {
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <NavigationContainer
         linking={{
-          prefixes: ['criszz77.github.io/luna://', 'localhost://'],
+          prefixes: ['criszz77.github.io/luna', 'localhost'],
           config: {
-            initialRouteName: 'Home',
             screens: {
               Details: 'details',
               Linking: 'linking',
