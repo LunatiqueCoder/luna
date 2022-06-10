@@ -18,7 +18,7 @@
     "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
     "lint:types": "tsc",
     "package:install": "yarn && yarn ios:pods || true",
-    "package:update": "yarn upgrade --latest && yarn add eslint@^7 react-native-gesture-handler@2.3.2 && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
+    "package:update": "yarn upgrade --latest && yarn add eslint@^7 react-native-gesture-handler@2.3.2 && yarn remove @types/react && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
     "postinstall": "patch-package"
   },
   "dependencies": {
