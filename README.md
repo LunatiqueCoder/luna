@@ -36,6 +36,18 @@
 > ⚠️ Please be sure your environment is set up correctly for React Native CLI. \
 > 🔗 https://reactnative.dev/docs/environment-setup 
 
+### Deep linking
+<details>
+<summary>Configuring deep links</summary>
+
+1. Be sure to add `yourschemename` to your <b>linking prefixes</b>.
+
+2. <pre>npx uri-scheme add <b>yourschemename</b></pre>
+
+To test it, run:
+<pre>npx uri-scheme open <b>yourschemename</b>://details</pre>
+</details>
+
 ## 🛸 Usage
 
 <pre>npx react-native init <b>MyAppName</b> --template @criszz77/luna</pre>
