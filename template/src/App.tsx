@@ -28,7 +28,6 @@ import {
   ReloadInstructions,
   // @ts-ignore -- these are not well typed, but are only example screens
 } from '../node_modules/react-native/Libraries/NewAppScreen';
-// @ts-ignore
 import {isMobile} from 'react-device-detect';
 import {
   initialWindowMetrics,
