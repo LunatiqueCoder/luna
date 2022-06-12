@@ -12,6 +12,8 @@ import appJson from './app.json';
 import React, {ReactNode} from 'react';
 import {
   Button,
+  Linking,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -26,6 +28,7 @@ import {
   ReloadInstructions,
   // @ts-ignore -- these are not well typed, but are only example screens
 } from '../node_modules/react-native/Libraries/NewAppScreen';
+import {isMobile} from 'react-device-detect';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
@@ -179,17 +182,39 @@ const TopTabNavigator = () => {
 };
 
 const TabbedApp = () => {
+  Linking.getInitialURL().then(async url => {
+    if (url && isMobile && Platform.OS === 'web') {
+      const interceptURL = url
+        .replace('http://localhost:3000/', 'localhost://')
+        .replace('http://10.0.2.2:3000/', 'localhost://')
+        .replace('http://172.20.10.3:3000/', 'localhost://')
+        .replace('https://criszz77.github.io/', 'localhost://');
+
+      const supported = await Linking.canOpenURL(interceptURL);
+
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(interceptURL);
+        console.log(url);
+      } else {
+        // await Linking.openURL(url);
+        // Alert.alert(`Don't know how to open this URL: ${url}`);
+      }
+    }
+  });
+
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <NavigationContainer
         linking={{
-          prefixes: ['criszz77.github.io/luna://', 'localhost://'],
+          prefixes: ['https://criszz77.github.io/', 'localhost://'],
           config: {
             initialRouteName: 'Home',
             screens: {
               Details: 'details',
               Linking: 'linking',
-              Home: '*', // Fall back to if no routes match
+              Home: 'home',
             },
           },
         }}

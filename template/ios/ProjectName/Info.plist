@@ -74,7 +74,12 @@
 		<array>
 			<dict>
 				<key>CFBundleURLSchemes</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>CFBundleURLSchemes</key>
 				<array>
+					<string>localhost</string>
 				</array>
 			</dict>
 		</array>

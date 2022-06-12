@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - deep-linking
 jobs:
   deploy:
     runs-on: ubuntu-latest
