@@ -28,7 +28,6 @@
 
 - [React Native Web](https://necolas.github.io/react-native-web/)
 - [React Navigation](https://reactnavigation.org/)
-- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [TypeScript](https://www.typescriptlang.org/)
 - Other
 
@@ -42,7 +41,7 @@
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
-### `npm run web`
+### `yarn web`
 
 Runs the app in the web.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -50,15 +49,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run start`
+### `yarn start`
 
 Start Metro Bundler.
 
-### `npm run android`
+### `yarn android`
 
 Launches the app for Android in debug mode.
 
-### `npm run ios`
+### `yarn ios`
 
 Launches the app for IOS in debug mode.
 

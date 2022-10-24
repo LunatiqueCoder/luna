@@ -33,7 +33,6 @@ import {
 } from 'react-native-safe-area-context';
 import {useLinkTo} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -109,7 +108,6 @@ const App = () => {
 };
 
 // *****************************************************************************************************
-// The rest of the file is to set up a react-navigation and react-native-vector-icons demonstration:
 
 const useStyles = () => {
   // Dark mode theming items
@@ -121,25 +119,6 @@ const useStyles = () => {
   return {isDarkMode, accentColor, primaryColor, backgroundStyle};
 };
 
-const DetailsTab = () => {
-  const {isDarkMode, backgroundStyle} = useStyles();
-
-  return (
-    <View style={[backgroundStyle, styles.detailsContainer]}>
-      <Icon name="rocket" size={30} color={'red'} />
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        If you see a rocket, react-native-vector-icons is working!
-      </Text>
-    </View>
-  );
-};
-
 const LinkingExample = () => {
   // Allows us to use web-compatible navigation
   const linkTo = useLinkTo();
@@ -148,7 +127,7 @@ const LinkingExample = () => {
 
   return (
     <View style={[backgroundStyle, styles.detailsContainer]}>
-      <Button title="Link to Details" onPress={() => linkTo('/details')} />
+      <Button title="Link to Details" onPress={() => linkTo('/home')} />
     </View>
   );
 };
@@ -172,7 +151,6 @@ const TopTabNavigator = () => {
   return (
     <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
       <Tab.Screen component={App} key={'Home'} name={'Home'} />
-      <Tab.Screen component={DetailsTab} key={'Details'} name={'Details'} />
       <Tab.Screen component={LinkingExample} key={'Linking'} name={'Linking'} />
     </Tab.Navigator>
   );

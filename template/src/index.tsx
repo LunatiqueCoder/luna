@@ -6,9 +6,6 @@ import {createRoot} from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// RNVI integration for web
-import './icons';
-
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement!);
 root.render(<App />);
