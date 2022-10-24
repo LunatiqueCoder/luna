@@ -9,7 +9,7 @@
  */
 
 import appJson from './app.json';
-import React, {ReactNode} from 'react';
+import {ReactNode} from 'react';
 import {
   Button,
   ScrollView,
