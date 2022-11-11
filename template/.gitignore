@@ -62,3 +62,7 @@ buck-out/
 
 # Misc
 build/
+
+.next
+.expo
+dist/

@@ -9,129 +9,17 @@
  */
 
 import appJson from './app.json';
-import {ReactNode} from 'react';
-import {
-  Button,
-  ScrollView,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-  // @ts-ignore -- these are not well typed, but are only example screens
-} from '../node_modules/react-native/Libraries/NewAppScreen';
+
 import {
   initialWindowMetrics,
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import {useLinkTo} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-
 import {NavigationContainer} from '@react-navigation/native';
-
-// *****************************************************************************************************
-// This pasted directly in from this file upstream
-// https://github.com/react-native-community/react-native-template-typescript/blob/main/template/App.tsx
-// The SafeAreaView and StatusBar are commented as those characteristics are provided by react-navigation
-const Section: React.FC<{
-  title: string;
-  children: ReactNode;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
-
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    // <SafeAreaView style={backgroundStyle}> // <-- provided by react-navigation
-    // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} /> // <-- provided by react-navigation
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={backgroundStyle}>
-      <Header />
-      <View
-        style={{
-          backgroundColor: isDarkMode ? Colors.black : Colors.white,
-        }}>
-        <Section title="Step One">
-          Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-          screen and then come back to see your edits.
-        </Section>
-        <Section title="See Your Changes">
-          <ReloadInstructions />
-        </Section>
-        <Section title="Debug">
-          <DebugInstructions />
-        </Section>
-        <Section title="Learn More">
-          Read the docs to discover what to do next:
-        </Section>
-        <LearnMoreLinks />
-      </View>
-    </ScrollView>
-    // </SafeAreaView> // <-- provided by react-navigation
-  );
-};
-
-// *****************************************************************************************************
-
-const useStyles = () => {
-  // Dark mode theming items
-  const isDarkMode = useColorScheme() === 'dark';
-  const accentColor = isDarkMode ? Colors.lighter : Colors.darker;
-  const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
-  const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
-
-  return {isDarkMode, accentColor, primaryColor, backgroundStyle};
-};
-
-const LinkingExample = () => {
-  // Allows us to use web-compatible navigation
-  const linkTo = useLinkTo();
-
-  const {backgroundStyle} = useStyles();
-
-  return (
-    <View style={[backgroundStyle, styles.detailsContainer]}>
-      <Button title="Link to Details" onPress={() => linkTo('/home')} />
-    </View>
-  );
-};
-
+import {useStyles} from './hooks';
+import {Home} from './features/Home';
+import {Linking} from './features/Linking';
 const Tab = createMaterialTopTabNavigator();
 const TopTabNavigator = () => {
   // Used for status bar layout in react-navigation
@@ -144,14 +32,14 @@ const TopTabNavigator = () => {
       backgroundColor: primaryColor,
       paddingTop: insets.top,
     },
-    tabBarLabelStyle: {color: isDarkMode ? Colors.light : Colors.dark},
+    tabBarLabelStyle: {color: isDarkMode ? 'white' : 'black'},
     tabBarIndicatorStyle: {backgroundColor: accentColor},
   };
 
   return (
     <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-      <Tab.Screen component={App} key={'Home'} name={'Home'} />
-      <Tab.Screen component={LinkingExample} key={'Linking'} name={'Linking'} />
+      <Tab.Screen component={Home} key={'home'} name={'home'} />
+      <Tab.Screen component={Linking} key={'home'} name={'linking'} />
     </Tab.Navigator>
   );
 };
@@ -164,9 +52,8 @@ const TabbedApp = () => {
           prefixes: ['criszz77.github.io/luna', 'localhost'],
           config: {
             screens: {
-              Details: 'details',
-              Linking: 'linking',
-              Home: '*', // Fall back to if no routes match
+              linking: '/linking',
+              home: '',
             },
           },
         }}
@@ -183,30 +70,5 @@ const TabbedApp = () => {
     </SafeAreaProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  detailsContainer: {
-    flex: 1,
-    alignContent: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default TabbedApp;
