@@ -77,32 +77,6 @@ const config: CracoConfig = {
 
       addBeforeLoader(webpackConfig, loaderByName('url-loader'), imageLoader);
 
-      // // https://github.com/facebook/create-react-app/pull/12021#issuecomment-1157617824
-      // const cjsLoader = {
-      //   test: /\.(cjs)$/,
-      //   // exclude: /@babel(?:\/|\\{1,2})runtime/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       babelrc: false,
-      //       configFile: false,
-      //       compact: false,
-      //       presets: [
-      //         [
-      //           require.resolve('babel-preset-react-app/dependencies'),
-      //           {helpers: true},
-      //         ],
-      //       ],
-      //       cacheDirectory: true,
-      //       cacheCompression: false,
-      //       sourceMaps: true,
-      //       inputSourceMap: true,
-      //     },
-      //   },
-      // };
-      //
-      // addBeforeLoader(webpackConfig, loaderByName('babel-loader'), cjsLoader);
-
       return webpackConfig;
     },
   },
