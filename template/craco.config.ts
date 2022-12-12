@@ -15,13 +15,13 @@ const Dotenv = require('dotenv-webpack');
 
 const config: CracoConfig = {
   babel: {
-    // presets: [
-    //   // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
-    //   [
-    //     'module:metro-react-native-babel-preset',
-    //     {useTransformReactJSXExperimental: true},
-    //   ],
-    // ],
+    presets: [
+      // The 'metro-react-native-babel-preset' preset is recommended to match React Native's packager
+      [
+        'module:metro-react-native-babel-preset',
+        {useTransformReactJSXExperimental: true},
+      ],
+    ],
 
     plugins: [
       // https://necolas.github.io/react-native-web/docs/setup/#package-optimization
