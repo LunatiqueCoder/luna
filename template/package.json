@@ -85,7 +85,7 @@
       "node"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|@react-native|react-native-vector-icons|solito)"
+      "node_modules/(?!react-native|@react-native|react-native-vector-icons|solito|@react-navigation)"
     ]
   },
   "browserslist": {
