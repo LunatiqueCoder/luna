@@ -24,8 +24,6 @@
     "next-lint": "next lint"
   },
   "dependencies": {
-    "@expo/config": "^7.0.3",
-    "@expo/next-adapter": "^4.0.13",
     "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/material-top-tabs": "^6.3.0",
     "@react-navigation/native": "^6.0.13",
