@@ -7,6 +7,7 @@ module.exports = function (api) {
       (caller.name === 'babel-loader' ||
         caller.name === 'next-babel-turbo-loader'),
   );
+
   return {
     presets: [
       // Only use next in the browser, it'll break your native project
