@@ -20,7 +20,7 @@ export const Home = () => {
       <View style={styles.pressableContainer}>
         <Pressable
           href=""
-          title="🌒  Luna Wiki"
+          title="🌒 Luna Wiki"
           onPress={() => {
             Linking.openURL('https://github.com/criszz77/luna/wiki');
           }}
