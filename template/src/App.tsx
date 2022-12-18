@@ -73,7 +73,7 @@ const DrawerApp = () => {
   const {backgroundStyle} = useStyles();
 
   return (
-    <SolitoImageProvider nextJsURL="http://localhost:3000">
+    <SolitoImageProvider nextJsURL="https://luna-git-nextjs-criszz77.vercel.app/">
       <SafeAreaProvider
         initialMetrics={initialWindowMetrics}
         style={backgroundStyle}>
