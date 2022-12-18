@@ -1,3 +1,10 @@
 import {Home} from '../features/Home';
+import {Layout} from '../components';
 
-export default Home;
+const HomePage = () => (
+  <Layout>
+    <Home />
+  </Layout>
+);
+
+export default HomePage;

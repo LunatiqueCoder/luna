@@ -1,74 +1,107 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import appJson from './app.json';
-
+import {Text, StyleSheet} from 'react-native';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
-  useSafeAreaInsets,
+  SafeAreaView,
 } from 'react-native-safe-area-context';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {NavigationContainer} from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerHeaderProps,
+  DrawerNavigationOptions,
+  DrawerToggleButton,
+} from '@react-navigation/drawer';
+import {SolitoImageProvider} from 'solito/image';
 import {useStyles} from './hooks';
 import {Home} from './features/Home';
 import {Linking} from './features/Linking';
-const Tab = createMaterialTopTabNavigator();
+import {Logo} from './components/Logo';
+
+const Drawer = createDrawerNavigator();
+
+const Header = ({route}: DrawerHeaderProps) => {
+  const {
+    accentColor,
+    backgroundStyle: {backgroundColor},
+  } = useStyles();
+
+  return (
+    <SafeAreaView edges={['top']} style={[styles.container, {backgroundColor}]}>
+      <DrawerToggleButton tintColor={accentColor} />
+      <Logo style={styles.logo} />
+      <Text style={[styles.routeName, {color: accentColor}]}>
+        {route.name.toUpperCase()}
+      </Text>
+    </SafeAreaView>
+  );
+};
+
+const screenOptions: DrawerNavigationOptions = {
+  header: props => <Header {...props} />,
+};
+
 const TopTabNavigator = () => {
-  // Used for status bar layout in react-navigation
-  const insets = useSafeAreaInsets();
+  return (
+    <Drawer.Navigator initialRouteName="home" screenOptions={screenOptions}>
+      <Drawer.Screen
+        component={Home}
+        key={'home'}
+        name={'home'}
+        options={{title: 'Home'}}
+      />
+      <Drawer.Screen
+        component={Linking}
+        key={'linking'}
+        name={'linking'}
+        options={{title: 'Linking'}}
+      />
+    </Drawer.Navigator>
+  );
+};
 
-  const {isDarkMode, accentColor, primaryColor} = useStyles();
-
-  const screenOptions = {
-    tabBarStyle: {
-      backgroundColor: primaryColor,
-      paddingTop: insets.top,
+const linking = {
+  prefixes: ['criszz77.github.io/luna', 'localhost'],
+  config: {
+    screens: {
+      linking: '/linking',
+      home: '',
     },
-    tabBarLabelStyle: {color: isDarkMode ? 'white' : 'black'},
-    tabBarIndicatorStyle: {backgroundColor: accentColor},
-  };
+  },
+};
+
+const DrawerApp = () => {
+  const {backgroundStyle} = useStyles();
 
   return (
-    <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-      <Tab.Screen component={Home} key={'home'} name={'home'} />
-      <Tab.Screen component={Linking} key={'home'} name={'linking'} />
-    </Tab.Navigator>
+    <SolitoImageProvider nextJsURL="http://localhost:3000">
+      <SafeAreaProvider
+        initialMetrics={initialWindowMetrics}
+        style={backgroundStyle}>
+        <NavigationContainer linking={linking}>
+          <TopTabNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </SolitoImageProvider>
   );
 };
 
-const TabbedApp = () => {
-  return (
-    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-      <NavigationContainer
-        linking={{
-          prefixes: ['criszz77.github.io/luna', 'localhost'],
-          config: {
-            screens: {
-              linking: '/linking',
-              home: '',
-            },
-          },
-        }}
-        documentTitle={{
-          formatter: (options, route) =>
-            `${appJson.displayName}${
-              options?.title || route?.name
-                ? ' - ' + options?.title ?? route?.name
-                : ' '
-            }`,
-        }}>
-        <TopTabNavigator />
-      </NavigationContainer>
-    </SafeAreaProvider>
-  );
-};
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingBottom: 5,
+  },
+  logo: {
+    width: 50,
+    height: 50,
+    flex: 1,
+  },
+  routeName: {
+    flex: 1,
+    textAlign: 'right',
+    marginRight: 15,
+  },
+});
 
-export default TabbedApp;
+export default DrawerApp;

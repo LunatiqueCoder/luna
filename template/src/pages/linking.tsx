@@ -1,3 +1,10 @@
 import {Linking} from '../features/Linking';
+import {Layout} from '../components';
 
-export default Linking;
+const LinkingPage = () => (
+  <Layout>
+    <Linking />
+  </Layout>
+);
+
+export default LinkingPage;

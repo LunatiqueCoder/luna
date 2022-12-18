@@ -1,73 +1,88 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, View, Text, Linking} from 'react-native';
+import {SolitoImage} from 'solito/image';
+import {Colors} from '../../hooks';
+import Pressable from '../../components/Pressable';
 
-import React, {ReactNode} from 'react';
-import {useStyles} from '../../hooks';
-import {Link} from 'solito/link';
-
-// *****************************************************************************************************
-// This pasted directly in from this file upstream
-// https://github.com/react-native-community/react-native-template-typescript/blob/main/template/App.tsx
-// The SafeAreaView and StatusBar are commented as those characteristics are provided by react-navigation
-const Section: React.FC<{
-  title: string;
-  children?: ReactNode;
-}> = ({children, title}) => {
+export const Home = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text style={[styles.sectionTitle]}>{title}</Text>
-      <Text style={[styles.sectionDescription, {}]}>{children}</Text>
+    <View style={styles.container}>
+      <SolitoImage
+        src={'/images/luna_cover.jpeg'}
+        alt={'logo'}
+        fill
+        resizeMode={'cover'}
+      />
+      <View style={styles.headerContainer}>
+        <View style={[styles.headerTextContainer, styles.shadow]}>
+          <Text style={styles.headerText}>Welcome to React Native</Text>
+        </View>
+      </View>
+      <View style={styles.pressableContainer}>
+        <Pressable
+          href=""
+          title="🌒 Luna Wiki"
+          onPress={() => {
+            Linking.openURL('https://github.com/criszz77/luna/wiki');
+          }}
+          pressableStyle={[
+            styles.pressable,
+            styles.shadow,
+            {backgroundColor: `${Colors.benitoite}80`},
+          ]}
+          labelStyle={[styles.labelStyle]}
+        />
+        <Pressable
+          title="Next steps"
+          href="/linking"
+          pressableStyle={styles.pressable}
+          labelStyle={styles.labelStyle}
+        />
+      </View>
     </View>
   );
 };
 
-export const Home = () => {
-  const {backgroundStyle, isDarkMode} = useStyles();
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text>Home page!</Text>
-      <Link href={'/linking'}>
-        <Text>Go to Linking screen.</Text>
-      </Link>
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={{flex: 1}}>
-        <View>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes" />
-          <Section title="Debug" />
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    alignItems: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  pressableContainer: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  sectionDescription: {
-    marginTop: 8,
+  pressable: {
+    marginHorizontal: 20,
+    height: 50,
+    justifyContent: 'center',
+  },
+  labelStyle: {
     fontSize: 18,
-    fontWeight: '400',
   },
-  highlight: {
-    fontWeight: '700',
+  headerContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  headerTextContainer: {
+    backgroundColor: `${Colors.light}90`,
+    padding: 20,
+  },
+  headerText: {
+    color: Colors.darker,
+    fontSize: 30,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+  shadow: {
+    shadowColor: Colors.white,
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+
+    elevation: 24,
   },
 });

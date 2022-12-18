@@ -1,7 +1,10 @@
 const withFonts = require('next-fonts');
 const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
-const withTM = require('next-transpile-modules')(['solito']);
+const withTM = require('next-transpile-modules')([
+  'solito',
+  'react-native-safe-area-context',
+]);
 const {Configuration, DefinePlugin} = require('webpack');
 
 /** @type {import('next').NextConfig} */
