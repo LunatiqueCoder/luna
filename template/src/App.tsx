@@ -1,4 +1,4 @@
-import {Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, StatusBar} from 'react-native';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
@@ -70,13 +70,17 @@ const linking = {
 };
 
 const DrawerApp = () => {
-  const {backgroundStyle} = useStyles();
+  const {backgroundStyle, isDarkMode} = useStyles();
 
   return (
     <SolitoImageProvider nextJsURL="https://luna-git-nextjs-criszz77.vercel.app/">
       <SafeAreaProvider
         initialMetrics={initialWindowMetrics}
         style={backgroundStyle}>
+        <StatusBar
+          backgroundColor={backgroundStyle.backgroundColor}
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        />
         <NavigationContainer linking={linking}>
           <TopTabNavigator />
         </NavigationContainer>

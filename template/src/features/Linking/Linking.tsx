@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import {ScrollView, StyleSheet, Text, View, StatusBar} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useStyles} from '../../hooks';
 
 // *****************************************************************************************************
@@ -24,14 +24,10 @@ const Section = ({children, title}: ISection) => {
 };
 
 export const Linking = () => {
-  const {backgroundStyle, isDarkMode} = useStyles();
+  const {backgroundStyle} = useStyles();
 
   return (
     <View style={backgroundStyle}>
-      <StatusBar
-        backgroundColor={backgroundStyle.backgroundColor}
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      />
       <ScrollView contentContainerStyle={styles.contentContainerStyle}>
         <Section title="Step One">
           Edit <Text style={styles.highlight}>src/features/Home/Home.tsx</Text>{' '}
