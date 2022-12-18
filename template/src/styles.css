@@ -1,10 +1,18 @@
 /*https://necolas.github.io/react-native-web/docs/setup/#root-element*/
 
 /* These styles make the body full-height */
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
 /* These styles disable body scrolling if you are using <ScrollView> */
-body { overflow: hidden; }
+body {
+  overflow: hidden;
+}
 
 /* These styles make the root element full-height */
-#__next { display:flex; height:100%;}
+#__next {
+  display: flex;
+  height: 100%;
+}
