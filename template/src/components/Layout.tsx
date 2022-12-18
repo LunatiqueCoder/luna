@@ -44,7 +44,7 @@ export const Layout = ({children}: ILayout) => {
   return (
     <View style={backgroundStyle}>
       <View style={styles.container}>
-        <Logo width={75} height={75} style={styles.logo} />
+        <Logo width={175} height={175} style={styles.logo} />
         <View style={styles.navContainer}>
           <NavButton href="/" title="Home" />
           <NavButton href="/linking" title="Linking" />
@@ -59,8 +59,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
-    paddingRight: '65%',
+    justifyContent: 'space-between',
     flex: 1,
   },
   childrenContainer: {
@@ -69,11 +68,11 @@ const styles = StyleSheet.create({
   navContainer: {
     flexDirection: 'row',
     flex: 1,
-    justifyContent: 'space-around',
+    justifyContent: 'flex-end',
   },
   logo: {
-    flex: 2,
     paddingTop: 20,
+    marginLeft: 20,
   },
   emptyView: {
     flex: 4,
