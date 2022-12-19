@@ -39,6 +39,7 @@
     "react-native-screens": "^3.18.2",
     "react-native-tab-view": "^3.3.4",
     "react-native-web": "^0.18.10",
+    "sharp": "^0.31.2",
     "solito": "^2.1.2"
   },
   "devDependencies": {
