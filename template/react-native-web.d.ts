@@ -1,9 +1,13 @@
 // This file is adapted from: https://github.com/necolas/react-native-web/issues/832#issuecomment-1027393818
 
-import {MouseEvent, UIEvent, FocusEvent} from 'react';
+import {MouseEvent, UIEvent, FocusEvent, ReactNode} from 'react';
 export * from 'react-native';
 
 declare module 'react-native' {
+  namespace AppRegistry {
+    function getApplication(string): {getStyleElement: () => ReactNode};
+  }
+
   // The following list is sourced from:
   // - https://github.com/necolas/react-native-web/blob/0.17.5/packages/react-native-web/src/types/styles.js#L76
   type CursorValue =
