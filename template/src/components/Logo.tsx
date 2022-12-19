@@ -14,6 +14,7 @@ export const Logo = ({height, width, style}: ILogo) => {
 
   return (
     <SolitoImage
+      priority
       src={`/images/logo_${colorScheme}.png`}
       alt="logo"
       width={width}

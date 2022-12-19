@@ -9,6 +9,7 @@ import {
 } from 'next/document';
 import {AppRegistry} from 'react-native';
 import config from '../app.json';
+
 // Force Next-generated DOM elements to fill their parent's height
 const normalizeNextElements = `
   #__next {
@@ -37,7 +38,10 @@ MyDocument.getInitialProps = async ({
   const {getStyleElement} = AppRegistry.getApplication(config.name);
   const page = await renderPage();
   const styles = [
-    <style dangerouslySetInnerHTML={{__html: normalizeNextElements}} />,
+    <style
+      key={'rn-web-style-tag'}
+      dangerouslySetInnerHTML={{__html: normalizeNextElements}}
+    />,
     getStyleElement(),
   ];
   return {...page, styles: Children.toArray(styles)};
