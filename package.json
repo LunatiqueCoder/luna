@@ -1,6 +1,6 @@
 {
   "name": "@criszz77/luna",
-  "version": "2.0.0-0",
+  "version": "2.0.0-1",
   "description": "Luna is a React Native boilerplate with minimal configuration so your app can run on Android, IOS and Web concurrently.",
   "repository": "git@github.com:criszz77/luna.git",
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
