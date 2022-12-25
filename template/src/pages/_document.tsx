@@ -21,7 +21,7 @@ const normalizeNextElements = `
 
 function MyDocument() {
   return (
-    <Html style={{height: '100%'}}>
+    <Html lang="en" style={{height: '100%'}}>
       <Head />
       <body style={{height: '100%', overflow: 'hidden'}}>
         <Main />
