@@ -1,5 +1,4 @@
 import type {AppProps} from 'next/app';
-import '../styles.css';
 import Head from 'next/head';
 import {ReactNode, useEffect, useState} from 'react';
 import {View, StyleSheet} from 'react-native';
