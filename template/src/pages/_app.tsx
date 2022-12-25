@@ -1,26 +1,20 @@
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
-import {ReactNode, useEffect, useState} from 'react';
+import {ReactNode} from 'react';
 import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {
+  initialWindowMetrics,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
 
-// Workaround to rehydrate wtih user system color scheme adapted from: https://brianlovin.com/writing/adding-dark-mode-with-next-js
 const Providers = ({children}: {children: ReactNode}) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <GestureHandlerRootView
-      key={mounted ? 0 : 1} // prevents ssr mismatched dark mode
-      style={[
-        styles.container,
-        !mounted && styles.hidden, // prevents ssr flash for mismatched dark mode
-      ]}>
-      {children}
-    </GestureHandlerRootView>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <GestureHandlerRootView style={styles.container}>
+        {children}
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 };
 
@@ -39,11 +33,9 @@ export default function MyApp({Component, pageProps}: AppProps) {
     </>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  hidden: {
-    visibility: 'hidden',
   },
 });
