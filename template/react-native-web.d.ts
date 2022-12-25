@@ -180,6 +180,7 @@ declare module 'react-native' {
     display?: 'flex' | 'inline-flex' | 'none';
     outlineWidth?: number | string;
     boxShadow?: string;
+    visibility?: 'hidden' | 'visible' | 'collapse' | 'initial';
   }
 
   interface TextStyle {

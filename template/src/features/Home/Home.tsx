@@ -7,6 +7,7 @@ export const Home = () => {
   return (
     <View style={styles.container}>
       <SolitoImage
+        priority
         src={'/images/luna_cover.jpeg'}
         alt={'logo'}
         fill

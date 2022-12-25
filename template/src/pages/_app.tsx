@@ -1,6 +1,28 @@
 import type {AppProps} from 'next/app';
 import '../styles.css';
 import Head from 'next/head';
+import {ReactNode, useEffect, useState} from 'react';
+import {View, StyleSheet} from 'react-native';
+
+// Workaround to rehydrate wtih user system color scheme adapted from: https://brianlovin.com/writing/adding-dark-mode-with-next-js
+const Providers = ({children}: {children: ReactNode}) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
+    <View
+      key={mounted ? 0 : 1} // prevents ssr mismatched dark mode
+      style={[
+        styles.container,
+        !mounted && styles.hidden, // prevents ssr flash for mismatched dark mode
+      ]}>
+      {children}
+    </View>
+  );
+};
 
 export default function MyApp({Component, pageProps}: AppProps) {
   return (
@@ -11,7 +33,17 @@ export default function MyApp({Component, pageProps}: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/*<link rel="icon" href="/favicon.ico" />*/}
       </Head>
-      <Component {...pageProps} />
+      <Providers>
+        <Component {...pageProps} />
+      </Providers>
     </>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  hidden: {
+    visibility: 'hidden',
+  },
+});
