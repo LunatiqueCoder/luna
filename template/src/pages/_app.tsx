@@ -3,14 +3,29 @@ import Head from 'next/head';
 import {ReactNode} from 'react';
 import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {
-  initialWindowMetrics,
-  SafeAreaProvider,
-} from 'react-native-safe-area-context';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+
+const insets = {
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+};
+
+const frame = {
+  x: 0,
+  y: 0,
+  width: 0,
+  height: 0,
+};
+
+const initialMetrics = {insets, frame};
 
 const Providers = ({children}: {children: ReactNode}) => {
   return (
-    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+    <SafeAreaProvider
+      initialMetrics={initialMetrics} //https://github.com/th3rdwave/react-native-safe-area-context#web-ssr
+    >
       <GestureHandlerRootView style={styles.container}>
         {children}
       </GestureHandlerRootView>
