@@ -1,7 +1,8 @@
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {ReactNode, useEffect, useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 // Workaround to rehydrate wtih user system color scheme adapted from: https://brianlovin.com/writing/adding-dark-mode-with-next-js
 const Providers = ({children}: {children: ReactNode}) => {
@@ -12,14 +13,14 @@ const Providers = ({children}: {children: ReactNode}) => {
   }, []);
 
   return (
-    <View
+    <GestureHandlerRootView
       key={mounted ? 0 : 1} // prevents ssr mismatched dark mode
       style={[
         styles.container,
         !mounted && styles.hidden, // prevents ssr flash for mismatched dark mode
       ]}>
       {children}
-    </View>
+    </GestureHandlerRootView>
   );
 };
 

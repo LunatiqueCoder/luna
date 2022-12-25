@@ -4,6 +4,8 @@ const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules')([
   'solito',
   'react-native-safe-area-context',
+  'react-native-reanimated',
+  'react-native-gesture-handler',
 ]);
 const {Configuration, DefinePlugin} = require('webpack');
 

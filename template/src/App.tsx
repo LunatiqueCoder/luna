@@ -1,4 +1,5 @@
 import {Text, StyleSheet, StatusBar} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
@@ -26,7 +27,9 @@ const Header = ({route}: DrawerHeaderProps) => {
   } = useStyles();
 
   return (
-    <SafeAreaView edges={['top']} style={[styles.container, {backgroundColor}]}>
+    <SafeAreaView
+      edges={['top']}
+      style={[styles.headerContainer, {backgroundColor}]}>
       <DrawerToggleButton tintColor={accentColor} />
       <Logo style={styles.logo} />
       <Text style={[styles.routeName, {color: accentColor}]}>
@@ -73,17 +76,19 @@ const DrawerApp = () => {
   const {backgroundStyle, isDarkMode} = useStyles();
 
   return (
-    <SolitoImageProvider nextJsURL="https://luna-git-nextjs-criszz77.vercel.app/">
+    <SolitoImageProvider nextJsURL="https://luna-gamma.vercel.app/">
       <SafeAreaProvider
         initialMetrics={initialWindowMetrics}
         style={backgroundStyle}>
-        <StatusBar
-          backgroundColor={backgroundStyle.backgroundColor}
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        />
-        <NavigationContainer linking={linking}>
-          <TopTabNavigator />
-        </NavigationContainer>
+        <GestureHandlerRootView style={styles.container}>
+          <StatusBar
+            backgroundColor={backgroundStyle.backgroundColor}
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          />
+          <NavigationContainer linking={linking}>
+            <TopTabNavigator />
+          </NavigationContainer>
+        </GestureHandlerRootView>
       </SafeAreaProvider>
     </SolitoImageProvider>
   );
@@ -91,6 +96,9 @@ const DrawerApp = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
