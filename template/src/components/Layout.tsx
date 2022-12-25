@@ -27,7 +27,7 @@ const NavButton = ({href, title}: INavButton) => {
       labelStyle={[
         styles.pressableLabel,
         routeIsFocused && {
-          color: Colors.light,
+          color: Colors.white,
         },
       ]}
     />
@@ -92,6 +92,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   selectedPressable: {
-    backgroundColor: Colors.sereneBlue,
+    backgroundColor: '#107896',
   },
 });
