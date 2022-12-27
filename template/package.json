@@ -28,7 +28,7 @@
     "@react-navigation/native": "^6.1.1",
     "babel-plugin-react-native-web": "^0.18.10",
     "eslint-config-next": "^13.0.7",
-    "next": "^13.0.7",
+    "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "^0.70.6",
