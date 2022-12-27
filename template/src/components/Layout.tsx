@@ -50,7 +50,7 @@ export const Layout = ({children}: ILayout) => {
           <NavButton href="/linking" title="Linking" />
         </View>
       </View>
-      <View style={styles.childrenContainer}> {children}</View>
+      <View style={styles.childrenContainer}>{children}</View>
     </View>
   );
 };
