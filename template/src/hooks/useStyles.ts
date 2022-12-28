@@ -1,4 +1,4 @@
-import {useColorScheme} from 'react-native';
+import {useColorScheme} from './useColorScheme';
 
 export const Colors = {
   white: '#FFF',
@@ -14,7 +14,9 @@ export const Colors = {
 
 export const useStyles = () => {
   // Dark mode theming items
-  const isDarkMode = useColorScheme() === 'dark';
+  const colorScheme = useColorScheme();
+  const isDarkMode = colorScheme === 'dark';
+
   const accentColor = isDarkMode ? Colors.light : Colors.dark;
   const primaryColor = isDarkMode ? Colors.dark : Colors.light;
 
@@ -23,5 +25,11 @@ export const useStyles = () => {
     flex: 1,
   };
 
-  return {isDarkMode, accentColor, primaryColor, backgroundStyle};
+  return {
+    isDarkMode,
+    accentColor,
+    primaryColor,
+    backgroundStyle,
+    colorScheme,
+  };
 };

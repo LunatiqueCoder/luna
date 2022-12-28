@@ -13,7 +13,7 @@ interface INavButton {
 const NavButton = ({href, title}: INavButton) => {
   const {pathname} = useRouter();
   const {primaryColor} = useStyles();
-  const routeIsFocused = pathname === href;
+  const routeIsFocused = (pathname.replace('/[M]', '') || '/') === href;
 
   return (
     <Pressable

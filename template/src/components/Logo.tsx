@@ -1,7 +1,8 @@
 import React from 'react';
 import {SolitoImage} from 'solito/image';
-import {StyleProp, useColorScheme} from 'react-native';
+import {StyleProp} from 'react-native';
 import {ImageStyle} from 'react-native-fast-image';
+import {useColorScheme} from '../hooks';
 
 interface ILogo {
   width?: number;
