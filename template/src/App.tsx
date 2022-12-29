@@ -31,7 +31,7 @@ const Header = ({route}: DrawerHeaderProps) => {
       edges={['top']}
       style={[styles.headerContainer, {backgroundColor}]}>
       <DrawerToggleButton tintColor={accentColor} />
-      <Logo style={styles.logo} />
+      <Logo containerStyle={styles.logoContainer} style={styles.logo} />
       <Text style={[styles.routeName, {color: accentColor}]}>
         {route.name.toUpperCase()}
       </Text>
@@ -105,9 +105,12 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   logo: {
-    width: 50,
-    height: 50,
     flex: 1,
+  },
+  logoContainer: {
+    flex: 1,
+    height: 50,
+    width: 50,
   },
   routeName: {
     flex: 1,
