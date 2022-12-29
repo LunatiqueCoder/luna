@@ -8,7 +8,7 @@
     "ios:pods": "npx pod-install",
     "start": "react-native start",
     "web": "next dev",
-    "build-web": "next build",
+    "build": "next build",
     "next-start": "next start",
     "test:all": "yarn test:jest",
     "test:jest": "jest",

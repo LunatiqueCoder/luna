@@ -10,6 +10,7 @@ export const Colors = {
   lightBlue: '#add8e6',
   sereneBlue: '#1292B4',
   benitoite: '#007DAA',
+  blue: '#0000FF',
 };
 
 export const useStyles = () => {

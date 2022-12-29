@@ -71,7 +71,7 @@ const links = [
 ];
 
 export const LinkList = () => {
-  const {primaryColor, accentColor} = useStyles();
+  const {primaryColor, accentColor, isDarkMode} = useStyles();
 
   return (
     <View style={styles.container}>
@@ -89,7 +89,13 @@ export const LinkList = () => {
             accessibilityRole="button"
             onPress={() => RNLinking.openURL(link)}
             style={styles.linkContainer}>
-            <Text style={styles.link}>{title}</Text>
+            <Text
+              style={[
+                styles.link,
+                {color: isDarkMode ? Colors.lightBlue : Colors.blue},
+              ]}>
+              {title}
+            </Text>
             <Text
               style={[
                 styles.description,
@@ -228,7 +234,6 @@ const styles = StyleSheet.create({
     flex: 2,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.lightBlue,
   },
   description: {
     flex: 3,
