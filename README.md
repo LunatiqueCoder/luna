@@ -77,11 +77,15 @@ Launches the app for IOS in debug mode.
 ## 🪲 Debugging
 - ### React Native CLI
 > This template only works with the new CLI. Please make sure that: 
-> - [your environment is set up correctly for React Native CLI.](https://reactnative.dev/docs/environment-setup)
+> - [your environment is set up correctly for React Native CLI.][26]
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
 > If you tried the above and still get the @criszz77/luna: Not found error, please try adding the `--ignore-existing` flag to force npx to ignore any locally installed versions of the CLI and use the latest.
 Further information can be found here: https://github.com/react-native-community/cli#about 
+
+- ### React Native Web
+> [React Dev Tools][27] supports inspecting and editing of React Native styles. It’s recommended that you rely more on React Dev Tools and live/hot-reloading rather than inspecting and editing the **DOM** directly.
+
 
 ## 📃 License
 
@@ -114,3 +118,5 @@ Further information can be found here: https://github.com/react-native-community
 [23]: https://solito.dev/
 [24]: https://www.typescriptlang.org/
 [25]: http://localhost:3000
+[26]: https://reactnative.dev/docs/environment-setup
+[27]: https://beta.reactjs.org/learn/react-developer-tools
