@@ -40,7 +40,8 @@
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
-### `yarn web`
+- ### 💻   **Web**
+#### `yarn web`
 
 Runs the app in the web in development mode.\
 Open [http://localhost:3000][25] to view it in the browser.
@@ -48,27 +49,28 @@ Open [http://localhost:3000][25] to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn build`
+#### `yarn build`
 
 Builds the web app for production with Next.js. 
 
-### `yarn next-start`
+#### `yarn next-start`
 
 Runs the web app in production mode with Next.js. \
 Open [http://localhost:3000][25] to view it in the browser. \
 **Note:** You have to run `yarn build` first!
 
+- ### 📱  **Native**
 
-### `yarn start`
+#### `yarn start`
 
 Start Metro Bundler.
 
 
-### `yarn android`
+#### `yarn android`
 
 Launches the app for Android in debug mode.
 
-### `yarn ios`
+#### `yarn ios`
 
 Launches the app for IOS in debug mode.
 
