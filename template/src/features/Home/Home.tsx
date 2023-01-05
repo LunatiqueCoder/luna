@@ -1,89 +1,96 @@
-import {StyleSheet, View, Text, Linking} from 'react-native';
-import {SolitoImage} from 'solito/image';
-import {Colors} from '../../hooks';
-import Pressable from '../../components/Pressable';
+import {
+  Anchor,
+  Button,
+  H1,
+  Paragraph,
+  Separator,
+  Sheet,
+  XStack,
+  YStack,
+} from 'tamagui';
+import {ChevronDown, ChevronUp} from '@tamagui/lucide-icons';
+import React, {useState} from 'react';
+import {useLink} from 'solito/link';
 
-export const Home = () => {
+export function Home() {
+  const linkProps = useLink({
+    href: '/user/nate',
+  });
+
   return (
-    <View style={styles.container}>
-      <SolitoImage
-        priority
-        src={'/images/luna_cover.jpeg'}
-        alt={'logo'}
-        fill
-        resizeMode={'cover'}
-      />
-      <View style={styles.headerContainer}>
-        <View style={[styles.headerTextContainer, styles.shadow]}>
-          <Text style={styles.headerText}>Welcome to React Native</Text>
-        </View>
-      </View>
-      <View style={styles.pressableContainer}>
-        <Pressable
-          href=""
-          title="🌒 Luna Wiki"
-          onPress={() => {
-            Linking.openURL('https://github.com/criszz77/luna/wiki');
-          }}
-          pressableStyle={[
-            styles.pressable,
-            styles.shadow,
-            {backgroundColor: `${Colors.benitoite}80`},
-          ]}
-          labelStyle={[styles.labelStyle]}
-        />
-        <Pressable
-          title="Next steps"
-          href="/linking"
-          pressableStyle={styles.pressable}
-          labelStyle={styles.labelStyle}
-        />
-      </View>
-    </View>
+    <YStack f={1} jc="center" ai="center" p="$4" space theme={'blue'}>
+      <YStack space="$4" maw={600}>
+        <H1 ta="center" fontFamily={'$silkscreen'}>
+          Welcome to Tamagui.
+        </H1>
+        <Paragraph ta="center">
+          Here&apos;s a basic starter to show navigating from one screen to
+          another. This screen uses the same code on Next.js and React Native.
+        </Paragraph>
+
+        <Separator />
+        <Paragraph ta="center">
+          Made by{' '}
+          <Anchor
+            color="$color12"
+            href="https://twitter.com/natebirdman"
+            target="_blank">
+            @natebirdman
+          </Anchor>
+          ,{' '}
+          <Anchor
+            color="$color12"
+            href="https://github.com/tamagui/tamagui"
+            target="_blank"
+            rel="noreferrer">
+            give it a ⭐️
+          </Anchor>
+        </Paragraph>
+      </YStack>
+
+      <XStack>
+        <Button {...linkProps}>Link to user</Button>
+      </XStack>
+
+      <SheetDemo />
+    </YStack>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  pressableContainer: {
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  pressable: {
-    marginHorizontal: 20,
-    height: 50,
-    justifyContent: 'center',
-  },
-  labelStyle: {
-    fontSize: 18,
-  },
-  headerContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-  headerTextContainer: {
-    backgroundColor: `${Colors.light}90`,
-    padding: 20,
-  },
-  headerText: {
-    color: Colors.darker,
-    fontSize: 30,
-    fontWeight: '800',
-    textAlign: 'center',
-  },
-  shadow: {
-    shadowColor: Colors.white,
-    shadowOffset: {
-      width: 0,
-      height: 12,
-    },
-    shadowOpacity: 0.58,
-    shadowRadius: 16.0,
+function SheetDemo() {
+  const [open, setOpen] = useState(false);
+  const [position, setPosition] = useState(0);
+  return (
+    <>
+      <Button
+        size="$6"
+        icon={open ? ChevronDown : ChevronUp}
+        circular
+        onPress={() => setOpen(x => !x)}
+      />
+      <Sheet
+        modal
+        open={open}
+        onOpenChange={setOpen}
+        snapPoints={[80]}
+        position={position}
+        onPositionChange={setPosition}
+        dismissOnSnapToBottom>
+        <Sheet.Overlay />
+        <Sheet.Frame ai="center" jc="center">
+          <Sheet.Handle />
+          <H1 ta="center">HAHAHAHAHAHAH.</H1>
 
-    elevation: 24,
-  },
-});
+          <Button
+            size="$6"
+            circular
+            icon={ChevronDown}
+            onPress={() => {
+              setOpen(false);
+            }}
+          />
+        </Sheet.Frame>
+      </Sheet>
+    </>
+  );
+}

@@ -1,40 +1,41 @@
-import {Text, StyleSheet, StatusBar} from 'react-native';
+import {StyleSheet, StatusBar, useColorScheme} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {TamaguiProvider, useTheme, Stack, H4} from 'tamagui';
+import {SolitoImageProvider} from 'solito/image';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  DefaultTheme,
+  NavigationContainer,
+  DarkTheme,
+} from '@react-navigation/native';
 import {
   createDrawerNavigator,
-  DrawerHeaderProps,
-  DrawerNavigationOptions,
   DrawerToggleButton,
+  DrawerNavigationOptions,
+  DrawerHeaderProps,
 } from '@react-navigation/drawer';
-import {SolitoImageProvider} from 'solito/image';
-import {useStyles} from './hooks';
 import {Home} from './features/Home';
-import {Linking} from './features/Linking';
 import {Logo} from './components/Logo';
+import config from '../tamagui';
 
 const Drawer = createDrawerNavigator();
 
 const Header = ({route}: DrawerHeaderProps) => {
-  const {
-    accentColor,
-    backgroundStyle: {backgroundColor},
-  } = useStyles();
+  const theme = useTheme();
 
   return (
-    <SafeAreaView
-      edges={['top']}
-      style={[styles.headerContainer, {backgroundColor}]}>
-      <DrawerToggleButton tintColor={accentColor} />
-      <Logo containerStyle={styles.logoContainer} style={styles.logo} />
-      <Text style={[styles.routeName, {color: accentColor}]}>
-        {route.name.toUpperCase()}
-      </Text>
+    <SafeAreaView style={styles.headerContainer}>
+      <DrawerToggleButton tintColor={theme.color?.val} />
+      <Stack ai="center" jc={'space-between'} fd={'row'} f={1}>
+        <Logo />
+        <H4 fontFamily={'$silkscreen'} pr={'$7'}>
+          {route.name.toUpperCase()}
+        </H4>
+      </Stack>
     </SafeAreaView>
   );
 };
@@ -52,12 +53,6 @@ const TopTabNavigator = () => {
         name={'home'}
         options={{title: 'Home'}}
       />
-      <Drawer.Screen
-        component={Linking}
-        key={'linking'}
-        name={'linking'}
-        options={{title: 'Linking'}}
-      />
     </Drawer.Navigator>
   );
 };
@@ -66,30 +61,40 @@ const linking = {
   prefixes: ['criszz77.github.io/luna', 'localhost'],
   config: {
     screens: {
-      linking: '/linking',
       home: '',
     },
   },
 };
 
-const DrawerApp = () => {
-  const {backgroundStyle, isDarkMode} = useStyles();
+const InnerApp = () => {
+  const colorScheme = useColorScheme() || 'light';
+  const isDarkMode = colorScheme === 'dark';
+  const theme = useTheme();
 
   return (
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <GestureHandlerRootView style={styles.container}>
+        <StatusBar
+          backgroundColor={theme.borderColor?.val}
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        />
+        <NavigationContainer
+          theme={isDarkMode ? DarkTheme : DefaultTheme}
+          linking={linking}>
+          <TopTabNavigator />
+        </NavigationContainer>
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
+  );
+};
+
+const App = () => {
+  const theme = useColorScheme() || 'light';
+  return (
     <SolitoImageProvider nextJsURL="https://luna-gamma.vercel.app/">
-      <SafeAreaProvider
-        initialMetrics={initialWindowMetrics}
-        style={backgroundStyle}>
-        <GestureHandlerRootView style={styles.container}>
-          <StatusBar
-            backgroundColor={backgroundStyle.backgroundColor}
-            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-          />
-          <NavigationContainer linking={linking}>
-            <TopTabNavigator />
-          </NavigationContainer>
-        </GestureHandlerRootView>
-      </SafeAreaProvider>
+      <TamaguiProvider config={config} disableInjectCSS defaultTheme={theme}>
+        <InnerApp />
+      </TamaguiProvider>
     </SolitoImageProvider>
   );
 };
@@ -101,8 +106,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingBottom: 5,
   },
   logo: {
     flex: 1,
@@ -119,4 +122,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DrawerApp;
+export default App;

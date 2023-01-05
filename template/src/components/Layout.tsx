@@ -1,97 +1,51 @@
-import {ReactNode} from 'react';
-import {View, StyleSheet} from 'react-native';
-import {useRouter} from 'next/router';
+import {ReactNode, useEffect, useState} from 'react';
+import {isClient, XStack, YStack} from 'tamagui';
 import {Logo} from './Logo';
-import {Colors, useStyles} from '../hooks';
-import Pressable from './Pressable';
-
-interface INavButton {
-  href: string;
-  title: string;
-}
-
-const NavButton = ({href, title}: INavButton) => {
-  const {pathname} = useRouter();
-  const {primaryColor} = useStyles();
-  const routeIsFocused = (pathname.replace('/[M]', '') || '/') === href;
-
-  return (
-    <Pressable
-      href={href}
-      title={title}
-      hoverTextStyle={{color: primaryColor}}
-      pressableStyle={[
-        styles.pressable,
-        routeIsFocused && styles.selectedPressable,
-      ]}
-      labelStyle={[
-        styles.pressableLabel,
-        routeIsFocused && {
-          color: Colors.white,
-        },
-      ]}
-    />
-  );
-};
-
 interface ILayout {
   children: ReactNode;
 }
 
 export const Layout = ({children}: ILayout) => {
-  const {backgroundStyle} = useStyles();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (isClient) {
+      const onScroll = () => {
+        setIsScrolled(window.scrollY > 30);
+      };
+      window.addEventListener('scroll', onScroll, {passive: true});
+      return () => {
+        window.removeEventListener('scroll', onScroll);
+      };
+    }
+  }, []);
 
   return (
-    <View style={backgroundStyle}>
-      <View style={styles.container}>
-        <Logo width={175} height={175} style={styles.logo} />
-        <View style={styles.navContainer}>
-          <NavButton href="/" title="Home" />
-          <NavButton href="/linking" title="Linking" />
-        </View>
-      </View>
-      <View style={styles.childrenContainer}>{children}</View>
-    </View>
+    <YStack f={1}>
+      <XStack
+        // className={`ease-out all ms200 blur-light ${
+        //   isScrolled ? 'hover-highlights' : ''
+        // }`}
+        bbc="$borderColor"
+        zi={50000}
+        // @ts-ignore
+        pos="fixed"
+        top={0}
+        my={isScrolled ? -2 : 0}
+        left={0}
+        right={0}
+        elevation={isScrolled ? 0 : '$1'}
+        py={isScrolled ? '$0' : '$2'}>
+        <YStack
+          // className="all ease-in ms200"
+          o={isScrolled ? 0.9 : 0}
+          // fullscreen
+          bc="$background"
+        />
+        <Logo />
+      </XStack>
+      <YStack height={54} w="100%" />
+      {children}
+    </YStack>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flex: 1,
-  },
-  childrenContainer: {
-    flex: 5,
-  },
-  navContainer: {
-    flexDirection: 'row',
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-  logo: {
-    paddingTop: 20,
-    marginLeft: 20,
-  },
-  emptyView: {
-    flex: 4,
-  },
-  labelContainer: {
-    borderBottomWidth: 1,
-    height: 75,
-    width: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  pressable: {
-    minWidth: 100,
-    marginHorizontal: 10,
-  },
-  pressableLabel: {
-    textAlign: 'center',
-  },
-  selectedPressable: {
-    backgroundColor: '#107896',
-  },
-});

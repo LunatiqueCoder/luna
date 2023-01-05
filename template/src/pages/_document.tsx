@@ -9,6 +9,7 @@ import {
 } from 'next/document';
 import {AppRegistry} from 'react-native';
 import config from '../../app.json';
+import Tamagui from '../../tamagui';
 
 // Force Next-generated DOM elements to fill their parent's height
 const normalizeNextElements = `
@@ -38,11 +39,13 @@ MyDocument.getInitialProps = async ({
   const {getStyleElement} = AppRegistry.getApplication(config.name);
   const page = await renderPage();
   const styles = [
-    <style
-      key={'rn-web-style-tag'}
-      dangerouslySetInnerHTML={{__html: normalizeNextElements}}
-    />,
     getStyleElement(),
+    <style
+      key={'tamagui-rn-web-style-tag'}
+      dangerouslySetInnerHTML={{
+        __html: normalizeNextElements + Tamagui.getCSS(),
+      }}
+    />,
   ];
   return {...page, styles: Children.toArray(styles)};
 };
