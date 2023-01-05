@@ -21,6 +21,7 @@ import {
 import {Home} from './features/Home';
 import {Logo} from './components/Logo';
 import config from '../tamagui';
+import {UserDetailScreen} from './features/DetailScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -53,6 +54,13 @@ const TopTabNavigator = () => {
         name={'home'}
         options={{title: 'Home'}}
       />
+      <Drawer.Screen
+        name="user-detail"
+        component={UserDetailScreen}
+        options={{
+          title: 'User',
+        }}
+      />
     </Drawer.Navigator>
   );
 };
@@ -62,6 +70,7 @@ const linking = {
   config: {
     screens: {
       home: '',
+      'user-detail': 'user/:id',
     },
   },
 };
