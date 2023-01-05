@@ -20,7 +20,8 @@
     "lint:types": "tsc",
     "package:install": "yarn && yarn ios:pods || true",
     "package:update": "yarn upgrade --latest && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
-    "next-lint": "next lint"
+    "next-lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.8",
@@ -63,7 +64,9 @@
     "eslint-plugin-react": "^7.31.11",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.73.6",
+    "patch-package": "^6.5.1",
     "pod-install": "^0.1.38",
+    "postinstall": "^0.8.0",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.8.1",
     "react-test-renderer": "^18.2.0",

@@ -17,10 +17,11 @@ const colorSchemeHeaders = [
 
 /** @type {import('next').NextConfig.transpilePackages} */
 const transpilePackages = [
-  'solito',
+  'react-native',
+  'react-native-gesture-handler',
   'react-native-safe-area-context',
   'react-native-reanimated',
-  'react-native-gesture-handler',
+  'solito',
 ];
 
 /** @type {import('next').NextConfig.headers} */
@@ -78,7 +79,6 @@ const webpack = (config, options) => {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   transpilePackages,
   headers,
   webpack,
