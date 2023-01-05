@@ -29,6 +29,7 @@
     "@react-navigation/native": "^6.1.1",
     "babel-plugin-react-native-web": "^0.18.10",
     "expo": "^47.0.0",
+    "expo-linear-gradient": "~12.0.1",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
