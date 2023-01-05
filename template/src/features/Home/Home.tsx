@@ -79,7 +79,7 @@ function SheetDemo() {
         <Sheet.Overlay />
         <Sheet.Frame ai="center" jc="center">
           <Sheet.Handle />
-          <H1 ta="center">HAHAHAHAHAHAH.</H1>
+          <H1 ta="center">What is Lorem Ipsum?</H1>
 
           <Button
             size="$6"
