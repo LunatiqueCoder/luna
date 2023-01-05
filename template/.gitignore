@@ -20,6 +20,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+/ios/.xcode.env.local
+
 
 # Android/IntelliJ
 #
@@ -62,7 +64,7 @@ buck-out/
 
 # Misc
 build/
-
+.tamagui
 .next
 .expo
 dist/
