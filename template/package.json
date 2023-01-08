@@ -11,7 +11,7 @@
     "build": "next build",
     "next-start": "next start",
     "test:all": "yarn test:jest",
-    "test:jest": "mv babel.config.native.js babel.config.js && jest; mv babel.config.js babel.config.native.js",
+    "test:jest": "jest",
     "lint:all": "yarn lint:eslint && yarn lint:prettier && yarn lint:types",
     "lint:eslint": "eslint src/",
     "lint:eslint:fix": "eslint --fix src/",
@@ -87,6 +87,13 @@
       "json",
       "node"
     ],
+    "transform": {
+      "\\.[jt]sx?$": [
+        "babel-jest",
+        {"configFile": "./babel.config.native.js"}
+      ]
+    },
+    "roots": ["../"],
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|@react-native|react-native-vector-icons|solito|@react-navigation)"
     ]
