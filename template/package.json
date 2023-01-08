@@ -15,8 +15,8 @@
     "lint:all": "yarn lint:eslint && yarn lint:prettier && yarn lint:types",
     "lint:eslint": "eslint src/",
     "lint:eslint:fix": "eslint --fix src/",
-    "lint:prettier": "prettier --check \"src/**/*.+(js|jsx|json|css|md)\"",
-    "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|json|css|md)\"",
+    "lint:prettier": "prettier --check \"src/**/*.+(js|jsx|ts|tsx|json|css|md)\"",
+    "lint:prettier:fix": "prettier --write \"src/**/*.+(js|jsx|ts|tsx|json|css|md)\"",
     "lint:types": "tsc",
     "package:install": "yarn && yarn ios:pods || true",
     "package:update": "yarn upgrade --latest && cd ios && rm -f Podfile.lock && yarn ios:pods && pod update",
@@ -100,6 +100,13 @@
       "json",
       "node"
     ],
+    "transform": {
+      "\\.[jt]sx?$": [
+        "babel-jest",
+        {"configFile": "./babel.config.native.js"}
+      ]
+    },
+    "roots": ["../"],
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|@react-native|react-native-vector-icons|solito|@react-navigation)"
     ]
