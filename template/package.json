@@ -38,6 +38,7 @@
     "@tamagui/theme-base": "^1.0.3",
     "expo": "^47.0.0",
     "expo-linear-gradient": "~12.0.1",
+    "jest-expo": "^47.0.1",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -91,7 +92,7 @@
     "@typescript-eslint/parser": "5.37.0"
   },
   "jest": {
-    "preset": "react-native",
+    "preset": "jest-expo",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -103,12 +104,13 @@
     "transform": {
       "\\.[jt]sx?$": [
         "babel-jest",
-        {"configFile": "./babel.config.native.js"}
+        {
+          "configFile": "./babel.config.native.js"
+        }
       ]
     },
-    "roots": ["../"],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|@react-native|react-native-vector-icons|solito|@react-navigation)"
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg|solito)"
     ]
   },
   "browserslist": {
