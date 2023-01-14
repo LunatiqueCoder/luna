@@ -1,6 +1,7 @@
 import {ReactNode, useEffect, useState} from 'react';
 import {isClient, XStack, YStack} from 'tamagui';
 import {Logo} from './Logo';
+
 interface ILayout {
   children: ReactNode;
 }
