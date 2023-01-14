@@ -26,6 +26,7 @@
 
 - [React Native Web][22]
 - [Next.js][6]
+- [Tamagui][29]
 - [Solito][23]
 - [TypeScript][24]
 - Other
@@ -93,6 +94,12 @@ Further information can be found here: https://github.com/react-native-community
 > 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
 
 
+## 🏆 Sponsors
+
+[<img style="max-width:10%;width:10%" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" alt="JetBrains Black Box Logo logo.">][28]
+
+
+
 [1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
 [2]: https://github.com/criszz77/luna/actions
 [3]: https://img.shields.io/badge/-React%20Native-282C34?style=flat-square&logo=react&logoColor=61DAFB
@@ -103,7 +110,7 @@ Further information can be found here: https://github.com/react-native-community
 [8]: https://necolas.github.io/react-native-web/
 [9]: https://img.shields.io/github/license/criszz77/luna
 [10]: https://github.com/criszz77/luna/blob/master/LICENSE
-[11]: https://img.shields.io/maintenance/yes/2022
+[11]: https://img.shields.io/maintenance/yes/2023
 [12]: https://github.com/criszz77/luna/graphs/contributors
 [13]: https://img.shields.io/npm/v/@criszz77/luna
 [14]: https://www.npmjs.com/package/@criszz77/luna
@@ -120,3 +127,5 @@ Further information can be found here: https://github.com/react-native-community
 [25]: http://localhost:3000
 [26]: https://reactnative.dev/docs/environment-setup
 [27]: https://beta.reactjs.org/learn/react-developer-tools
+[28]: https://www.jetbrains.com/
+[29]: https://tamagui.dev
