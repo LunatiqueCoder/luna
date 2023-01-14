@@ -9,7 +9,6 @@ module.exports = {
     ],
   ],
   plugins: [
-    'react-native-reanimated/plugin',
     [
       '@babel/plugin-transform-react-jsx',
       {
@@ -30,5 +29,6 @@ module.exports = {
         include: 'TAMAGUI_TARGET',
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 };
