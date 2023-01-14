@@ -6,6 +6,7 @@
 
 - [React Native Web][22]
 - [Next.js][6]
+- [Tamagui][29]
 - [Solito][23]
 - [TypeScript][24]
 - Other
@@ -59,3 +60,4 @@ Launches the app for IOS in debug mode.
 [25]: http://localhost:3000
 [26]: https://reactnative.dev/docs/environment-setup
 [27]: https://beta.reactjs.org/learn/react-developer-tools
+[29]: https://tamagui.dev
