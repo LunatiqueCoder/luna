@@ -11,20 +11,11 @@ import {AppRegistry} from 'react-native';
 import config from '../../app.json';
 import Tamagui from '../../tamagui';
 
-// Force Next-generated DOM elements to fill their parent's height
-const normalizeNextElements = `
-  #__next {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-`;
-
 function MyDocument() {
   return (
-    <Html lang="en" style={{height: '100%'}}>
+    <Html lang="en">
       <Head />
-      <body style={{height: '100%', overflow: 'hidden'}}>
+      <body>
         <Main />
         <NextScript />
       </body>
@@ -43,7 +34,7 @@ MyDocument.getInitialProps = async ({
     <style
       key={'tamagui-rn-web-style-tag'}
       dangerouslySetInnerHTML={{
-        __html: normalizeNextElements + Tamagui.getCSS(),
+        __html: Tamagui.getCSS(),
       }}
     />,
   ];
