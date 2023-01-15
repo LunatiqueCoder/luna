@@ -102,7 +102,9 @@ Further information can be found here: https://github.com/react-native-community
 [2]: https://github.com/criszz77/luna/actions
 [3]: https://img.shields.io/badge/-React%20Native-282C34?style=flat-square&logo=react&logoColor=61DAFB
 [4]: https://reactnative.dev/
-[5]: https://img.shields.io/badge/-Next.js-282C34?style=flat-square&logo=vercel&logoColor=white&labelColor=black&color=black
+
+[5]: https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white 
+<!-- Other Next.js badge with Vercel icon: https://img.shields.io/badge/-Next.js-282C34?style=flat-square&logo=vercel&logoColor=white&labelColor=black&color=black -->
 [6]: https://nextjs.org/
 [7]: https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=flat-square&colorB=191A17
 [8]: https://necolas.github.io/react-native-web/
