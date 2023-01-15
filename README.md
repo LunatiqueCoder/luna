@@ -26,8 +26,8 @@
 
 - [React Native Web][22]
 - [Next.js][6]
-- [Tamagui][29]
 - [Solito][23]
+- [Tamagui][29]
 - [TypeScript][24]
 - Other
 
