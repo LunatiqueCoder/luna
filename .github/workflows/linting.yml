@@ -1,4 +1,4 @@
-name: Code Quality Checks
+name: Lint
 
 on:
   workflow_dispatch:
