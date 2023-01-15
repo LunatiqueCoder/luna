@@ -98,7 +98,6 @@ Further information can be found here: https://github.com/react-native-community
 
 [<img style="max-width:15%;width:15%" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" alt="JetBrains Black Box Logo logo.">][28]
 
-
 [1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
 [2]: https://github.com/criszz77/luna/actions
 [3]: https://img.shields.io/badge/-React%20Native-282C34?style=flat-square&logo=react&logoColor=61DAFB
