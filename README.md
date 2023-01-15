@@ -96,7 +96,7 @@ Further information can be found here: https://github.com/react-native-community
 
 ## 🏆 Sponsors
 
-[<img style="max-width:10%;width:10%" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" alt="JetBrains Black Box Logo logo.">][28]
+[<img style="max-width:15%;width:15%" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" alt="JetBrains Black Box Logo logo.">][28]
 
 
 
