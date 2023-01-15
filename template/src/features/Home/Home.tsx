@@ -63,6 +63,7 @@ function SheetDemo() {
   return (
     <>
       <Button
+        aria-label={'toggle-sheet-button'}
         size="$6"
         icon={open ? ChevronDown : ChevronUp}
         circular
@@ -85,6 +86,7 @@ function SheetDemo() {
             size="$6"
             circular
             icon={ChevronDown}
+            aria-label={'close-sheet-button'}
             onPress={() => {
               setOpen(false);
             }}
