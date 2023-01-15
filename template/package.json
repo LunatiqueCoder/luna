@@ -11,7 +11,7 @@
     "build": "next build",
     "next-start": "next start",
     "test:all": "yarn test:jest",
-    "test:jest": "jest --detectOpenHandles",
+    "test:jest": "jest --watchAll=false",
     "lint:all": "yarn lint:eslint && yarn lint:prettier && yarn lint:types",
     "lint:eslint": "eslint src/",
     "lint:eslint:fix": "eslint --fix src/",
