@@ -92,7 +92,6 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "testEnvironment": "node",
     "moduleFileExtensions": [
       "ts",
       "tsx",
