@@ -91,7 +91,7 @@ Further information can be found here: https://github.com/react-native-community
 ## 📃 License
 
 > 📃 This project is released under the [MIT License](LICENSE). \
-> 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
+> 💻 By [contributing](CONTRIBUTING.md), you agree that your contributions will be licensed under its MIT License.
 
 
 ## 🏆 Sponsors
