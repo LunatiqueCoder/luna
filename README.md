@@ -9,6 +9,7 @@
 [![reactnative][3]][4]
 [![nextjs][5]][6]
 [![platforms][7]][8]
+[![GitHub top language][31]][32]
 [![ci][1]][2]
 [![GitHub][9]][10]
 [![Maintenance][11]][12]
@@ -130,3 +131,5 @@ Further information can be found here: https://github.com/react-native-community
 [28]: https://www.jetbrains.com/
 [29]: https://tamagui.dev
 [30]: https://github.com/npm/npx#description
+[31]: https://img.shields.io/github/languages/top/criszz77/luna
+[32]: https://github.com/criszz77/luna/search?l=typescript
