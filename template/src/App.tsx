@@ -1,212 +1,134 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import appJson from './app.json';
-import {ReactNode} from 'react';
-import {
-  Button,
-  ScrollView,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-  // @ts-ignore -- these are not well typed, but are only example screens
-} from '../node_modules/react-native/Libraries/NewAppScreen';
+import {StyleSheet, StatusBar, useColorScheme} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {TamaguiProvider, useTheme, Stack, H4} from 'tamagui';
+import {SolitoImageProvider} from 'solito/image';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
-  useSafeAreaInsets,
+  SafeAreaView,
 } from 'react-native-safe-area-context';
-import {useLinkTo} from '@react-navigation/native';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {
+  DefaultTheme,
+  NavigationContainer,
+  DarkTheme,
+} from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerToggleButton,
+  DrawerNavigationOptions,
+  DrawerHeaderProps,
+} from '@react-navigation/drawer';
+import {Home} from './features/Home';
+import {Logo} from './components/Logo';
+import config from '../tamagui';
+import {UserDetailScreen} from './features/DetailScreen';
 
-import {NavigationContainer} from '@react-navigation/native';
+const Drawer = createDrawerNavigator();
 
-// *****************************************************************************************************
-// This pasted directly in from this file upstream
-// https://github.com/react-native-community/react-native-template-typescript/blob/main/template/App.tsx
-// The SafeAreaView and StatusBar are commented as those characteristics are provided by react-navigation
-const Section: React.FC<{
-  title: string;
-  children: ReactNode;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
+const Header = ({route}: DrawerHeaderProps) => {
+  const theme = useTheme();
+
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
+    <SafeAreaView style={styles.headerContainer}>
+      <DrawerToggleButton tintColor={theme.color?.val} />
+      <Stack ai="center" jc={'space-between'} fd={'row'} f={1}>
+        <Logo />
+        <H4 fontFamily={'$silkscreen'} pr={'$7'}>
+          {route.name.toUpperCase()}
+        </H4>
+      </Stack>
+    </SafeAreaView>
   );
 };
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    // <SafeAreaView style={backgroundStyle}> // <-- provided by react-navigation
-    // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} /> // <-- provided by react-navigation
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={backgroundStyle}>
-      <Header />
-      <View
-        style={{
-          backgroundColor: isDarkMode ? Colors.black : Colors.white,
-        }}>
-        <Section title="Step One">
-          Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-          screen and then come back to see your edits.
-        </Section>
-        <Section title="See Your Changes">
-          <ReloadInstructions />
-        </Section>
-        <Section title="Debug">
-          <DebugInstructions />
-        </Section>
-        <Section title="Learn More">
-          Read the docs to discover what to do next:
-        </Section>
-        <LearnMoreLinks />
-      </View>
-    </ScrollView>
-    // </SafeAreaView> // <-- provided by react-navigation
-  );
+const screenOptions: DrawerNavigationOptions = {
+  header: props => <Header {...props} />,
 };
 
-// *****************************************************************************************************
-
-const useStyles = () => {
-  // Dark mode theming items
-  const isDarkMode = useColorScheme() === 'dark';
-  const accentColor = isDarkMode ? Colors.lighter : Colors.darker;
-  const primaryColor = isDarkMode ? Colors.darker : Colors.lighter;
-  const backgroundStyle = {backgroundColor: primaryColor, flex: 1};
-
-  return {isDarkMode, accentColor, primaryColor, backgroundStyle};
-};
-
-const LinkingExample = () => {
-  // Allows us to use web-compatible navigation
-  const linkTo = useLinkTo();
-
-  const {backgroundStyle} = useStyles();
-
-  return (
-    <View style={[backgroundStyle, styles.detailsContainer]}>
-      <Button title="Link to Details" onPress={() => linkTo('/home')} />
-    </View>
-  );
-};
-
-const Tab = createMaterialTopTabNavigator();
 const TopTabNavigator = () => {
-  // Used for status bar layout in react-navigation
-  const insets = useSafeAreaInsets();
-
-  const {isDarkMode, accentColor, primaryColor} = useStyles();
-
-  const screenOptions = {
-    tabBarStyle: {
-      backgroundColor: primaryColor,
-      paddingTop: insets.top,
-    },
-    tabBarLabelStyle: {color: isDarkMode ? Colors.light : Colors.dark},
-    tabBarIndicatorStyle: {backgroundColor: accentColor},
-  };
-
   return (
-    <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-      <Tab.Screen component={App} key={'Home'} name={'Home'} />
-      <Tab.Screen component={LinkingExample} key={'Linking'} name={'Linking'} />
-    </Tab.Navigator>
+    <Drawer.Navigator initialRouteName="home" screenOptions={screenOptions}>
+      <Drawer.Screen
+        component={Home}
+        key={'home'}
+        name={'home'}
+        options={{title: 'Home'}}
+      />
+      <Drawer.Screen
+        name="user-detail"
+        component={UserDetailScreen}
+        options={{
+          title: 'User',
+        }}
+      />
+    </Drawer.Navigator>
   );
 };
 
-const TabbedApp = () => {
+const linking = {
+  prefixes: ['criszz77.github.io/luna', 'localhost'],
+  config: {
+    screens: {
+      home: '',
+      'user-detail': 'user/:id',
+    },
+  },
+};
+
+const InnerApp = () => {
+  const colorScheme = useColorScheme() || 'light';
+  const isDarkMode = colorScheme === 'dark';
+  const theme = useTheme();
+
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-      <NavigationContainer
-        linking={{
-          prefixes: ['criszz77.github.io/luna', 'localhost'],
-          config: {
-            screens: {
-              Details: 'details',
-              Linking: 'linking',
-              Home: '*', // Fall back to if no routes match
-            },
-          },
-        }}
-        documentTitle={{
-          formatter: (options, route) =>
-            `${appJson.displayName}${
-              options?.title || route?.name
-                ? ' - ' + options?.title ?? route?.name
-                : ' '
-            }`,
-        }}>
-        <TopTabNavigator />
-      </NavigationContainer>
+      <GestureHandlerRootView style={styles.container}>
+        <StatusBar
+          backgroundColor={theme.borderColor?.val}
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        />
+        <NavigationContainer
+          theme={isDarkMode ? DarkTheme : DefaultTheme}
+          linking={linking}>
+          <TopTabNavigator />
+        </NavigationContainer>
+      </GestureHandlerRootView>
     </SafeAreaProvider>
   );
 };
 
+const App = () => {
+  const theme = useColorScheme() || 'light';
+  return (
+    <SolitoImageProvider nextJsURL="https://luna-gamma.vercel.app/">
+      <TamaguiProvider config={config} disableInjectCSS defaultTheme={theme}>
+        <InnerApp />
+      </TamaguiProvider>
+    </SolitoImageProvider>
+  );
+};
+
 const styles = StyleSheet.create({
-  detailsContainer: {
+  container: {
     flex: 1,
-    alignContent: 'center',
-    justifyContent: 'center',
+  },
+  headerContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  logo: {
+    flex: 1,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  logoContainer: {
+    flex: 1,
+    height: 50,
+    width: 50,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  routeName: {
+    flex: 1,
+    textAlign: 'right',
+    marginRight: 15,
   },
 });
 
-export default TabbedApp;
+export default App;

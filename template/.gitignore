@@ -20,6 +20,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+/ios/.xcode.env.local
+
 
 # Android/IntelliJ
 #
@@ -28,6 +30,9 @@ DerivedData
 local.properties
 *.iml
 *.hprof
+.cxx/
+*.keystore
+!debug.keystore
 
 # node.js
 #
@@ -35,12 +40,6 @@ package-lock.json
 node_modules/
 npm-debug.log
 yarn-error.log
-
-# BUCK
-buck-out/
-\.buckd/
-*.keystore
-!debug.keystore
 
 # fastlane
 #
@@ -60,5 +59,12 @@ buck-out/
 /ios/Pods/
 /vendor/bundle/
 
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
 # Misc
 build/
+.tamagui
+.next
+.expo
+dist/

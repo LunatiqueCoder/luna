@@ -62,3 +62,7 @@ Podfile.lock
 
 # Misc
 build/
+
+.next
+.expo
+dist/
