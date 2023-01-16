@@ -12,8 +12,8 @@
 [![GitHub top language][31]][32]
 [![ci][1]][2]
 [![GitHub][9]][10]
-<!-- [![Maintenance][11]][12] -->
 [![npm][13]][14]
+<!-- [![Maintenance][11]][12] -->
 <!-- [![GitHub issues][15]][16] -->
 <!-- [![GitHub closed issues][17]][18] -->
 
