@@ -70,16 +70,16 @@
       "sha1": "cf2dcfd6aa812f641e3d2c81af69a6c553539083"
     },
     {
-      "path": "node_modules/@tamagui/font-silkscreen/files/slkscr.ttf",
+      "path": "node_modules/@tamagui/font-silkscreen/files/Silkscreen-bold.ttf",
+      "sha1": "a960fd4e201077cda027756743c344ffcb8285fb"
+    },
+    {
+      "path": "node_modules/@tamagui/font-silkscreen/files/Silkscreen.ttf",
       "sha1": "417bc8219cf9d819c538c052397f3352dda426a7"
     },
     {
-      "path": "node_modules/@tamagui/font-silkscreen/files/slkscr.woff",
+      "path": "node_modules/@tamagui/font-silkscreen/files/Silkscreen.woff",
       "sha1": "30d9b6f1b318c955d613dcf18d572f9aee9a35c8"
-    },
-    {
-      "path": "node_modules/@tamagui/font-silkscreen/files/slkscrb.ttf",
-      "sha1": "a960fd4e201077cda027756743c344ffcb8285fb"
     }
   ]
 }

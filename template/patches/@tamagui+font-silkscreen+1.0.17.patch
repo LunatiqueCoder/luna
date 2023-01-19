@@ -1,0 +1,12 @@
+diff --git a/node_modules/@tamagui/font-silkscreen/files/slkscrb.ttf b/node_modules/@tamagui/font-silkscreen/files/Silkscreen-bold.ttf
+similarity index 100%
+rename from node_modules/@tamagui/font-silkscreen/files/slkscrb.ttf
+rename to node_modules/@tamagui/font-silkscreen/files/Silkscreen-bold.ttf
+diff --git a/node_modules/@tamagui/font-silkscreen/files/slkscr.ttf b/node_modules/@tamagui/font-silkscreen/files/Silkscreen.ttf
+similarity index 100%
+rename from node_modules/@tamagui/font-silkscreen/files/slkscr.ttf
+rename to node_modules/@tamagui/font-silkscreen/files/Silkscreen.ttf
+diff --git a/node_modules/@tamagui/font-silkscreen/files/slkscr.woff b/node_modules/@tamagui/font-silkscreen/files/Silkscreen.woff
+similarity index 100%
+rename from node_modules/@tamagui/font-silkscreen/files/slkscr.woff
+rename to node_modules/@tamagui/font-silkscreen/files/Silkscreen.woff

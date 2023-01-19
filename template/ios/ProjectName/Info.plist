@@ -70,8 +70,8 @@
 		<string>Inter-SemiBoldItalic.otf</string>
 		<string>Inter-Thin.otf</string>
 		<string>Inter-ThinItalic.otf</string>
-		<string>slkscr.ttf</string>
-		<string>slkscrb.ttf</string>
+		<string>Silkscreen-bold.ttf</string>
+		<string>Silkscreen.ttf</string>
 	</array>
 </dict>
 </plist>

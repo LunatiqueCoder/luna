@@ -47,7 +47,7 @@ export function createGenericFont<
 
 const systemFamily =
   process.env.TAMAGUI_TARGET === 'native'
-    ? 'Inter'
+    ? 'Inter-Medium'
     : '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 const silkscreenFont = createSilkscreenFont();
@@ -98,6 +98,10 @@ const bodyFont = createInterFont(
     weight: {
       1: '500',
       7: '600',
+    },
+    // for native
+    face: {
+      900: {normal: 'Inter-Bold'},
     },
   },
   {
