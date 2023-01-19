@@ -26,6 +26,9 @@ module.exports = function () {
   /** @type {import('next').NextConfig} */
   let config = {
     transpilePackages,
+    // experimental: {
+    //   swcPlugins: [['react-native-reanimated-swc-plugin']],
+    // },
   };
 
   for (const plugin of plugins) {
