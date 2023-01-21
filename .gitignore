@@ -63,6 +63,7 @@ Podfile.lock
 # Misc
 build/
 */build/*
+*/ios/build/*
 
 .next
 .expo
