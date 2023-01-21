@@ -18,7 +18,7 @@ export function Home() {
   });
 
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space theme={'blue'}>
+    <YStack f={1} jc="center" ai="center" p="$4" space>
       <YStack space="$4" maw={600}>
         <H1 ta="center" fontFamily={'$silkscreen'}>
           Welcome to Tamagui.
