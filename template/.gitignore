@@ -62,7 +62,7 @@ yarn-error.log
 .metro-health-check*
 
 # Misc
-build/
+build/*
 .tamagui
 .next
 .expo
