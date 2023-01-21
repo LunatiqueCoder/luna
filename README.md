@@ -94,10 +94,11 @@ Further information can be found here: https://github.com/react-native-community
 > 📃 This project is released under the [MIT License](LICENSE). \
 > 💻 By [contributing](CONTRIBUTING.md), you agree that your contributions will be licensed under its MIT License.
 
-
 ## 🏆 Sponsors
 
-[<img style="max-width:15%;width:15%" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png" alt="JetBrains Black Box Logo logo.">][28]
+|                           |    
+|---------------------------|
+| [![jetbrains100][33]][28] | 
 
 [1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
 [2]: https://github.com/criszz77/luna/actions
@@ -133,3 +134,4 @@ Further information can be found here: https://github.com/react-native-community
 [30]: https://github.com/npm/npx#description
 [31]: https://img.shields.io/github/languages/top/criszz77/luna
 [32]: https://github.com/criszz77/luna/search?l=typescript
+[33]: https://user-images.githubusercontent.com/55203625/213786907-b95dfb4b-08bf-4449-a055-72edf401da23.png
