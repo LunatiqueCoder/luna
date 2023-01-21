@@ -61,8 +61,8 @@ buck-out/
 Podfile.lock
 
 # Misc
-build/
-/ios/build/
+*/build/*
+*/ios/build/*
 
 .next
 .expo
