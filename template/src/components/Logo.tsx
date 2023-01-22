@@ -30,16 +30,10 @@ export const Logo = () => {
           sizes="(max-width: 600px) 400px,
                  800px"
           {...logoMediaQuery(8)}
-          {...(media.gtSm && {
+          {...((media.gtSm || media.gtMd) && {
             ...logoMediaQuery(9),
           })}
-          {...(media.gtMd && {
-            ...logoMediaQuery(9),
-          })}
-          {...(media.gtLg && {
-            ...logoMediaQuery(10),
-          })}
-          {...(media.gtXl && {
+          {...((media.gtLg || media.gtXl) && {
             ...logoMediaQuery(10),
           })}
         />
