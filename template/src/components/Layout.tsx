@@ -1,5 +1,12 @@
 import React, {ReactNode, useEffect, useState} from 'react';
-import {Button, isClient, XStack, YStack} from 'tamagui';
+import {
+  Button,
+  isClient,
+  Paragraph,
+  XStack,
+  YStack,
+  AnimatePresence,
+} from 'tamagui';
 import {Menu} from '@tamagui/lucide-icons';
 import {Logo} from './Logo';
 
@@ -8,7 +15,11 @@ interface ILayout {
 }
 
 export const Layout = ({children}: ILayout) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleMenu = () => setOpenMenu(x => !x);
 
   useEffect(() => {
     if (isClient) {
@@ -24,27 +35,33 @@ export const Layout = ({children}: ILayout) => {
 
   return (
     <YStack f={1}>
+      <AnimatePresence>
+        {openMenu && (
+          <YStack
+            key={'drawer-menu'}
+            onPress={toggleMenu}
+            enterStyle={{left: '-75%'}}
+            animation={'slow'}
+            position={'absolute'}
+            backgroundColor={'$background'}
+            width={'75%'}
+            height={'100%'}
+            left={0}
+            zi={5000}
+            exitStyle={{left: '-75%'}}>
+            <Paragraph minWidth={200} bbc={'$borderColor'}>
+              Drawer menu
+            </Paragraph>
+          </YStack>
+        )}
+      </AnimatePresence>
       <XStack
-        // className={`ease-out all ms200 blur-light ${
-        //   isScrolled ? 'hover-highlights' : ''
-        // }`}
-        bbc="$borderColor"
-        zi={50000}
-        pos="fixed"
-        space={5}
-        paddingHorizontal="$2"
-        top={0}
-        my={isScrolled ? -2 : 0}
-        left={0}
-        right={0}
         elevation={isScrolled ? 0 : '$1'}
-        py={isScrolled ? '$0' : '$2'}>
-        {/*<YStack*/}
-        {/*  // className="all ease-in ms200"*/}
-        {/*  o={isScrolled ? 0.9 : 0}*/}
-        {/*  // fullscreen*/}
-        {/*  bc="$background"*/}
-        {/*/>*/}
+        py={isScrolled ? '$0' : '$2'}
+        my={isScrolled ? -2 : 0}
+        bbc="$borderColor"
+        space={5}
+        paddingHorizontal="$2">
         <Button
           aria-label={'drawer-menu-button'}
           size="$5"
@@ -54,6 +71,9 @@ export const Layout = ({children}: ILayout) => {
           alignSelf="center"
           space={2}
           scaleIcon={1.5}
+          hoverStyle={{scale: 1.1}}
+          animation={'fast'}
+          onPress={toggleMenu}
         />
         <Logo />
       </XStack>
