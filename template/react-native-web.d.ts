@@ -181,6 +181,7 @@ declare module 'react-native' {
     outlineWidth?: number | string;
     boxShadow?: string;
     visibility?: 'hidden' | 'visible' | 'collapse' | 'initial';
+    position?: 'absolute' | 'relative' | 'fixed';
   }
 
   interface TextStyle {
