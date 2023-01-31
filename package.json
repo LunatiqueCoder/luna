@@ -1,7 +1,7 @@
 {
   "name": "@criszz77/luna",
   "version": "2.0.10",
-  "description": "Luna is a React Native boilerplate with minimal configuration so your app can run on Android, IOS and Web concurrently.",
+  "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
   "repository": {
     "type": "git",
     "url": "https://github.com/criszz77/luna.git"
@@ -16,10 +16,15 @@
     "react",
     "native",
     "boilerplate",
+    "template",
     "luna",
     "react-native",
     "web",
-    "react-native-web"
+    "react-native-web",
+    "next",
+    "nextjs",
+    "solito",
+    "tamagui"
   ],
   "devDependencies": {
     "release-it": "^15.6.0"
