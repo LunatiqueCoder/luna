@@ -3,6 +3,8 @@ name: Test
 on:
   workflow_dispatch:
   pull_request:
+    branches:
+      - master
     paths:
       - "template/**"
   push:
