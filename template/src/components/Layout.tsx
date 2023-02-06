@@ -40,15 +40,15 @@ export const Layout = ({children}: ILayout) => {
           <YStack
             key={'drawer-menu'}
             onPress={toggleMenu}
-            enterStyle={{left: '-75%'}}
-            animation={'slow'}
             position={'absolute'}
             backgroundColor={'$background'}
             width={'75%'}
             height={'100%'}
-            left={0}
-            zi={5000}
-            exitStyle={{left: '-75%'}}>
+            animation={'slow'}
+            x={0}
+            exitStyle={{x: -1000}}
+            enterStyle={{x: -1000}}
+            zi={5000}>
             <Paragraph minWidth={200} bbc={'$borderColor'}>
               Drawer menu
             </Paragraph>
