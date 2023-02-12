@@ -1,4 +1,3 @@
-import React from 'react';
 import {SolitoImage} from 'solito/image';
 import {useLink} from 'solito/link';
 import {Button, useMedia, useThemeName} from 'tamagui';
