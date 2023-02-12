@@ -30,7 +30,7 @@ local.properties
 
 # node.js
 #
-node_modules/
+*node_modules/
 npm-debug.log
 yarn-error.log
 
@@ -55,10 +55,10 @@ buck-out/
 *.jsbundle
 
 # CocoaPods
-/ios/Pods/
+*/ios/Pods/
 
 # Misc
-build/
+*build/
 
 .next
 .expo
@@ -72,6 +72,4 @@ package-lock.json
 template/yarn.lock
 Podfile.lock
 
-# TODO: find out why releasing on npm still publishes some build files
-*/build/*
-*/ios/build/*
+.tamagui
