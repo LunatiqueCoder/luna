@@ -19,10 +19,4 @@ const appConfig = createTamagui({
 //@ts-ignore
 appConfig.mediaQueryDefaultActive = mediaQueryDefaultActive;
 
-export type AppConfig = typeof appConfig;
-
-declare module 'tamagui' {
-  interface TamaguiCustomConfig extends AppConfig {}
-}
-
 export default appConfig;
