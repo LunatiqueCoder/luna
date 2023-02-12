@@ -73,6 +73,7 @@ template/yarn.lock
 Podfile.lock
 
 # TODO: find out why releasing on npm still publishes some build files
-*/build/
+*/build/*
+*/template/ios/build/*
 
 .tamagui
