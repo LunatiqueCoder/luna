@@ -10,8 +10,14 @@ module.exports = {
     getTransformOptions: async () => ({
       transform: {
         experimentalImportSupport: false,
-        inlineRequires: true
-      }
-    })
-  }
+        inlineRequires: true,
+      },
+    }),
+  },
+  serializer: {
+    processModuleFilter: module =>
+      !module.path.match(
+        '/node_modules/(((react-native-)?web|reanimated-swc-plugin)|react-dom|sharp)/',
+      ),
+  },
 };
