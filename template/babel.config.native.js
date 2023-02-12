@@ -1,20 +1,6 @@
-// babel.config.js
-process.env.TAMAGUI_TARGET = 'native';
-
 module.exports = {
-  presets: [
-    [
-      'module:metro-react-native-babel-preset',
-      {useTransformReactJSXExperimental: true},
-    ],
-  ],
+  presets: ['module:metro-react-native-babel-preset'],
   plugins: [
-    [
-      '@babel/plugin-transform-react-jsx',
-      {
-        runtime: 'automatic',
-      },
-    ],
     [
       '@tamagui/babel-plugin',
       {
@@ -22,7 +8,6 @@ module.exports = {
         config: './tamagui',
       },
     ],
-    // be sure to set TAMAGUI_TARGET
     [
       'transform-inline-environment-variables',
       {
