@@ -9,8 +9,9 @@ import fonts from './fonts';
 /**
  * Tamagui is currently working to support the latest RN version types.
  *
- * Be sure to remove this workaround and set the TamaguiCustomConfig
- * according to https://tamagui.dev/docs/core/configuration
+ * When they are ready, e sure to remove this workaround and
+ * set the TamaguiCustomConfig according to
+ * https://tamagui.dev/docs/core/configuration
  */
 type GetMyClassT<C extends AnimationDriver<any>> = C extends AnimationDriver<
   infer T
