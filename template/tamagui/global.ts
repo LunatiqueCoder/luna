@@ -1,14 +1,22 @@
 import {TamaguiInternalConfig} from 'tamagui';
 import {shorthands} from '@tamagui/shorthands';
-import {themes, tokens} from '@tamagui/theme-base';
+import {themes, tokens} from '@tamagui/themes';
+import {AnimationDriver} from '@tamagui/web';
+import {animations} from './animations';
 import {media} from './mediaQueries';
 import fonts from './fonts';
 
-type animations = {
-  fast: {type: 'spring'; damping: number; mass: number; stiffness: number};
-  medium: {type: 'spring'; damping: number; mass: number; stiffness: number};
-  slow: {type: 'spring'; damping: number; stiffness: number};
-};
+/**
+ * Tamagui is currently working to support the latest RN version types.
+ *
+ * Be sure to remove this workaround and set the TamaguiCustomConfig
+ * according to https://tamagui.dev/docs/core/configuration
+ */
+type GetMyClassT<C extends AnimationDriver<any>> = C extends AnimationDriver<
+  infer T
+>
+  ? T
+  : {};
 
 declare module 'tamagui' {
   interface TamaguiCustomConfig
@@ -17,7 +25,7 @@ declare module 'tamagui' {
       typeof themes,
       typeof shorthands,
       typeof media,
-      animations,
+      GetMyClassT<typeof animations>,
       typeof fonts
     > {}
 }

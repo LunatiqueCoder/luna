@@ -1,7 +1,7 @@
 import {SolitoImage} from 'solito/image';
 import {useLink} from 'solito/link';
 import {Button, useMedia, useThemeName} from 'tamagui';
-import {tokens} from '@tamagui/theme-base';
+import {tokens} from '@tamagui/themes';
 
 const logoMediaQuery = (size: keyof typeof tokens.size) => ({
   width: tokens.size[size].val,

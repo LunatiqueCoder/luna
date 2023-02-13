@@ -1,6 +1,6 @@
 import {createTamagui} from 'tamagui';
 import {shorthands} from '@tamagui/shorthands';
-import {themes, tokens} from '@tamagui/theme-base';
+import {themes, tokens} from '@tamagui/themes';
 import {media, mediaQueryDefaultActive} from './mediaQueries';
 import {animations} from './animations';
 import fonts from './fonts';
