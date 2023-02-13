@@ -72,7 +72,7 @@ export const Layout = ({children}: ILayout) => {
           space={2}
           scaleIcon={1.5}
           hoverStyle={{scale: 1.1}}
-          animation={'fast'}
+          animation={'quick'}
           onPress={toggleMenu}
         />
         <Logo />
