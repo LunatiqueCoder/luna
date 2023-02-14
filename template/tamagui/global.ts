@@ -9,7 +9,7 @@ import fonts from './fonts';
 /**
  * Tamagui is currently working to support the latest RN version types.
  *
- * When they are ready, e sure to remove this workaround and
+ * When they are ready, be sure to remove this workaround and
  * set the TamaguiCustomConfig according to
  * https://tamagui.dev/docs/core/configuration
  */
