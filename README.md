@@ -121,7 +121,7 @@ Further information can be found here: https://github.com/react-native-community
 [17]: https://img.shields.io/github/issues-closed/criszz77/luna
 [18]: https://github.com/criszz77/luna/issues?q=is%3Aissue+is%3Aclosed
 [19]: https://luna-gamma.vercel.app/
-[20]: https://github.com/criszz77/luna/wiki
+[20]: https://github.com/LunatiqueCoder/luna/wiki/v2.0.0
 [21]: https://github.com/invertase/react-native-firebase-authentication-example
 [22]: https://necolas.github.io/react-native-web/
 [23]: https://solito.dev/
