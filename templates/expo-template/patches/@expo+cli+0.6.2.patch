@@ -1,0 +1,12 @@
+diff --git a/node_modules/@expo/cli/build/src/start/server/DevServerManager.js b/node_modules/@expo/cli/build/src/start/server/DevServerManager.js
+index 291124f..418d965 100644
+--- a/node_modules/@expo/cli/build/src/start/server/DevServerManager.js
++++ b/node_modules/@expo/cli/build/src/start/server/DevServerManager.js
+@@ -57,6 +57,7 @@ class DevServerManager {
+             "./.babelrc.json",
+             "./.babelrc",
+             "./.babelrc.js",
++            "./babel.config.native.js"
+         ], {
+             additionalWarning: _chalk.default` You may need to clear the bundler cache with the {bold --clear} flag for your changes to take effect.`
+         });
