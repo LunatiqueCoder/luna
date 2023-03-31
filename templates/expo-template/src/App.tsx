@@ -119,8 +119,8 @@ const App = () => {
     "Inter-LightItalic": require('@tamagui/font-inter/otf/Inter-LightItalic.otf'),
     "Inter-SemiBoldItalic": require('@tamagui/font-inter/otf/Inter-SemiBoldItalic.otf'),
     "Inter-ThinItalic": require('@tamagui/font-inter/otf/Inter-ThinItalic.otf'),
-    Silkscreen: require('@tamagui/font-silkscreen/files/Silkscreen.ttf'),
-    "Silkscreen-Bold": require('@tamagui/font-silkscreen/files/Silkscreen-bold.ttf'),
+    Silkscreen: require('@tamagui/font-silkscreen/files/slkscr.ttf'),
+    "Silkscreen-Bold": require('@tamagui/font-silkscreen/files/slkscrb.ttf'),
   })
 
   if (!loaded) {
