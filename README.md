@@ -25,19 +25,25 @@
 > 📖 Please visit the [`🌒 Luna Wiki`][20] to see why and how we decided to implement all those features. \
 > 🚀 For an advanced start, but currently without `Next.js`, you can head to [react-native-firebase-authentification-example][21] which is built on top of Luna template
 
+- [Expo (optionally)][34]
 - [React Native Web][22]
 - [Next.js][6]
 - [Solito][23]
 - [Tamagui][29]
 - [TypeScript][24]
+- No monorepo (everything in one app)
 - Other
 
 ## 🎛 Setup
-> ⚠️ Please be sure your environment is set up correctly for React Native CLI. \
+> ⚠️ Please be sure your environment is set up correctly for React Native. \
 > 🔗 https://reactnative.dev/docs/environment-setup 
 
 ## 🛸 Usage
 
+### Expo:
+<pre>npx create-expo-app  <b>my-app-name</b> --template @create-luna-app/expo</pre>
+
+### React Native CLI:
 <pre>npx react-native init <b>MyAppName</b> --template @criszz77/luna</pre>
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
@@ -135,3 +141,4 @@ Further information can be found here: https://github.com/react-native-community
 [31]: https://img.shields.io/github/languages/top/criszz77/luna
 [32]: https://github.com/criszz77/luna/search?l=typescript
 [33]: https://user-images.githubusercontent.com/55203625/213786907-b95dfb4b-08bf-4449-a055-72edf401da23.png
+[34]: https://expo.dev/
