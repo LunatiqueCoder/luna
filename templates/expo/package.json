@@ -59,6 +59,5 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "metro-react-native-babel-transformer": "0.73.8",
     "typescript": "^4.9.4"
-  },
-  "private": true
+  }
 }
