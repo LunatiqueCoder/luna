@@ -27,7 +27,7 @@
     "tamagui"
   ],
   "devDependencies": {
-    "release-it": "^15.9.3"
+    "release-it": "^15.10.1"
   },
   "release-it": {
     "git": {
