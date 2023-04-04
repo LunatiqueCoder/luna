@@ -69,7 +69,7 @@ tsconfig.tsbuildinfo
 
 # templates don't shit with lock files
 package-lock.json
-template/yarn.lock
+yarn.lock
 Podfile.lock
 
 .tamagui
