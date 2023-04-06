@@ -1,8 +1,7 @@
 {
   "name": "create-luna-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create-luna-app CLI",
-  "private": true,
   "types": "build/types/types.d.ts",
   "bin": {
     "create-luna-app": "bin/create-luna-app"
