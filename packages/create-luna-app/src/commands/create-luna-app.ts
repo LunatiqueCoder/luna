@@ -11,7 +11,12 @@ const command: GluegunCommand = {
   run: async (toolbox) => {
     const { system, print } = toolbox
 
-    const { selectedCLI } = await prompt.ask([
+    const { appName, selectedCLI } = await prompt.ask([
+      {
+        type: 'input',
+        name: 'appName',
+        message: 'What is the name of the app?',
+      },
       {
         type: 'select',
         name: 'selectedCLI',
@@ -20,31 +25,29 @@ const command: GluegunCommand = {
       },
     ])
 
-    if (selectedCLI === CLIs.tamagui) {
-      const spinner = print.spin('Creating your app...')
+    const expoTemplate = `npx create-expo-app ${appName} --template @create-luna-app/expo@latest`
+    const vanillaTemplate = `npx react-native init ${appName} --template @criszz77/luna@latest`
+    const tamaguiTemplate = `npx create-tamagui ${appName}`
 
-      const installTemplate = await system.run('npx create-tamagui')
-      spinner.succeed('Installed!')
-      print.info(installTemplate)
-    } else {
-      const { appName } = await prompt.ask([
-        {
-          type: 'input',
-          name: 'appName',
-          message: 'What is the name of the app?',
-        },
-      ])
+    const spinner = print.spin('Creating your app...')
 
-      const expoTemplate = `npx create-expo-app ${appName} --template @create-luna-app/expo@latest`
-      const vanillaTemplate = `npx react-native init ${appName} --template @criszz77/luna@latest`
-      const spinner = print.spin('Creating your app...')
+    const installTemplate = await system.run(
+      (() => {
+        switch (selectedCLI) {
+          case CLIs.expo:
+            return expoTemplate
+          case CLIs.reactNative:
+            return vanillaTemplate
+          case CLIs.tamagui:
+            return tamaguiTemplate
+          default:
+            return expoTemplate
+        }
+      })()
+    )
 
-      const installTemplate = await system.run(
-        selectedCLI === CLIs.expo ? expoTemplate : vanillaTemplate
-      )
-      spinner.succeed('Installed!')
-      print.info(installTemplate)
-    }
+    spinner.succeed('Installed!')
+    print.info(installTemplate)
   },
 }
 
