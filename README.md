@@ -40,11 +40,16 @@
 
 ## 🛸 Usage
 
-### Expo:
-<pre>npx create-expo-app  <b>my-app-name</b> --template @create-luna-app/expo</pre>
+`
+npm create expo-app`
 
-### React Native CLI:
-<pre>npx react-native init <b>MyAppName</b> --template @criszz77/luna</pre>
+
+
+` yarn create expo-app`
+
+OR
+
+`pnpm: pnpm create expo-app`
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
