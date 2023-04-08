@@ -27,7 +27,7 @@ jobs:
           node-version: 16
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: cd template && echo "::set-output name=dir::$(yarn cache dir)"
+        run: cd templates/vanilla/template && echo "::set-output name=dir::$(yarn cache dir)"
       - uses: actions/cache@v3
         name: Yarn Cache
         id: yarn-cache
@@ -42,6 +42,6 @@ jobs:
           timeout_minutes: 10
           retry_wait_seconds: 60
           max_attempts: 4
-          command: cd template && yarn --no-audit --prefer-offline
+          command: cd templates/vanilla/template && yarn --no-audit --prefer-offline
       - name: Jest
-        run: cd template && yarn test:jest
+        run: cd templates/vanilla/template && yarn test:jest
