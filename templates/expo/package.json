@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/LunatiqueCoder/luna/issues"
   },
-  "homepage": "https://github.com/LunatiqueCoder/luna/templates/expo",
+  "homepage": "https://github.com/LunatiqueCoder/luna/tree/master/templates/expo",
   "main": "index.js",
   "scripts": {
     "start": "expo start -c",

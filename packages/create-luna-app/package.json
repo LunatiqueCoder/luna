@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/LunatiqueCoder/luna/issues"
   },
-  "homepage": "https://github.com/LunatiqueCoder/luna/packages/create-luna-app",
+  "homepage": "https://github.com/LunatiqueCoder/luna/tree/master/packages/create-luna-app",
   "keywords": [
     "react",
     "native",

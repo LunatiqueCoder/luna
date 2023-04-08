@@ -9,9 +9,9 @@
   "author": "Ovidiu Cristescu <cristee95@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/criszz77/luna/issues"
+    "url": "https://github.com/LunatiqueCoder/luna/issues"
   },
-  "homepage": "https://github.com/criszz77/luna",
+  "homepage": "https://github.com/LunatiqueCoder/luna/tree/master/templates/vanilla/template",
   "keywords": [
     "react",
     "native",
