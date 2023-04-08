@@ -42,6 +42,6 @@ jobs:
           timeout_minutes: 3
           retry_wait_seconds: 30
           max_attempts: 3
-          command: cd templates/vanilla/template && yarn config set workspaces-nohoist-experimental false && yarn --no-audit --prefer-offline
+          command: cd templates/vanilla/template && yarn --no-audit --prefer-offline
       - name: Lint
         run: cd templates/vanilla/template && yarn lint:all

@@ -42,6 +42,6 @@ jobs:
           timeout_minutes: 10
           retry_wait_seconds: 60
           max_attempts: 4
-          command: cd templates/vanilla/template && yarn config set workspaces-nohoist-experimental false && yarn --no-audit --prefer-offline
+          command: cd templates/vanilla/template yarn --no-audit --prefer-offline
       - name: Jest
         run: cd templates/vanilla/template && yarn test:jest
