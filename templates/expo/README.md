@@ -1,5 +1,7 @@
 # 🛸 @create-luna-app/expo
 
+## Template project created with [🌘 Luna](https://github.com/LunatiqueCoder/luna) 
+
 > ⚠️ [Please be sure your environment is set up correctly for React Native CLI.][26]
 
 ## ⭐ Features
@@ -36,16 +38,8 @@ Open [http://localhost:3000][25] to view it in the browser. \
 
 #### `yarn start`
 
-Start Metro Bundler.
+Start Metro Bundler. After that, you can press "i" or "a" to run the app on iOS or Android simulator respectively.
 
-
-#### `yarn android`
-
-Launches the app for Android in debug mode.
-
-#### `yarn ios`
-
-Launches the app for IOS in debug mode.
 
 ## 🧰 Development Tools
 - [React Dev Tools][27] supports inspecting and editing of React Native styles. It’s recommended that you rely more on React Dev Tools and live/hot-reloading rather than inspecting and editing the **DOM** directly.
