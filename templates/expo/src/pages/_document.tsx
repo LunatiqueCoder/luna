@@ -26,8 +26,8 @@ function MyDocument() {
 MyDocument.getInitialProps = async ({
   renderPage,
 }: DocumentContext): Promise<DocumentInitialProps> => {
-  AppRegistry.registerComponent(config.name, () => Main);
-  const {getStyleElement} = AppRegistry.getApplication(config.name);
+  AppRegistry.registerComponent(config.expo.name, () => Main);
+  const {getStyleElement} = AppRegistry.getApplication(config.expo.name);
   const page = await renderPage();
   const styles = [
     getStyleElement(),
