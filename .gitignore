@@ -72,3 +72,11 @@ Podfile.lock
 
 .tamagui
 .turbo
+
+# gluegun
+node_modules
+coverage
+.nyc_output
+dist
+build
+.vscode

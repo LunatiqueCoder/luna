@@ -4,5 +4,5 @@ module.exports = {
   placeholderName: "ProjectName",
 
   // Directory with template
-  templateDir: "./template",
+  templateDir: "./templates/vanilla",
 };
