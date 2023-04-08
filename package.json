@@ -46,7 +46,9 @@
       "release": true
     },
     "plugins": {
-      "@release-it-plugins/workspaces": true,
+      "@release-it-plugins/workspaces": {
+        "publish": "true"
+      },
       "@release-it/bumper": {
         "in": "package.json",
         "out": "package.json"
