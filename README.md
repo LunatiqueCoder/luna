@@ -65,7 +65,7 @@ You will also see any lint errors in the console.
 
 #### `yarn build`
 
-Builds the web app for production with Next.js. 
+Builds the web app for production with Next.js.
 
 #### `yarn next-start`
 
@@ -77,16 +77,16 @@ Open [http://localhost:3000][25] to view it in the browser. \
 
 #### `yarn start`
 
-Start Metro Bundler. After that, you can press "i" or "a" to run the app on iOS or Android simulator respectively.
+Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
 
 ## 🪲 Debugging
 - ### React Native CLI
-> This template only works with the new CLI. Please make sure that: 
+> This template only works with the new CLI. Please make sure that:
 > - [your environment is set up correctly for React Native CLI.][26]
 > - you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use npx, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
 
 > If you tried the above and still get the @criszz77/luna: Not found error, please try adding the `--ignore-existing` flag to [force npx to ignore][30] any locally installed versions of the CLI and use the latest.
-Further information can be found here: https://github.com/react-native-community/cli#about 
+Further information can be found here: https://github.com/react-native-community/cli#about
 
 - ### React Native Web
 > [React Dev Tools][27] supports inspecting and editing of React Native styles. It’s recommended that you rely more on React Dev Tools and live/hot-reloading rather than inspecting and editing the **DOM** directly.
@@ -108,7 +108,7 @@ Further information can be found here: https://github.com/react-native-community
 [3]: https://img.shields.io/badge/-React%20Native%20CLI-282C34?style=flat-square&logo=react&logoColor=61DAFB
 [4]: https://reactnative.dev/
 
-[5]: https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white 
+[5]: https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white
 <!-- Other Next.js badge with Vercel icon: https://img.shields.io/badge/-Next.js-282C34?style=flat-square&logo=vercel&logoColor=white&labelColor=black&color=black -->
 [6]: https://nextjs.org/
 [7]: https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=flat-square&colorB=191A17
