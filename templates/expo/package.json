@@ -1,6 +1,17 @@
 {
   "name": "@create-luna-app/expo",
-  "version": "1.0.1",
+  "version": "2.1.10",
+  "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/criszz77/luna.git"
+  },
+  "author": "Ovidiu Cristescu <cristee95@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LunatiqueCoder/luna/issues"
+  },
+  "homepage": "https://github.com/LunatiqueCoder/luna/templates/expo",
   "main": "index.js",
   "scripts": {
     "start": "expo start -c",

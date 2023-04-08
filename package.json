@@ -1,7 +1,11 @@
 {
   "name": "luna",
+  "workspaces": [
+    "packages/*",
+    "templates/*"
+  ],
   "private": true,
-  "version": "0.0.1",
+  "version": "2.1.10",
   "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
   "repository": {
     "type": "git",
@@ -28,6 +32,8 @@
     "tamagui"
   ],
   "devDependencies": {
+    "@release-it-plugins/workspaces": "^3.2.0",
+    "@release-it/bumper": "^4.0.2",
     "release-it": "^15.6.0"
   },
   "release-it": {
@@ -35,11 +41,17 @@
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}"
     },
-    "npm": {
-      "publish": true
-    },
+    "npm": false,
     "github": {
       "release": true
+    },
+    "plugins": {
+      "@release-it-plugins/workspaces": true,
+      "@release-it/bumper": {
+        "in": "package.json",
+        "out": "package.json"
+      }
+
     }
   }
 }
