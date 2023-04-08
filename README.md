@@ -47,9 +47,9 @@ You can create a new project interactively by running:
 ```bash
 npx create-luna-app@latest
 # or
-yarn create luna-app
-# or
 npm create luna-app@latest
+# or
+yarn create luna-app
 ```
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
