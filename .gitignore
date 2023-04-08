@@ -71,3 +71,4 @@ tsconfig.tsbuildinfo
 Podfile.lock
 
 .tamagui
+.turbo

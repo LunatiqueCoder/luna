@@ -25,20 +25,5 @@
     "nextjs",
     "solito",
     "tamagui"
-  ],
-  "devDependencies": {
-    "release-it": "^15.6.0"
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    }
-  }
+  ]
 }

@@ -2,7 +2,8 @@
   "name": "luna",
   "workspaces": [
     "packages/*",
-    "templates/*"
+    "templates/*",
+    "templates/vanilla/*"
   ],
   "private": true,
   "version": "2.1.11-3",
@@ -31,12 +32,21 @@
     "solito",
     "tamagui"
   ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
   "devDependencies": {
     "@release-it-plugins/workspaces": "^3.2.0",
     "@release-it/bumper": "^4.0.2",
-    "release-it": "^15.6.0"
+    "release-it": "^15.6.0",
+    "turbo": "^1.8.8"
   },
   "release-it": {
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org/"
+    },
     "git": {
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}"
