@@ -72,3 +72,4 @@ Podfile.lock
 
 .tamagui
 .turbo
+node_modules

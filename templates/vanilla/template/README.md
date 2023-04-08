@@ -1,6 +1,8 @@
 # 🛸 ProjectName
 
-> ⚠️ [Please be sure your environment is set up correctly for React Native CLI.][26]
+## Template project created with [🌘 Luna](https://github.com/LunatiqueCoder/luna)
+
+> ⚠️ [Please be sure your environment is set up correctly for React Native.][26]
 
 ## ⭐ Features
 
@@ -24,7 +26,7 @@ You will also see any lint errors in the console.
 
 #### `yarn build`
 
-Builds the web app for production with Next.js. 
+Builds the web app for production with Next.js.
 
 #### `yarn next-start`
 
@@ -36,16 +38,8 @@ Open [http://localhost:3000][25] to view it in the browser. \
 
 #### `yarn start`
 
-Start Metro Bundler.
+Start Metro Bundler. After that, you can press "i" or "a" to run the app on iOS or Android simulator respectively.
 
-
-#### `yarn android`
-
-Launches the app for Android in debug mode.
-
-#### `yarn ios`
-
-Launches the app for IOS in debug mode.
 
 ## 🧰 Development Tools
 - [React Dev Tools][27] supports inspecting and editing of React Native styles. It’s recommended that you rely more on React Dev Tools and live/hot-reloading rather than inspecting and editing the **DOM** directly.

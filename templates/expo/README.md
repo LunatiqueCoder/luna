@@ -2,7 +2,7 @@
 
 ## Template project created with [🌘 Luna](https://github.com/LunatiqueCoder/luna) 
 
-> ⚠️ [Please be sure your environment is set up correctly for React Native CLI.][26]
+> ⚠️ [Please be sure your environment is set up correctly for React Native.][26]
 
 ## ⭐ Features
 
