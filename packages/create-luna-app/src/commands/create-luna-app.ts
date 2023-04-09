@@ -25,9 +25,9 @@ const command: GluegunCommand = {
       },
     ])
 
-    const expoTemplate = `npx create-expo-app ${appName} --template @create-luna-app/expo@latest`
+    const expoTemplate = `yarn create expo-app ${appName} --template @create-luna-app/expo@latest`
     const vanillaTemplate = `npx react-native init ${appName} --template @criszz77/luna@latest`
-    const tamaguiTemplate = `npx create-tamagui ${appName}`
+    const tamaguiTemplate = `yarn create tamagui ${appName}`
 
     const spinner = print.spin(
       `Creating your ${(() => {
