@@ -62,7 +62,7 @@ const command: GluegunCommand = {
     // the program, the cursor will remain hidden
     process.stdout.write('\x1B[?25h')
     process.stdout.write('\n')
-    process.exit(0)
+    process.exit(1)
   },
 }
 
