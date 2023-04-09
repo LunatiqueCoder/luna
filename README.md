@@ -110,7 +110,7 @@ Further information can be found here: https://github.com/react-native-community
 [6]: https://nextjs.org/
 [7]: https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=flat-square&colorB=191A17
 [8]: https://necolas.github.io/react-native-web/
-[9]: https://img.shields.io/github/LunatiqueCoder/criszz77/luna
+[9]: https://img.shields.io/github/license/LunatiqueCoder/luna
 [10]: https://github.com/LunatiqueCoder/luna/blob/master/LICENSE
 [11]: https://img.shields.io/maintenance/yes/2023
 [12]: https://github.com/LunatiqueCoder/luna/graphs/contributors
