@@ -36,10 +36,6 @@
 You can create a new project interactively by running:
 
 ```bash
-npx create-luna-app@latest
-# or
-npm create luna-app@latest
-# or
 yarn create luna-app
 ```
 

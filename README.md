@@ -50,6 +50,12 @@ yarn create luna-app
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
+- ### 📱  **Native**
+
+#### `yarn start`
+
+Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
+
 - ### 💻   **Web**
 #### `yarn web`
 
@@ -69,11 +75,6 @@ Runs the web app in production mode with Next.js. \
 Open [http://localhost:3000][25] to view it in the browser. \
 **Note:** You have to run `yarn build` first!
 
-- ### 📱  **Native**
-
-#### `yarn start`
-
-Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
 
 ## 🪲 Debugging
 - ### React Native CLI

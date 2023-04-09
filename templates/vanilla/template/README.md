@@ -15,6 +15,13 @@
 
 ## 🏃🏻‍♂️ Running the app
 
+- ### 📱  **Native**
+
+#### `yarn start`
+
+Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
+
+
 - ### 💻   **Web**
 #### `yarn web`
 
@@ -33,12 +40,6 @@ Builds the web app for production with Next.js.
 Runs the web app in production mode with Next.js. \
 Open [http://localhost:3000][25] to view it in the browser. \
 **Note:** You have to run `yarn build` first!
-
-- ### 📱  **Native**
-
-#### `yarn start`
-
-Start Metro Bundler. After that, you can press "i" or "a" to run the app on iOS or Android simulator respectively.
 
 
 ## 🧰 Development Tools
