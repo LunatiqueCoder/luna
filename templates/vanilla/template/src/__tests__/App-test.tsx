@@ -3,7 +3,7 @@
  */
 
 // FIXME need reanimated update, see https://github.com/software-mansion/react-native-reanimated/issues/3355
-if (process.browser) {
+if (window) {
   // @ts-ignore
   window._frameTimestamp = null;
 }
