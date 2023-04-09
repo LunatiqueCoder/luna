@@ -48,7 +48,10 @@ You can create a new project interactively by running:
 yarn create luna-app
 ```
 
-Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
+![image](https://user-images.githubusercontent.com/55203625/230792569-195fb22f-9163-4173-a1a9-716010c08f82.png)
+
+
+After that, all the commands from below are available:
 
 - ### 📱  **Native**
 
