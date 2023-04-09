@@ -11626,19 +11626,6 @@ react-native-reanimated-swc-plugin@^0.3.0:
   resolved "https://registry.yarnpkg.com/react-native-reanimated-swc-plugin/-/react-native-reanimated-swc-plugin-0.3.0.tgz#43a826478504020c470cce929058efcfe8cd3309"
   integrity sha512-8lbNNUnRhDz+gh5XLmbbETSEuBPX3fIypFTZc5bgHToa2T00Xf51442wnuofDvy7xfA2ko8TOWn2JDpGV41uCg==
 
-react-native-reanimated@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.0.2.tgz#8f7284fab2b0cd949779429e48f32d19a966bbd6"
-  integrity sha512-8Et90yTI9yxchGbDP79k391XZqc/64zNbASbGy8X3Vgv4EbZ1M3IkKwcIbZmbVwpA804VJ6V9nJAGUh9fP0LrA==
-  dependencies:
-    "@babel/plugin-transform-object-assign" "^7.16.7"
-    "@babel/preset-typescript" "^7.16.7"
-    convert-source-map "^1.7.0"
-    invariant "^2.2.4"
-    lodash.isequal "^4.5.0"
-    setimmediate "^1.0.5"
-    string-hash-64 "^1.0.3"
-
 react-native-reanimated@~2.14.4:
   version "2.14.4"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.14.4.tgz#3fa3da4e7b99f5dfb28f86bcf24d9d1024d38836"
