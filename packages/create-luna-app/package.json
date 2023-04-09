@@ -1,6 +1,6 @@
 {
   "name": "create-luna-app",
-  "version": "2.1.11-6",
+  "version": "2.1.11-7",
   "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
   "repository": {
     "type": "git",
