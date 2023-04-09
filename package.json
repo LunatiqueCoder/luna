@@ -6,7 +6,7 @@
     "templates/vanilla/*"
   ],
   "private": true,
-  "version": "2.1.11-8",
+  "version": "3.0.1",
   "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
   "repository": {
     "type": "git",
@@ -57,7 +57,7 @@
     },
     "plugins": {
       "@release-it-plugins/workspaces": {
-        "distTag": "next"
+        "distTag": "latest"
       },
       "@release-it/bumper": {
         "in": "package.json",

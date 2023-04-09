@@ -50,6 +50,12 @@ yarn create luna-app
 
 Use the above command to start a new React Native app using this template. After that, all the commands from below are available:
 
+- ### 📱  **Native**
+
+#### `yarn start`
+
+Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
+
 - ### 💻   **Web**
 #### `yarn web`
 
@@ -69,11 +75,6 @@ Runs the web app in production mode with Next.js. \
 Open [http://localhost:3000][25] to view it in the browser. \
 **Note:** You have to run `yarn build` first!
 
-- ### 📱  **Native**
-
-#### `yarn start`
-
-Start Metro Bundler. After that, you can press `i` or `a` to run the app on iOS or Android simulator respectively.
 
 ## 🪲 Debugging
 - ### React Native CLI
@@ -99,8 +100,8 @@ Further information can be found here: https://github.com/react-native-community
 |---------------------------|
 | [![jetbrains100][33]][28] | 
 
-[1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
-[2]: https://github.com/criszz77/luna/actions
+[1]: https://github.com/LunatiqueCoder/react-native-media-console/workflows/ci/badge.svg
+[2]: https://github.com/LunatiqueCoder/luna/actions
 [3]: https://img.shields.io/badge/-React%20Native%20CLI-282C34?style=flat-square&logo=react&logoColor=61DAFB
 [4]: https://reactnative.dev/
 
@@ -109,16 +110,16 @@ Further information can be found here: https://github.com/react-native-community
 [6]: https://nextjs.org/
 [7]: https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web-brightgreen.svg?style=flat-square&colorB=191A17
 [8]: https://necolas.github.io/react-native-web/
-[9]: https://img.shields.io/github/license/criszz77/luna
-[10]: https://github.com/criszz77/luna/blob/master/LICENSE
+[9]: https://img.shields.io/github/LunatiqueCoder/criszz77/luna
+[10]: https://github.com/LunatiqueCoder/luna/blob/master/LICENSE
 [11]: https://img.shields.io/maintenance/yes/2023
-[12]: https://github.com/criszz77/luna/graphs/contributors
-[13]: https://img.shields.io/npm/v/@criszz77/luna
-[14]: https://www.npmjs.com/package/@criszz77/luna
+[12]: https://github.com/LunatiqueCoder/luna/graphs/contributors
+[13]: https://img.shields.io/npm/v/create-luna-app
+[14]: https://www.npmjs.com/package/create-luna-app
 [15]: https://img.shields.io/github/issues/criszz77/luna
-[16]: https://github.com/criszz77/luna/issues
-[17]: https://img.shields.io/github/issues-closed/criszz77/luna
-[18]: https://github.com/criszz77/luna/issues?q=is%3Aissue+is%3Aclosed
+[16]: https://github.com/LunatiqueCoder/luna/issues
+[17]: https://img.shields.io/github/issues-closed/LunatiqueCoder/luna
+[18]: https://github.com/LunatiqueCoder/luna/issues?q=is%3Aissue+is%3Aclosed
 [19]: https://luna-gamma.vercel.app/
 [20]: https://github.com/LunatiqueCoder/luna/wiki/v2.0.0
 [21]: https://github.com/invertase/react-native-firebase-authentication-example
@@ -131,7 +132,7 @@ Further information can be found here: https://github.com/react-native-community
 [28]: https://www.jetbrains.com/
 [29]: https://tamagui.dev
 [30]: https://github.com/npm/npx#description
-[31]: https://img.shields.io/github/languages/top/criszz77/luna
+[31]: https://img.shields.io/github/languages/top/LunatiqueCoder/luna
 [32]: https://github.com/criszz77/luna/search?l=typescript
 [33]: https://user-images.githubusercontent.com/55203625/213786907-b95dfb4b-08bf-4449-a055-72edf401da23.png
 [34]: https://img.shields.io/badge/-Expo%20CLI-282C34?style=flat-square&logo=expo&logoColor=#D04A37
