@@ -29,7 +29,16 @@ const command: GluegunCommand = {
     const vanillaTemplate = `npx react-native init ${appName} --template @criszz77/luna@latest`
     const tamaguiTemplate = `npx create-tamagui ${appName}`
 
-    const spinner = print.spin('Creating your app...')
+    const spinner = print.spin(
+      `Creating your ${(() => {
+        switch (selectedCLI) {
+          case CLIs.tamagui:
+            return 'Tamagui (@tamagui/create-tamagui)'
+          default:
+            return '🌘 Luna'
+        }
+      })()} app...`
+    )
 
     const installTemplate = await system.run(
       (() => {
