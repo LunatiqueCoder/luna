@@ -39,6 +39,10 @@ You can create a new project interactively by running:
 yarn create luna-app
 ```
 
+![image](https://user-images.githubusercontent.com/55203625/230792569-195fb22f-9163-4173-a1a9-716010c08f82.png)
+
+
+
 [1]: https://github.com/LunatiqueCoder/react-native-media-console/workflows/ci/badge.svg
 [2]: https://github.com/LunatiqueCoder/luna/actions
 [3]: https://img.shields.io/badge/-React%20Native%20CLI-282C34?style=flat-square&logo=react&logoColor=61DAFB
