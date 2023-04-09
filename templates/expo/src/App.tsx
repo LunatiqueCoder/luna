@@ -23,7 +23,7 @@ import {Logo} from './components/Logo';
 import config from '../tamagui';
 import {UserDetailScreen} from './features/DetailScreen';
 import {useFonts} from "expo-font";
-import {tamaguiFonts} from "../tamagui/fonts";
+import {tamaguiFonts} from "../tamagui/tamaguiFonts.native";
 
 const Drawer = createDrawerNavigator();
 
