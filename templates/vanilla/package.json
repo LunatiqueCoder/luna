@@ -1,6 +1,6 @@
 {
   "name": "@criszz77/luna",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "🌘Luna is a React Native and Next.js boilerplate so your app can run on Android, IOS and Web concurrently.",
   "repository": {
     "type": "git",
