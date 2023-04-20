@@ -45,6 +45,7 @@
   },
   "release-it": {
     "publishConfig": {
+      "access": "public",
       "registry": "https://registry.npmjs.org/"
     },
     "git": {
