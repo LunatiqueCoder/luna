@@ -19,6 +19,9 @@
 <!-- [![GitHub issues][15]][16] -->
 <!-- [![GitHub closed issues][17]][18] -->
 
+> DEPRECATED
+> I believe expo-router (with a simpler setup) achieves the same thing as this template. There's no need to go down the rabbit hole and use Next.js + Expo.
+
 # 🌒 `Luna`
 ### `🌒 Luna` is a `React Native` and `Next.js` boilerplate so your app can run on `Android`, `IOS` and `Web` concurrently.
 [You can try the live example here.][19]
